@@ -12,13 +12,19 @@ import Former
 class InputInventoryViewController: UIViewController {
     let tableView: UITableView = UITableView(frame: CGRect.zero, style: .grouped)
     lazy var former: Former = Former(tableView: self.tableView)
-    
     var sizeRow: InlinePickerRowFormer<FormInlinePickerCell, String>!
     var addingQuantityRow: InlinePickerRowFormer<FormInlinePickerCell, Int>!
+    
+    var dataStore: InputInventoryDataStore?
+    var productType: ProductType!
+    
+    let sizes = ["XS", "S", "M", "L", "XL", "XXL", "One Size"]
+    let quantities: [Int] = [1, 2, 3, 4, 5, 6, 7, 8 , 9, 10, 11, 12, 13, 14, 15, -1, -2, -3]
 
     override func viewDidLoad() {
         super.viewDidLoad()
         tableViewSetup()
+        dataStoreSetup()
         rightBarButtonItemSetup()
         sizeRowSetup()
         addingQuantityRowSetup()
@@ -27,6 +33,10 @@ class InputInventoryViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    fileprivate func dataStoreSetup() {
+        dataStore = InputInventoryDataStore(delegate: self)
     }
     
     fileprivate func tableViewSetup() {
@@ -46,7 +56,6 @@ class InputInventoryViewController: UIViewController {
 
 extension InputInventoryViewController {
     fileprivate func sizeRowSetup() {
-        let sizes = ["XS", "S", "M", "L", "XL", "XXL", "One Size"]
         sizeRow = InlinePickerRowFormer<FormInlinePickerCell, String>(cellSetup: {
             $0.titleLabel.text = "Size"
         })
@@ -60,10 +69,9 @@ extension InputInventoryViewController {
     }
     
     fileprivate func addingQuantityRowSetup() {
-        let nums: [Int] = [1, 2, 3, 4, 5, 6, 7, 8 , 9, 10, 11, 12, 13, 14, 15, -1, -2, -3]
         addingQuantityRow = InlinePickerRowFormer<FormInlinePickerCell, Int>(cellSetup: nil)
         addingQuantityRow.configure { (row) in
-            row.pickerItems = nums.map {
+            row.pickerItems = quantities.map {
                 return InlinePickerItem(title: $0.toString, value: $0)
             }
         }
@@ -81,6 +89,14 @@ extension InputInventoryViewController {
     }
     
     func save(sender: UIBarButtonItem) {
-        //TODO: save in data store
+        let quantity = quantities[addingQuantityRow.selectedRow]
+        let size = sizes[sizeRow.selectedRow]
+        dataStore?.saveInventory(productType: productType, quantity: quantity, size: size)
+    }
+}
+
+extension InputInventoryViewController: InputInventoryDataDelegate {
+    func successfullySavedInventory() {
+        popVC()
     }
 }

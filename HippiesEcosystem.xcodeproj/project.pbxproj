@@ -22,6 +22,7 @@
 		92C66F031EE1433400CA8292 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C66F021EE1433400CA8292 /* HomeViewController.swift */; };
 		92C66F051EE1490600CA8292 /* ProductType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C66F041EE1490600CA8292 /* ProductType.swift */; };
 		92C66F081EE1681B00CA8292 /* InputInventoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C66F071EE1681B00CA8292 /* InputInventoryViewController.swift */; };
+		92C66F0B1EE16EB400CA8292 /* InputInventoryDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C66F0A1EE16EB400CA8292 /* InputInventoryDataStore.swift */; };
 		D6B19A08BF665B2FA5A4C32D /* Pods_HippiesEcosystem.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A84C2EA6A6B416856716234F /* Pods_HippiesEcosystem.framework */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +46,7 @@
 		92C66F021EE1433400CA8292 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		92C66F041EE1490600CA8292 /* ProductType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductType.swift; sourceTree = "<group>"; };
 		92C66F071EE1681B00CA8292 /* InputInventoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputInventoryViewController.swift; sourceTree = "<group>"; };
+		92C66F0A1EE16EB400CA8292 /* InputInventoryDataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputInventoryDataStore.swift; sourceTree = "<group>"; };
 		A84C2EA6A6B416856716234F /* Pods_HippiesEcosystem.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HippiesEcosystem.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -115,6 +117,7 @@
 		92C66EE41EE137F600CA8292 /* Inputting */ = {
 			isa = PBXGroup;
 			children = (
+				92C66F091EE16E9000CA8292 /* Data Store */,
 				92C66F071EE1681B00CA8292 /* InputInventoryViewController.swift */,
 			);
 			name = Inputting;
@@ -196,6 +199,14 @@
 			children = (
 			);
 			name = "New Group";
+			sourceTree = "<group>";
+		};
+		92C66F091EE16E9000CA8292 /* Data Store */ = {
+			isa = PBXGroup;
+			children = (
+				92C66F0A1EE16EB400CA8292 /* InputInventoryDataStore.swift */,
+			);
+			name = "Data Store";
 			sourceTree = "<group>";
 		};
 		B5C3C8F1D36C3B002CA066F2 /* Frameworks */ = {
@@ -336,6 +347,7 @@
 				92C66F081EE1681B00CA8292 /* InputInventoryViewController.swift in Sources */,
 				92C66EF91EE13EB800CA8292 /* MainSearchTableViewCell.swift in Sources */,
 				92C66EF11EE13CF900CA8292 /* ProductSearchViewController.swift in Sources */,
+				92C66F0B1EE16EB400CA8292 /* InputInventoryDataStore.swift in Sources */,
 				92C66EEA1EE13A8100CA8292 /* CustomSearchBar.swift in Sources */,
 				92C66ED21EE1370100CA8292 /* AppDelegate.swift in Sources */,
 				92C66EF41EE13D3600CA8292 /* MainSearchingDataStore.swift in Sources */,

@@ -25,7 +25,6 @@ class MainSearchingDataStore {
 
 //search extension
 extension MainSearchingDataStore {
-    //TODO: make it search for our products
     func search(text: String) {
         if !isSearching {
             isSearching = true

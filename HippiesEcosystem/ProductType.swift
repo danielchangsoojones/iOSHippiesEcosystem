@@ -9,10 +9,19 @@
 import Foundation
 
 class ProductType: NSObject {
-    var title: String = ""
+    var title: String {
+        get {
+            return productTypeParse.title
+        }
+        set {
+            productTypeParse.title = newValue
+            productTypeParse.lowercaseTitle = newValue.lowercased()
+        }
+    }
+    var productTypeParse: ProductTypeParse!
     
     init(p: ProductTypeParse) {
         super.init()
-        title = p.title
+        productTypeParse = p
     }
 }

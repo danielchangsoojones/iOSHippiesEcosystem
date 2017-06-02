@@ -92,6 +92,7 @@ extension ProductSearchViewController: UITableViewDelegate, UITableViewDataSourc
     func segueToInputInventoryVC(product: ProductType) {
         let inputInventoryVC = InputInventoryViewController()
         inputInventoryVC.title = product.title
+        inputInventoryVC.productType = product
         pushVC(inputInventoryVC)
     }
 }
