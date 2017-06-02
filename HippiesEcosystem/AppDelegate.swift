@@ -7,16 +7,38 @@
 //
 
 import UIKit
+import Parse
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        registerParseSubclasses()
+        setParseConfiguration()
+        setHomeVC()
         return true
+    }
+    
+    fileprivate func registerParseSubclasses() {
+        ProductTypeParse.registerSubclass()
+        FabricParse.registerSubclass()
+    }
+    
+    fileprivate func setParseConfiguration() {
+        let configuration = ParseClientConfiguration {
+            $0.applicationId = "hippiesAndHousewives123SHDJ4852"
+            $0.server = "https://hippies-and-housewives.herokuapp.com/parse"
+        }
+        Parse.initialize(with: configuration)
+    }
+    
+    fileprivate func setHomeVC() {
+        let homeVC = HomeViewController()
+        let navController = UINavigationController(rootViewController: homeVC)
+        setInitialVC(vc: navController)
     }
     
     fileprivate func setInitialVC(vc: UIViewController) {

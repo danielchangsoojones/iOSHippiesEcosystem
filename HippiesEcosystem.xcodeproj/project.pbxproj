@@ -8,20 +8,42 @@
 
 /* Begin PBXBuildFile section */
 		92C66ED21EE1370100CA8292 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C66ED11EE1370100CA8292 /* AppDelegate.swift */; };
-		92C66ED41EE1370100CA8292 /* SearchProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C66ED31EE1370100CA8292 /* SearchProductViewController.swift */; };
 		92C66ED91EE1370100CA8292 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92C66ED81EE1370100CA8292 /* Assets.xcassets */; };
 		92C66EDC1EE1370100CA8292 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92C66EDA1EE1370100CA8292 /* LaunchScreen.storyboard */; };
 		92C66EE71EE1382600CA8292 /* MainSearchingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C66EE61EE1382600CA8292 /* MainSearchingView.swift */; };
+		92C66EEA1EE13A8100CA8292 /* CustomSearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C66EE91EE13A8100CA8292 /* CustomSearchBar.swift */; };
+		92C66EED1EE13AC900CA8292 /* CustomColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C66EEC1EE13AC900CA8292 /* CustomColors.swift */; };
+		92C66EEF1EE13C5B00CA8292 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C66EEE1EE13C5B00CA8292 /* Helpers.swift */; };
+		92C66EF11EE13CF900CA8292 /* ProductSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C66EF01EE13CF900CA8292 /* ProductSearchViewController.swift */; };
+		92C66EF41EE13D3600CA8292 /* MainSearchingDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C66EF31EE13D3600CA8292 /* MainSearchingDataStore.swift */; };
+		92C66EF91EE13EB800CA8292 /* MainSearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C66EF81EE13EB800CA8292 /* MainSearchTableViewCell.swift */; };
+		92C66EFE1EE1417F00CA8292 /* ProductTypeParse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C66EFD1EE1417F00CA8292 /* ProductTypeParse.swift */; };
+		92C66F001EE1420900CA8292 /* FabricParse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C66EFF1EE1420900CA8292 /* FabricParse.swift */; };
+		92C66F031EE1433400CA8292 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C66F021EE1433400CA8292 /* HomeViewController.swift */; };
+		92C66F051EE1490600CA8292 /* ProductType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C66F041EE1490600CA8292 /* ProductType.swift */; };
+		D6B19A08BF665B2FA5A4C32D /* Pods_HippiesEcosystem.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A84C2EA6A6B416856716234F /* Pods_HippiesEcosystem.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		135E1988B26BD50D4A1461E7 /* Pods-HippiesEcosystem.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HippiesEcosystem.release.xcconfig"; path = "Pods/Target Support Files/Pods-HippiesEcosystem/Pods-HippiesEcosystem.release.xcconfig"; sourceTree = "<group>"; };
+		527E5FB96BF6BA46DABF0DD0 /* Pods-HippiesEcosystem.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HippiesEcosystem.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HippiesEcosystem/Pods-HippiesEcosystem.debug.xcconfig"; sourceTree = "<group>"; };
 		92C66ECE1EE1370100CA8292 /* HippiesEcosystem.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HippiesEcosystem.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92C66ED11EE1370100CA8292 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		92C66ED31EE1370100CA8292 /* SearchProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchProductViewController.swift; sourceTree = "<group>"; };
 		92C66ED81EE1370100CA8292 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		92C66EDB1EE1370100CA8292 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		92C66EDD1EE1370100CA8292 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		92C66EE61EE1382600CA8292 /* MainSearchingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainSearchingView.swift; sourceTree = "<group>"; };
+		92C66EE91EE13A8100CA8292 /* CustomSearchBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomSearchBar.swift; sourceTree = "<group>"; };
+		92C66EEC1EE13AC900CA8292 /* CustomColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomColors.swift; sourceTree = "<group>"; };
+		92C66EEE1EE13C5B00CA8292 /* Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
+		92C66EF01EE13CF900CA8292 /* ProductSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductSearchViewController.swift; sourceTree = "<group>"; };
+		92C66EF31EE13D3600CA8292 /* MainSearchingDataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainSearchingDataStore.swift; sourceTree = "<group>"; };
+		92C66EF81EE13EB800CA8292 /* MainSearchTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainSearchTableViewCell.swift; sourceTree = "<group>"; };
+		92C66EFD1EE1417F00CA8292 /* ProductTypeParse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductTypeParse.swift; sourceTree = "<group>"; };
+		92C66EFF1EE1420900CA8292 /* FabricParse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FabricParse.swift; sourceTree = "<group>"; };
+		92C66F021EE1433400CA8292 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		92C66F041EE1490600CA8292 /* ProductType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductType.swift; sourceTree = "<group>"; };
+		A84C2EA6A6B416856716234F /* Pods_HippiesEcosystem.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HippiesEcosystem.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +51,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D6B19A08BF665B2FA5A4C32D /* Pods_HippiesEcosystem.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		00F69F69285EAC45352BF6C1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				527E5FB96BF6BA46DABF0DD0 /* Pods-HippiesEcosystem.debug.xcconfig */,
+				135E1988B26BD50D4A1461E7 /* Pods-HippiesEcosystem.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		92C66EC51EE1370100CA8292 = {
 			isa = PBXGroup;
 			children = (
 				92C66ED01EE1370100CA8292 /* HippiesEcosystem */,
 				92C66ECF1EE1370100CA8292 /* Products */,
+				00F69F69285EAC45352BF6C1 /* Pods */,
+				B5C3C8F1D36C3B002CA066F2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,11 +88,14 @@
 		92C66ED01EE1370100CA8292 /* HippiesEcosystem */ = {
 			isa = PBXGroup;
 			children = (
+				92C66F011EE1431400CA8292 /* Home */,
 				92C66EE31EE137EA00CA8292 /* Inventory */,
 				92C66ED11EE1370100CA8292 /* AppDelegate.swift */,
 				92C66ED81EE1370100CA8292 /* Assets.xcassets */,
 				92C66EDA1EE1370100CA8292 /* LaunchScreen.storyboard */,
 				92C66EDD1EE1370100CA8292 /* Info.plist */,
+				92C66EFA1EE140C500CA8292 /* Models */,
+				92C66EEB1EE13A9B00CA8292 /* Helpers */,
 			);
 			path = HippiesEcosystem;
 			sourceTree = "<group>";
@@ -75,7 +112,6 @@
 		92C66EE41EE137F600CA8292 /* Inputting */ = {
 			isa = PBXGroup;
 			children = (
-				92C66ED31EE1370100CA8292 /* SearchProductViewController.swift */,
 			);
 			name = Inputting;
 			sourceTree = "<group>";
@@ -83,9 +119,80 @@
 		92C66EE51EE1380000CA8292 /* Search */ = {
 			isa = PBXGroup;
 			children = (
+				92C66EF21EE13D2300CA8292 /* Data Store */,
+				92C66EE81EE13A6900CA8292 /* Subviews */,
+				92C66EF01EE13CF900CA8292 /* ProductSearchViewController.swift */,
 				92C66EE61EE1382600CA8292 /* MainSearchingView.swift */,
 			);
 			name = Search;
+			sourceTree = "<group>";
+		};
+		92C66EE81EE13A6900CA8292 /* Subviews */ = {
+			isa = PBXGroup;
+			children = (
+				92C66EF81EE13EB800CA8292 /* MainSearchTableViewCell.swift */,
+				92C66EE91EE13A8100CA8292 /* CustomSearchBar.swift */,
+			);
+			name = Subviews;
+			sourceTree = "<group>";
+		};
+		92C66EEB1EE13A9B00CA8292 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				92C66EEC1EE13AC900CA8292 /* CustomColors.swift */,
+				92C66EEE1EE13C5B00CA8292 /* Helpers.swift */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
+		92C66EF21EE13D2300CA8292 /* Data Store */ = {
+			isa = PBXGroup;
+			children = (
+				92C66EF31EE13D3600CA8292 /* MainSearchingDataStore.swift */,
+			);
+			name = "Data Store";
+			sourceTree = "<group>";
+		};
+		92C66EFA1EE140C500CA8292 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				92C66EFC1EE140D100CA8292 /* Internal */,
+				92C66EFB1EE140CC00CA8292 /* Database */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		92C66EFB1EE140CC00CA8292 /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				92C66EFD1EE1417F00CA8292 /* ProductTypeParse.swift */,
+				92C66EFF1EE1420900CA8292 /* FabricParse.swift */,
+			);
+			name = Database;
+			sourceTree = "<group>";
+		};
+		92C66EFC1EE140D100CA8292 /* Internal */ = {
+			isa = PBXGroup;
+			children = (
+				92C66F041EE1490600CA8292 /* ProductType.swift */,
+			);
+			name = Internal;
+			sourceTree = "<group>";
+		};
+		92C66F011EE1431400CA8292 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				92C66F021EE1433400CA8292 /* HomeViewController.swift */,
+			);
+			name = Home;
+			sourceTree = "<group>";
+		};
+		B5C3C8F1D36C3B002CA066F2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A84C2EA6A6B416856716234F /* Pods_HippiesEcosystem.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -95,9 +202,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 92C66EE01EE1370100CA8292 /* Build configuration list for PBXNativeTarget "HippiesEcosystem" */;
 			buildPhases = (
+				CCEDE376CAF1184D75F945E1 /* [CP] Check Pods Manifest.lock */,
 				92C66ECA1EE1370100CA8292 /* Sources */,
 				92C66ECB1EE1370100CA8292 /* Frameworks */,
 				92C66ECC1EE1370100CA8292 /* Resources */,
+				63324E022C4CA98560208DF0 /* [CP] Embed Pods Frameworks */,
+				E307A76E919033326353D526 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -155,14 +265,71 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		63324E022C4CA98560208DF0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HippiesEcosystem/Pods-HippiesEcosystem-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CCEDE376CAF1184D75F945E1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E307A76E919033326353D526 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HippiesEcosystem/Pods-HippiesEcosystem-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		92C66ECA1EE1370100CA8292 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				92C66ED41EE1370100CA8292 /* SearchProductViewController.swift in Sources */,
+				92C66F001EE1420900CA8292 /* FabricParse.swift in Sources */,
+				92C66EEF1EE13C5B00CA8292 /* Helpers.swift in Sources */,
+				92C66EED1EE13AC900CA8292 /* CustomColors.swift in Sources */,
 				92C66EE71EE1382600CA8292 /* MainSearchingView.swift in Sources */,
+				92C66EF91EE13EB800CA8292 /* MainSearchTableViewCell.swift in Sources */,
+				92C66EF11EE13CF900CA8292 /* ProductSearchViewController.swift in Sources */,
+				92C66EEA1EE13A8100CA8292 /* CustomSearchBar.swift in Sources */,
 				92C66ED21EE1370100CA8292 /* AppDelegate.swift in Sources */,
+				92C66EF41EE13D3600CA8292 /* MainSearchingDataStore.swift in Sources */,
+				92C66F051EE1490600CA8292 /* ProductType.swift in Sources */,
+				92C66EFE1EE1417F00CA8292 /* ProductTypeParse.swift in Sources */,
+				92C66F031EE1433400CA8292 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,6 +442,7 @@
 		};
 		92C66EE11EE1370100CA8292 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 527E5FB96BF6BA46DABF0DD0 /* Pods-HippiesEcosystem.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = KNK3WJA66N;
@@ -288,6 +456,7 @@
 		};
 		92C66EE21EE1370100CA8292 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 135E1988B26BD50D4A1461E7 /* Pods-HippiesEcosystem.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = KNK3WJA66N;
@@ -318,6 +487,7 @@
 				92C66EE21EE1370100CA8292 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -7,6 +7,11 @@
 //
 
 import UIKit
+import SnapKit
+
+struct MainSearchingViewConstants {
+    static let leadingInset: CGFloat = 15
+}
 
 class MainSearchingView: UIView {
     var beginningTopInset: CGFloat = 0
@@ -54,7 +59,7 @@ extension MainSearchingView {
     }
     
     fileprivate func searchBarSetup() {
-        theSearchBar.placeholder = "What Do You Need?"
+        theSearchBar.placeholder = "product to add to inventory..."
         theSearchAreaView.addSubview(theSearchBar)
         theSearchBar.snp.makeConstraints { (make) in
             let verticalInset: CGFloat = 5.0
