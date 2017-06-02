@@ -86,7 +86,13 @@ extension ProductSearchViewController: UITableViewDelegate, UITableViewDataSourc
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let productType = results[indexPath.row]
-        //TODO: segue to the add inventory for a product page
+        segueToInputInventoryVC(product: productType)
+    }
+    
+    func segueToInputInventoryVC(product: ProductType) {
+        let inputInventoryVC = InputInventoryViewController()
+        inputInventoryVC.title = product.title
+        pushVC(inputInventoryVC)
     }
 }
 
