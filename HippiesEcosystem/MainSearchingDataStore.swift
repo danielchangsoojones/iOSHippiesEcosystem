@@ -32,9 +32,6 @@ extension MainSearchingDataStore {
             let lowercasedText = text.lowercased()
             PFCloud.callFunction(inBackground: "searchProduct", withParameters: ["searchText": lowercasedText], block: {
                 (results: Any?, error: Error?) -> Void in
-                if let array = results as? NSArray {
-                    print(array[0])
-                }
                 if let productTypeParses = results as? [ProductTypeParse] {
                     let productTypes = productTypeParses.map({ (p: ProductTypeParse) -> ProductType in
                         return ProductType(p: p)
