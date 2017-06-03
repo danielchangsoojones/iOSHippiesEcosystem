@@ -9,13 +9,19 @@
 import UIKit
 
 class HomeViewController: UIViewController {
-    fileprivate struct Categories {
-        static let inputInventory = "Input Inventory"
-        static let pickTickets = "Pick Tickets"
+    fileprivate enum Categories: String {
+        case inputInventory = "Input Inventory"
+        case pickTickets = "Pick Tickets"
+        case cutting = "Cutting"
+        case sewing = "Sewn"
+        case packaging = "Packaging"
+        case shipped = "Shipped"
+        
+        static let all : [Categories] = [.inputInventory, .cutting, .sewing, .packaging, .pickTickets, .shipped]
     }
     
     var theTableView: UITableView!
-    let categories: [String] = [Categories.inputInventory, Categories.pickTickets]
+    fileprivate let categories: [Categories] = Categories.all
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,27 +50,40 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         //TODO: I should be reusing cells, but who cares for now.
         let category = categories[indexPath.row]
         let cell = UITableViewCell()
-        cell.textLabel?.text = category
+        cell.textLabel?.text = category.rawValue
         
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let category = categories[indexPath.row]
+        var targetVC: UIViewController!
         switch category {
-        case Categories.inputInventory:
-            segueToProductSeachVC()
-        case Categories.pickTickets:
-            break
-        default:
-            break
+        case .inputInventory:
+            targetVC = ProductSearchViewController()
+        case .cutting:
+            targetVC = CuttingFormViewController()
+        case .sewing:
+            targetVC = SewingFormViewController()
+        case .packaging:
+            targetVC = PackageFormViewController()
+        case .pickTickets:
+            targetVC = UIViewController()
+        case .shipped:
+            targetVC = QualityFormViewController()
         }
+        
+        pushWithTitle(vc: targetVC)
     }
 }
 
 extension HomeViewController {
-    func segueToProductSeachVC() {
-        let searchVC = ProductSearchViewController()
-        pushVC(searchVC)
+    func pushWithTitle(vc: UIViewController) {
+        if let selectedIndexPath = theTableView.indexPathForSelectedRow {
+            let category = categories[selectedIndexPath.row]
+            vc.title = category.rawValue
+        }
+        
+        pushVC(vc)
     }
 }

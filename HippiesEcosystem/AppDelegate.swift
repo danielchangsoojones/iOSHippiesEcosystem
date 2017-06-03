@@ -25,6 +25,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     fileprivate func registerParseSubclasses() {
         ProductTypeParse.registerSubclass()
         FabricParse.registerSubclass()
+        LineItemParse.registerSubclass()
     }
     
     fileprivate func setParseConfiguration() {
