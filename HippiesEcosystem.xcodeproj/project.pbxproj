@@ -39,6 +39,10 @@
 		92C66F351EE2566100CA8292 /* OrderParse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C66F341EE2566100CA8292 /* OrderParse.swift */; };
 		92C66F371EE2569F00CA8292 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C66F361EE2569F00CA8292 /* Order.swift */; };
 		92C66F3A1EE2570D00CA8292 /* PickOrderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C66F391EE2570D00CA8292 /* PickOrderTableViewCell.swift */; };
+		92C66F3D1EE25ABF00CA8292 /* LineItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C66F3C1EE25ABF00CA8292 /* LineItem.swift */; };
+		92C66F401EE25C3400CA8292 /* PickListItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C66F3F1EE25C3400CA8292 /* PickListItemViewController.swift */; };
+		92C66F431EE25CA800CA8292 /* PickItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C66F421EE25CA800CA8292 /* PickItemTableViewCell.swift */; };
+		92C66F461EE2693B00CA8292 /* PickItemDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C66F451EE2693B00CA8292 /* PickItemDataStore.swift */; };
 		D6B19A08BF665B2FA5A4C32D /* Pods_HippiesEcosystem.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A84C2EA6A6B416856716234F /* Pods_HippiesEcosystem.framework */; };
 /* End PBXBuildFile section */
 
@@ -79,6 +83,10 @@
 		92C66F341EE2566100CA8292 /* OrderParse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderParse.swift; sourceTree = "<group>"; };
 		92C66F361EE2569F00CA8292 /* Order.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
 		92C66F391EE2570D00CA8292 /* PickOrderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickOrderTableViewCell.swift; sourceTree = "<group>"; };
+		92C66F3C1EE25ABF00CA8292 /* LineItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineItem.swift; sourceTree = "<group>"; };
+		92C66F3F1EE25C3400CA8292 /* PickListItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickListItemViewController.swift; sourceTree = "<group>"; };
+		92C66F421EE25CA800CA8292 /* PickItemTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickItemTableViewCell.swift; sourceTree = "<group>"; };
+		92C66F451EE2693B00CA8292 /* PickItemDataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickItemDataStore.swift; sourceTree = "<group>"; };
 		A84C2EA6A6B416856716234F /* Pods_HippiesEcosystem.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HippiesEcosystem.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -218,6 +226,7 @@
 			children = (
 				92C66F041EE1490600CA8292 /* ProductType.swift */,
 				92C66F361EE2569F00CA8292 /* Order.swift */,
+				92C66F3C1EE25ABF00CA8292 /* LineItem.swift */,
 			);
 			name = Internal;
 			sourceTree = "<group>";
@@ -330,6 +339,7 @@
 		92C66F291EE234F400CA8292 /* Picking */ = {
 			isa = PBXGroup;
 			children = (
+				92C66F3E1EE25C1000CA8292 /* Line Item List */,
 				92C66F331EE2561A00CA8292 /* Order List */,
 			);
 			name = Picking;
@@ -362,8 +372,8 @@
 		92C66F331EE2561A00CA8292 /* Order List */ = {
 			isa = PBXGroup;
 			children = (
-				92C66F381EE256ED00CA8292 /* Cell */,
 				92C66F301EE2556800CA8292 /* Data Store */,
+				92C66F381EE256ED00CA8292 /* Cell */,
 				92C66F311EE2559B00CA8292 /* PickOrderViewController.swift */,
 			);
 			name = "Order List";
@@ -375,6 +385,32 @@
 				92C66F391EE2570D00CA8292 /* PickOrderTableViewCell.swift */,
 			);
 			name = Cell;
+			sourceTree = "<group>";
+		};
+		92C66F3E1EE25C1000CA8292 /* Line Item List */ = {
+			isa = PBXGroup;
+			children = (
+				92C66F441EE2692B00CA8292 /* Data Store */,
+				92C66F411EE25C9400CA8292 /* Cell */,
+				92C66F3F1EE25C3400CA8292 /* PickListItemViewController.swift */,
+			);
+			name = "Line Item List";
+			sourceTree = "<group>";
+		};
+		92C66F411EE25C9400CA8292 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				92C66F421EE25CA800CA8292 /* PickItemTableViewCell.swift */,
+			);
+			name = Cell;
+			sourceTree = "<group>";
+		};
+		92C66F441EE2692B00CA8292 /* Data Store */ = {
+			isa = PBXGroup;
+			children = (
+				92C66F451EE2693B00CA8292 /* PickItemDataStore.swift */,
+			);
+			name = "Data Store";
 			sourceTree = "<group>";
 		};
 		B5C3C8F1D36C3B002CA066F2 /* Frameworks */ = {
@@ -509,6 +545,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				92C66F171EE2123200CA8292 /* CuttingFormDataStore.swift in Sources */,
+				92C66F461EE2693B00CA8292 /* PickItemDataStore.swift in Sources */,
 				92C66F281EE2342900CA8292 /* PackageFormViewController.swift in Sources */,
 				92C66F351EE2566100CA8292 /* OrderParse.swift in Sources */,
 				92C66F1D1EE22D1F00CA8292 /* SewingFormViewController.swift in Sources */,
@@ -527,10 +564,13 @@
 				92C66F1F1EE22D5D00CA8292 /* SewingFormDataStore.swift in Sources */,
 				92C66F141EE211EB00CA8292 /* CuttingFormViewController.swift in Sources */,
 				92C66F0B1EE16EB400CA8292 /* InputInventoryDataStore.swift in Sources */,
+				92C66F431EE25CA800CA8292 /* PickItemTableViewCell.swift in Sources */,
 				92C66F221EE22DEA00CA8292 /* TrackingFormDataStore.swift in Sources */,
 				92C66EEA1EE13A8100CA8292 /* CustomSearchBar.swift in Sources */,
 				92C66ED21EE1370100CA8292 /* AppDelegate.swift in Sources */,
+				92C66F3D1EE25ABF00CA8292 /* LineItem.swift in Sources */,
 				92C66F191EE212D800CA8292 /* LineItemParse.swift in Sources */,
+				92C66F401EE25C3400CA8292 /* PickListItemViewController.swift in Sources */,
 				92C66F3A1EE2570D00CA8292 /* PickOrderTableViewCell.swift in Sources */,
 				92C66EF41EE13D3600CA8292 /* MainSearchingDataStore.swift in Sources */,
 				92C66F051EE1490600CA8292 /* ProductType.swift in Sources */,

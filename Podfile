@@ -12,5 +12,6 @@ target 'HippiesEcosystem' do
   pod 'ParseUI'
   pod "Former"
   pod 'SCLAlertView'
+  pod 'BEMCheckBox'
 
 end

@@ -1,4 +1,5 @@
 PODS:
+  - BEMCheckBox (1.4.0)
   - Bolts/Tasks (1.8.4)
   - EZSwiftExtensions (1.9)
   - Former (1.5.1)
@@ -11,6 +12,7 @@ PODS:
   - SnapKit (3.2.0)
 
 DEPENDENCIES:
+  - BEMCheckBox
   - EZSwiftExtensions
   - Former
   - Parse
@@ -19,6 +21,7 @@ DEPENDENCIES:
   - SnapKit (~> 3.0)
 
 SPEC CHECKSUMS:
+  BEMCheckBox: e18e4a148905b290bd03d98b767651c104f4eda3
   Bolts: 8a7995239dbe724f9cba2248b766d48b7ebdd322
   EZSwiftExtensions: ce22bf6fc5c6e7c883fec413300b006e123735d0
   Former: 0b48a812c0d93b092b908d1b0574d0fd95c6b6f9
@@ -27,6 +30,6 @@ SPEC CHECKSUMS:
   SCLAlertView: 8a14ffc40590c619e183eed2298b854385f30be1
   SnapKit: 1ca44df72cfa543218d177cb8aab029d10d86ea7
 
-PODFILE CHECKSUM: d3746a7166e374556919b5b610494c754a9bb387
+PODFILE CHECKSUM: 0b86a4e4d593aab4534e612931f2e5c4c055093c
 
 COCOAPODS: 1.1.1

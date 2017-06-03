@@ -25,6 +25,10 @@ class PickOrderTableViewCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
+    func set(order: Order) {
+        idLabel.text = order.name
+    }
+    
     func idLabelSetup() {
         idLabel = UILabel()
         idLabel.text = "#HippiesandHousewives2806<3"

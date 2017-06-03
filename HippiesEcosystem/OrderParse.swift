@@ -14,5 +14,6 @@ class OrderParse: PFObject, PFSubclassing {
         return "Order"
     }
     
-    @NSManaged var title: String
+    //i.e. #HippiesAndHousewives1324<3
+    @NSManaged var name: String
 }

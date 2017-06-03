@@ -10,12 +10,12 @@ import Foundation
 
 class Order: NSObject {
     var orderParse: OrderParse!
-    var title: String {
+    var name: String {
         get {
-            return orderParse.title
+            return orderParse.name
         }
         set {
-            orderParse.title = newValue
+            orderParse.name = newValue
         }
     }
     

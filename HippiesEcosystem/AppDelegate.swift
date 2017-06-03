@@ -18,7 +18,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         registerParseSubclasses()
         setParseConfiguration()
-        setHomeVC()
+        setInitialVC(vc: UINavigationController(rootViewController: PickListItemViewController()))
+//        setHomeVC()
         return true
     }
     
