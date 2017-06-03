@@ -68,7 +68,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         case .packaging:
             targetVC = PackageFormViewController()
         case .pickTickets:
-            targetVC = UIViewController()
+            targetVC = PickListOrderViewController()
         case .shipped:
             targetVC = QualityFormViewController()
         }
