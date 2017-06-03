@@ -43,6 +43,10 @@
 		92C66F401EE25C3400CA8292 /* PickListItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C66F3F1EE25C3400CA8292 /* PickListItemViewController.swift */; };
 		92C66F431EE25CA800CA8292 /* PickItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C66F421EE25CA800CA8292 /* PickItemTableViewCell.swift */; };
 		92C66F461EE2693B00CA8292 /* PickItemDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C66F451EE2693B00CA8292 /* PickItemDataStore.swift */; };
+		92C66F481EE2E4A400CA8292 /* PickOrderDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C66F471EE2E4A400CA8292 /* PickOrderDataStore.swift */; };
+		92C66F4B1EE2E9C100CA8292 /* CutListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C66F4A1EE2E9C100CA8292 /* CutListViewController.swift */; };
+		92C66F4D1EE2EBED00CA8292 /* CutListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C66F4C1EE2EBED00CA8292 /* CutListView.swift */; };
+		92C66F511EE2EDFF00CA8292 /* CutListDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C66F501EE2EDFF00CA8292 /* CutListDataStore.swift */; };
 		D6B19A08BF665B2FA5A4C32D /* Pods_HippiesEcosystem.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A84C2EA6A6B416856716234F /* Pods_HippiesEcosystem.framework */; };
 /* End PBXBuildFile section */
 
@@ -87,6 +91,10 @@
 		92C66F3F1EE25C3400CA8292 /* PickListItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickListItemViewController.swift; sourceTree = "<group>"; };
 		92C66F421EE25CA800CA8292 /* PickItemTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickItemTableViewCell.swift; sourceTree = "<group>"; };
 		92C66F451EE2693B00CA8292 /* PickItemDataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickItemDataStore.swift; sourceTree = "<group>"; };
+		92C66F471EE2E4A400CA8292 /* PickOrderDataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickOrderDataStore.swift; sourceTree = "<group>"; };
+		92C66F4A1EE2E9C100CA8292 /* CutListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CutListViewController.swift; sourceTree = "<group>"; };
+		92C66F4C1EE2EBED00CA8292 /* CutListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CutListView.swift; sourceTree = "<group>"; };
+		92C66F501EE2EDFF00CA8292 /* CutListDataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CutListDataStore.swift; sourceTree = "<group>"; };
 		A84C2EA6A6B416856716234F /* Pods_HippiesEcosystem.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HippiesEcosystem.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -259,6 +267,7 @@
 			children = (
 				92C66F101EE20F5200CA8292 /* Form */,
 				92C66F0D1EE20F0700CA8292 /* Cutting */,
+				92C66F491EE2E97400CA8292 /* Cut List */,
 				92C66F1A1EE22CE900CA8292 /* Sewing */,
 				92C66F231EE2316F00CA8292 /* Packaging */,
 				92C66F291EE234F400CA8292 /* Picking */,
@@ -365,6 +374,7 @@
 		92C66F301EE2556800CA8292 /* Data Store */ = {
 			isa = PBXGroup;
 			children = (
+				92C66F471EE2E4A400CA8292 /* PickOrderDataStore.swift */,
 			);
 			name = "Data Store";
 			sourceTree = "<group>";
@@ -409,6 +419,24 @@
 			isa = PBXGroup;
 			children = (
 				92C66F451EE2693B00CA8292 /* PickItemDataStore.swift */,
+			);
+			name = "Data Store";
+			sourceTree = "<group>";
+		};
+		92C66F491EE2E97400CA8292 /* Cut List */ = {
+			isa = PBXGroup;
+			children = (
+				92C66F4E1EE2EDC700CA8292 /* Data Store */,
+				92C66F4A1EE2E9C100CA8292 /* CutListViewController.swift */,
+				92C66F4C1EE2EBED00CA8292 /* CutListView.swift */,
+			);
+			name = "Cut List";
+			sourceTree = "<group>";
+		};
+		92C66F4E1EE2EDC700CA8292 /* Data Store */ = {
+			isa = PBXGroup;
+			children = (
+				92C66F501EE2EDFF00CA8292 /* CutListDataStore.swift */,
 			);
 			name = "Data Store";
 			sourceTree = "<group>";
@@ -544,6 +572,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92C66F511EE2EDFF00CA8292 /* CutListDataStore.swift in Sources */,
 				92C66F171EE2123200CA8292 /* CuttingFormDataStore.swift in Sources */,
 				92C66F461EE2693B00CA8292 /* PickItemDataStore.swift in Sources */,
 				92C66F281EE2342900CA8292 /* PackageFormViewController.swift in Sources */,
@@ -561,6 +590,7 @@
 				92C66F321EE2559B00CA8292 /* PickOrderViewController.swift in Sources */,
 				92C66EF91EE13EB800CA8292 /* MainSearchTableViewCell.swift in Sources */,
 				92C66EF11EE13CF900CA8292 /* ProductSearchViewController.swift in Sources */,
+				92C66F4B1EE2E9C100CA8292 /* CutListViewController.swift in Sources */,
 				92C66F1F1EE22D5D00CA8292 /* SewingFormDataStore.swift in Sources */,
 				92C66F141EE211EB00CA8292 /* CuttingFormViewController.swift in Sources */,
 				92C66F0B1EE16EB400CA8292 /* InputInventoryDataStore.swift in Sources */,
@@ -569,12 +599,14 @@
 				92C66EEA1EE13A8100CA8292 /* CustomSearchBar.swift in Sources */,
 				92C66ED21EE1370100CA8292 /* AppDelegate.swift in Sources */,
 				92C66F3D1EE25ABF00CA8292 /* LineItem.swift in Sources */,
+				92C66F481EE2E4A400CA8292 /* PickOrderDataStore.swift in Sources */,
 				92C66F191EE212D800CA8292 /* LineItemParse.swift in Sources */,
 				92C66F401EE25C3400CA8292 /* PickListItemViewController.swift in Sources */,
 				92C66F3A1EE2570D00CA8292 /* PickOrderTableViewCell.swift in Sources */,
 				92C66EF41EE13D3600CA8292 /* MainSearchingDataStore.swift in Sources */,
 				92C66F051EE1490600CA8292 /* ProductType.swift in Sources */,
 				92C66EFE1EE1417F00CA8292 /* ProductTypeParse.swift in Sources */,
+				92C66F4D1EE2EBED00CA8292 /* CutListView.swift in Sources */,
 				92C66F031EE1433400CA8292 /* HomeViewController.swift in Sources */,
 				92C66F2F1EE2354800CA8292 /* QualityFormDataStore.swift in Sources */,
 				92C66F371EE2569F00CA8292 /* Order.swift in Sources */,

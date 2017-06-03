@@ -10,13 +10,18 @@ import UIKit
 
 class PickListOrderViewController: UIViewController {
     var tableView : UITableView!
+    var theSpinner: UIActivityIndicatorView!
     
     var orders: [Order] = []
     var lineItemDictionary: [Order : [LineItem]] = [:]
+    
+    var dataStore: PickOrderDataStore?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         tableViewSetup()
+        spinnerSetup()
+        dataStoreSetup()
     }
 
     override func didReceiveMemoryWarning() {
@@ -31,14 +36,22 @@ class PickListOrderViewController: UIViewController {
         tableView.register(PickOrderTableViewCell.self, forCellReuseIdentifier: PickOrderTableViewCell.identifier)
         self.view.addSubview(tableView)
     }
+    
+    fileprivate func dataStoreSetup() {
+        dataStore = PickOrderDataStore(delegate: self)
+        dataStore?.getPickList()
+    }
+    
+    fileprivate func spinnerSetup() {
+        theSpinner = UIActivityIndicatorView()
+        theSpinner.startAnimating()
+    }
 }
 
 extension PickListOrderViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
         return orders.count
     }
-    
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: PickOrderTableViewCell.identifier, for: indexPath) as! PickOrderTableViewCell
@@ -55,10 +68,12 @@ extension PickListOrderViewController: UITableViewDelegate, UITableViewDataSourc
     }
     
     func segueToLineItemPickVC(lineItems: [LineItem], order: Order) {
-       let itemPickVC = PickListItemViewController()
-        //TODO: send over the line items for that order
-        itemPickVC.title = order.name
-        pushVC(itemPickVC)
+        let itemPickVC = PickListItemViewController()
+        if let lineItems = lineItemDictionary[order] {
+            itemPickVC.lineItems = lineItems
+            itemPickVC.title = order.name
+            pushVC(itemPickVC)
+        }
     }
     
     func removeRow() {
@@ -66,5 +81,15 @@ extension PickListOrderViewController: UITableViewDelegate, UITableViewDataSourc
             orders.remove(at: selectedIndexPath.row)
             tableView.deleteRows(at: [selectedIndexPath], with: .automatic)
         }
+    }
+}
+
+extension PickListOrderViewController: PickOrderDataStoreDelegate {
+    func recieved(orders: [Order], orderDictionary: [Order : [LineItem]]) {
+        theSpinner.stopAnimating()
+    }
+    
+    func recieved(error: Error) {
+        theSpinner.stopAnimating()
     }
 }

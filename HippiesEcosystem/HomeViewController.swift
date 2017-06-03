@@ -11,13 +11,13 @@ import UIKit
 class HomeViewController: UIViewController {
     fileprivate enum Categories: String {
         case inputInventory = "Input Inventory"
-        case pickTickets = "Pick Tickets"
+        case pickList = "Pick List"
         case cutting = "Cutting"
         case sewing = "Sewn"
         case packaging = "Packaging"
         case shipped = "Shipped"
         
-        static let all : [Categories] = [.inputInventory, .cutting, .sewing, .packaging, .pickTickets, .shipped]
+        static let all : [Categories] = [.inputInventory, .cutting, .sewing, .packaging, .pickList, .shipped]
     }
     
     var theTableView: UITableView!
@@ -67,7 +67,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
             targetVC = SewingFormViewController()
         case .packaging:
             targetVC = PackageFormViewController()
-        case .pickTickets:
+        case .pickList:
             targetVC = PickListOrderViewController()
         case .shipped:
             targetVC = QualityFormViewController()
