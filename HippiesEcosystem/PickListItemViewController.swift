@@ -11,14 +11,21 @@ import BEMCheckBox
 import SCLAlertView
 
 class PickListItemViewController: UIViewController {
+    struct Constants {
+        static let cellHeight: CGFloat = 100
+    }
+    
     var tableView : UITableView!
     
     var lineItems: [LineItem] = []
     var completes: [Bool] = []
+    
+    var dataStore: PickItemDataStore?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         tableViewSetup()
+        dataStoreSetup()
         populateCompletes()
         rightBarButtonSetup()
     }
@@ -47,9 +54,14 @@ class PickListItemViewController: UIViewController {
         navigationItem.rightBarButtonItem = barButton
     }
     
+    fileprivate func dataStoreSetup() {
+        dataStore = PickItemDataStore(delegate: self)
+    }
+    
     func save() {
         if !completes.contains(false) {
             //all items checked, so we can save
+            self.dataStore?.save(lineItems: lineItems)
         } else {
             SCLAlertView().showError("Not All Boxes Checked", subTitle: "Not all items have been checked off")
         }
@@ -65,14 +77,14 @@ extension PickListItemViewController: UITableViewDelegate, UITableViewDataSource
         let cell = tableView.dequeueReusableCell(withIdentifier: PickItemTableViewCell.identifier, for: indexPath) as! PickItemTableViewCell
         cell.checkBox.tag = indexPath.row
         cell.checkBox.delegate = self
+        let lineItem = lineItems[indexPath.row]
+        cell.set(lineItem: lineItem)
         return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 70
+        return Constants.cellHeight
     }
-    
-    
 }
 
 extension PickListItemViewController: BEMCheckBoxDelegate {

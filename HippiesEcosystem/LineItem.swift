@@ -17,6 +17,22 @@ class LineItem: NSObject {
             lineItemParse.isPicked = newValue
         }
     }
+    var shopifyID: String {
+        get {
+            let removedZeroID = String(format: "%g", lineItemParse.shopifyLineItemID)
+            return removedZeroID
+        }
+    }
+    var size: String {
+        get {
+            return lineItemParse.variant_title
+        }
+    }
+    var title: String {
+        get {
+            return lineItemParse.title
+        }
+    }
     
     var lineItemParse: LineItemParse!
     

@@ -22,4 +22,7 @@ class LineItemParse: PFObject, PFSubclassing {
     @NSManaged var isPackaged: Bool
     @NSManaged var isPicked: Bool
     @NSManaged var isShipped: Bool
+    @NSManaged var title: String
+    @NSManaged var variant_title: String
+    @NSManaged var productVariant: ProductVariantParse
 }
