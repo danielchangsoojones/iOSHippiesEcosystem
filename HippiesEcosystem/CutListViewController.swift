@@ -18,6 +18,7 @@ class CutListViewController: UIViewController {
         super.viewDidLoad()
         viewSetup()
         showPasswordPrompt()
+        dataStoreSetup()
     }
 
     override func didReceiveMemoryWarning() {
@@ -71,7 +72,7 @@ extension CutListViewController {
         let alertView = SCLAlertView(appearance: appearance)
         let textField = alertView.addTextField()
         alertView.addButton("Enter") {
-            let password = "admin"
+            let password = "Password"
             if textField.text == password {
                 alertView.hideView()
             } else {

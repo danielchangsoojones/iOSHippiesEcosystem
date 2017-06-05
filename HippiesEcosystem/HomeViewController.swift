@@ -16,8 +16,9 @@ class HomeViewController: UIViewController {
         case sewing = "Sewn"
         case packaging = "Packaging"
         case shipped = "Shipped"
+        case cutList = "Cut List"
         
-        static let all : [Categories] = [.inputInventory, .cutting, .sewing, .packaging, .pickList, .shipped]
+        static let all : [Categories] = [.inputInventory, .cutting, .sewing, .packaging, .pickList, .shipped, .cutList]
     }
     
     var theTableView: UITableView!
@@ -71,6 +72,8 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
             targetVC = PickListOrderViewController()
         case .shipped:
             targetVC = QualityFormViewController()
+        case .cutList:
+            targetVC = CutListViewController()
         }
         
         pushWithTitle(vc: targetVC)

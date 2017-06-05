@@ -44,6 +44,7 @@ class PickListOrderViewController: UIViewController {
     
     fileprivate func spinnerSetup() {
         theSpinner = UIActivityIndicatorView()
+        self.view.addSubview(theSpinner)
         theSpinner.startAnimating()
     }
 }
@@ -86,6 +87,9 @@ extension PickListOrderViewController: UITableViewDelegate, UITableViewDataSourc
 
 extension PickListOrderViewController: PickOrderDataStoreDelegate {
     func recieved(orders: [Order], orderDictionary: [Order : [LineItem]]) {
+        self.orders = orders
+        self.lineItemDictionary = orderDictionary
+        tableView.reloadData()
         theSpinner.stopAnimating()
     }
     

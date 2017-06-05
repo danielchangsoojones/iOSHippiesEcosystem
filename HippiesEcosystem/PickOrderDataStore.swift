@@ -26,7 +26,7 @@ class PickOrderDataStore {
             (results: Any?, error: Error?) -> Void in
             if let results = results {
                 let tuple = self.parse(results: results)
-//                self.delegate?.recieved(orders: <#T##[Order]#>, orderDictionary: <#T##[Order : [LineItem]]#>)
+                self.delegate?.recieved(orders: tuple.orders, orderDictionary: tuple.orderDictionary)
             } else if let error = error {
                 self.delegate?.recieved(error: error)
             }
@@ -39,7 +39,11 @@ class PickOrderDataStore {
         
         if let array = results as? NSArray {
             for innerArray in array {
-                if let innerArray = innerArray as? NSArray, let order = innerArray[0] as? Order, let lineItems = innerArray[1] as? [LineItem] {
+                if let innerArray = innerArray as? NSArray, let orderParse = innerArray[0] as? OrderParse, let lineItemsParse = innerArray[1] as? [LineItemParse] {
+                    let order = Order(orderParse: orderParse)
+                    let lineItems = lineItemsParse.map({ (lineItemParse: LineItemParse) -> LineItem in
+                        return LineItem(lineItemParse: lineItemParse)
+                    })
                     orders.append(order)
                     orderDictionary[order] = lineItems
                 }
