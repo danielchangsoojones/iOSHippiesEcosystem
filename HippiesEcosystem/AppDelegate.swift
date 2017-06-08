@@ -32,10 +32,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     fileprivate func setParseConfiguration() {
+        var appConfiguration = Configuration()
         let configuration = ParseClientConfiguration {
-            $0.applicationId = "hippiesAndHousewives123SHDJ4852"
-            $0.server = "https://hippies-and-housewives.herokuapp.com/parse"
+            $0.applicationId = appConfiguration.environment.applicationId
+            $0.server = appConfiguration.environment.server
         }
+        print(appConfiguration.environment.applicationId)
+        print(appConfiguration.environment.server)
         Parse.initialize(with: configuration)
     }
     

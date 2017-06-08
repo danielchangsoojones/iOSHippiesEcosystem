@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		92699F691EE8EA93008EDC56 /* Enviroment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92699F671EE8EA93008EDC56 /* Enviroment.swift */; };
+		92699F6A1EE8EA93008EDC56 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92699F681EE8EA93008EDC56 /* Configuration.swift */; };
 		92C66ED21EE1370100CA8292 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C66ED11EE1370100CA8292 /* AppDelegate.swift */; };
 		92C66ED91EE1370100CA8292 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92C66ED81EE1370100CA8292 /* Assets.xcassets */; };
 		92C66EDC1EE1370100CA8292 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92C66EDA1EE1370100CA8292 /* LaunchScreen.storyboard */; };
@@ -55,6 +57,9 @@
 /* Begin PBXFileReference section */
 		135E1988B26BD50D4A1461E7 /* Pods-HippiesEcosystem.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HippiesEcosystem.release.xcconfig"; path = "Pods/Target Support Files/Pods-HippiesEcosystem/Pods-HippiesEcosystem.release.xcconfig"; sourceTree = "<group>"; };
 		527E5FB96BF6BA46DABF0DD0 /* Pods-HippiesEcosystem.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HippiesEcosystem.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HippiesEcosystem/Pods-HippiesEcosystem.debug.xcconfig"; sourceTree = "<group>"; };
+		8B60980DBB0B09CDC321CF0C /* Pods-HippiesEcosystem.debug (staging).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HippiesEcosystem.debug (staging).xcconfig"; path = "Pods/Target Support Files/Pods-HippiesEcosystem/Pods-HippiesEcosystem.debug (staging).xcconfig"; sourceTree = "<group>"; };
+		92699F671EE8EA93008EDC56 /* Enviroment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Enviroment.swift; sourceTree = "<group>"; };
+		92699F681EE8EA93008EDC56 /* Configuration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 		92C66ECE1EE1370100CA8292 /* HippiesEcosystem.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HippiesEcosystem.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92C66ED11EE1370100CA8292 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		92C66ED81EE1370100CA8292 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -100,6 +105,7 @@
 		92C66F521EE5322000CA8292 /* ProductVariantParse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductVariantParse.swift; sourceTree = "<group>"; };
 		92C66F541EE5327C00CA8292 /* ProductVariant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductVariant.swift; sourceTree = "<group>"; };
 		A84C2EA6A6B416856716234F /* Pods_HippiesEcosystem.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HippiesEcosystem.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C94F17F7AB18AA5749DB7653 /* Pods-HippiesEcosystem.debug (production).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HippiesEcosystem.debug (production).xcconfig"; path = "Pods/Target Support Files/Pods-HippiesEcosystem/Pods-HippiesEcosystem.debug (production).xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,8 +125,19 @@
 			children = (
 				527E5FB96BF6BA46DABF0DD0 /* Pods-HippiesEcosystem.debug.xcconfig */,
 				135E1988B26BD50D4A1461E7 /* Pods-HippiesEcosystem.release.xcconfig */,
+				8B60980DBB0B09CDC321CF0C /* Pods-HippiesEcosystem.debug (staging).xcconfig */,
+				C94F17F7AB18AA5749DB7653 /* Pods-HippiesEcosystem.debug (production).xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		92699F661EE8EA88008EDC56 /* Configurations */ = {
+			isa = PBXGroup;
+			children = (
+				92699F671EE8EA93008EDC56 /* Enviroment.swift */,
+				92699F681EE8EA93008EDC56 /* Configuration.swift */,
+			);
+			name = Configurations;
 			sourceTree = "<group>";
 		};
 		92C66EC51EE1370100CA8292 = {
@@ -199,6 +216,7 @@
 		92C66EEB1EE13A9B00CA8292 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				92699F661EE8EA88008EDC56 /* Configurations */,
 				92C66EEC1EE13AC900CA8292 /* CustomColors.swift */,
 				92C66EEE1EE13C5B00CA8292 /* Helpers.swift */,
 			);
@@ -585,7 +603,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		E307A76E919033326353D526 /* [CP] Copy Pods Resources */ = {
@@ -640,6 +658,8 @@
 				92C66ED21EE1370100CA8292 /* AppDelegate.swift in Sources */,
 				92C66F3D1EE25ABF00CA8292 /* LineItem.swift in Sources */,
 				92C66F481EE2E4A400CA8292 /* PickOrderDataStore.swift in Sources */,
+				92699F6A1EE8EA93008EDC56 /* Configuration.swift in Sources */,
+				92699F691EE8EA93008EDC56 /* Enviroment.swift in Sources */,
 				92C66F191EE212D800CA8292 /* LineItemParse.swift in Sources */,
 				92C66F401EE25C3400CA8292 /* PickListItemViewController.swift in Sources */,
 				92C66F3A1EE2570D00CA8292 /* PickOrderTableViewCell.swift in Sources */,
@@ -667,7 +687,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		92C66EDE1EE1370100CA8292 /* Debug */ = {
+		92699F641EE8E94D008EDC56 /* Debug (Production) */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -715,7 +735,76 @@
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
-			name = Debug;
+			name = "Debug (Production)";
+		};
+		92699F651EE8E94D008EDC56 /* Debug (Production) */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C94F17F7AB18AA5749DB7653 /* Pods-HippiesEcosystem.debug (production).xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Medici Holdings LLC (KNK3WJA66N)";
+				CURRENT_PROJECT_VERSION = 2;
+				DEVELOPMENT_TEAM = KNK3WJA66N;
+				INFOPLIST_FILE = HippiesEcosystem/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = dcj.Chong500Productions.HippiesEcosystem;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "15dc68ba-8638-4666-a21a-0a27a85ad8dd";
+				PROVISIONING_PROFILE_SPECIFIER = hippiesEcosystemDistributionProfile;
+				SWIFT_VERSION = 3.0;
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = "Debug (Production)";
+		};
+		92C66EDE1EE1370100CA8292 /* Debug (Staging) */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = "Debug (Staging)";
 		};
 		92C66EDF1EE1370100CA8292 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -760,12 +849,13 @@
 			};
 			name = Release;
 		};
-		92C66EE11EE1370100CA8292 /* Debug */ = {
+		92C66EE11EE1370100CA8292 /* Debug (Staging) */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 527E5FB96BF6BA46DABF0DD0 /* Pods-HippiesEcosystem.debug.xcconfig */;
+			baseConfigurationReference = 8B60980DBB0B09CDC321CF0C /* Pods-HippiesEcosystem.debug (staging).xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Medici Holdings LLC (KNK3WJA66N)";
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = KNK3WJA66N;
 				INFOPLIST_FILE = HippiesEcosystem/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -774,8 +864,9 @@
 				PROVISIONING_PROFILE = "15dc68ba-8638-4666-a21a-0a27a85ad8dd";
 				PROVISIONING_PROFILE_SPECIFIER = hippiesEcosystemDistributionProfile;
 				SWIFT_VERSION = 3.0;
+				VERSIONING_SYSTEM = "apple-generic";
 			};
-			name = Debug;
+			name = "Debug (Staging)";
 		};
 		92C66EE21EE1370100CA8292 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -783,6 +874,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Medici Holdings LLC (KNK3WJA66N)";
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = KNK3WJA66N;
 				INFOPLIST_FILE = HippiesEcosystem/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -791,6 +883,7 @@
 				PROVISIONING_PROFILE = "15dc68ba-8638-4666-a21a-0a27a85ad8dd";
 				PROVISIONING_PROFILE_SPECIFIER = hippiesEcosystemDistributionProfile;
 				SWIFT_VERSION = 3.0;
+				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;
 		};
@@ -800,7 +893,8 @@
 		92C66EC91EE1370100CA8292 /* Build configuration list for PBXProject "HippiesEcosystem" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				92C66EDE1EE1370100CA8292 /* Debug */,
+				92C66EDE1EE1370100CA8292 /* Debug (Staging) */,
+				92699F641EE8E94D008EDC56 /* Debug (Production) */,
 				92C66EDF1EE1370100CA8292 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -809,7 +903,8 @@
 		92C66EE01EE1370100CA8292 /* Build configuration list for PBXNativeTarget "HippiesEcosystem" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				92C66EE11EE1370100CA8292 /* Debug */,
+				92C66EE11EE1370100CA8292 /* Debug (Staging) */,
+				92699F651EE8E94D008EDC56 /* Debug (Production) */,
 				92C66EE21EE1370100CA8292 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;

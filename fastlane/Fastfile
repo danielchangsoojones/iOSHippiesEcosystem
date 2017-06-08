@@ -14,7 +14,7 @@ default_platform :ios
 # don't worry, fastlane will prompt you for required
 # info which you can add here later
 lane :beta do
-  # increment_build_number
+  increment_build_number
 
   # build your iOS app
   gym(
@@ -25,7 +25,7 @@ lane :beta do
   # upload to Testflight
   pilot(skip_waiting_for_build_processing: false)
 
-  # slack(
-  #   slack_url: "https://hooks.slack.com/services/IDS"
-  # )
+  slack(
+     slack_url: "https://hooks.slack.com/services/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"
+   )
 end
