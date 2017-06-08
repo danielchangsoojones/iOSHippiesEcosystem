@@ -26,6 +26,7 @@ class PickListItemViewController: UIViewController {
         super.viewDidLoad()
         tableViewSetup()
         dataStoreSetup()
+        titleSetup()
         populateCompletes()
         rightBarButtonSetup()
     }
@@ -52,6 +53,11 @@ class PickListItemViewController: UIViewController {
     fileprivate func rightBarButtonSetup() {
         let barButton = UIBarButtonItem(barButtonSystemItem: .save, target: self, action: #selector(save))
         navigationItem.rightBarButtonItem = barButton
+    }
+    
+    fileprivate func titleSetup() {
+        let attributes = [NSFontAttributeName: UIFont.systemFont(ofSize: 12)]
+        self.navigationController?.navigationBar.titleTextAttributes = attributes
     }
     
     fileprivate func dataStoreSetup() {

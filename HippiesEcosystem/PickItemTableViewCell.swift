@@ -57,7 +57,7 @@ class PickItemTableViewCell: UITableViewCell {
         stackView.snp.makeConstraints { (make) in
             make.leading.equalToSuperview().inset(10)
             make.top.bottom.equalToSuperview()
-            make.trailing.equalTo(checkBox)
+            make.trailing.equalTo(checkBox.snp.leading)
         }
         itemTitleLabelSetup()
         sizeLabelSetup()

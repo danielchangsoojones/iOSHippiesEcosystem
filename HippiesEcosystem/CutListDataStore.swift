@@ -23,7 +23,7 @@ class CutListDataStore {
     }
     
     func getCutList() {
-        PFCloud.callFunction(inBackground: "getCutList", withParameters: [:], block: {
+        PFCloud.callFunction(inBackground: "createCutList", withParameters: [:], block: {
             (results: Any?, error: Error?) -> Void in
             if let _ = results {
                 self.delegate?.recieved(success: true)
