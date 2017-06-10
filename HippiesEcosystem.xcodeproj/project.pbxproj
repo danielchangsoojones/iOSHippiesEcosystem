@@ -9,6 +9,17 @@
 /* Begin PBXBuildFile section */
 		92699F691EE8EA93008EDC56 /* Enviroment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92699F671EE8EA93008EDC56 /* Enviroment.swift */; };
 		92699F6A1EE8EA93008EDC56 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92699F681EE8EA93008EDC56 /* Configuration.swift */; };
+		92699F701EEC9CBD008EDC56 /* WelcomeFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92699F6F1EEC9CBD008EDC56 /* WelcomeFormViewController.swift */; };
+		92699F741EEC9D0A008EDC56 /* WelcomeFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92699F731EEC9D0A008EDC56 /* WelcomeFormView.swift */; };
+		92699F771EEC9D33008EDC56 /* ForwardAccessoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92699F761EEC9D33008EDC56 /* ForwardAccessoryView.swift */; };
+		92699F7A1EEC9D5F008EDC56 /* AdmissionFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92699F791EEC9D5F008EDC56 /* AdmissionFormViewController.swift */; };
+		92699F7D1EEC9D7D008EDC56 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92699F7C1EEC9D7D008EDC56 /* LoginViewController.swift */; };
+		92699F801EEC9D90008EDC56 /* LogInDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92699F7F1EEC9D90008EDC56 /* LogInDataStore.swift */; };
+		92699F831EEC9DA8008EDC56 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92699F821EEC9DA8008EDC56 /* SignUpViewController.swift */; };
+		92699F861EEC9DB9008EDC56 /* SignUpDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92699F851EEC9DB9008EDC56 /* SignUpDataStore.swift */; };
+		92699F891EEC9DD2008EDC56 /* NameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92699F881EEC9DD2008EDC56 /* NameViewController.swift */; };
+		92699F8C1EEC9DE0008EDC56 /* NameDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92699F8B1EEC9DE0008EDC56 /* NameDataStore.swift */; };
+		92699F8E1EEC9EF4008EDC56 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92699F8D1EEC9EF4008EDC56 /* User.swift */; };
 		92C66ED21EE1370100CA8292 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C66ED11EE1370100CA8292 /* AppDelegate.swift */; };
 		92C66ED91EE1370100CA8292 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92C66ED81EE1370100CA8292 /* Assets.xcassets */; };
 		92C66EDC1EE1370100CA8292 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92C66EDA1EE1370100CA8292 /* LaunchScreen.storyboard */; };
@@ -60,6 +71,17 @@
 		8B60980DBB0B09CDC321CF0C /* Pods-HippiesEcosystem.debug (staging).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HippiesEcosystem.debug (staging).xcconfig"; path = "Pods/Target Support Files/Pods-HippiesEcosystem/Pods-HippiesEcosystem.debug (staging).xcconfig"; sourceTree = "<group>"; };
 		92699F671EE8EA93008EDC56 /* Enviroment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Enviroment.swift; sourceTree = "<group>"; };
 		92699F681EE8EA93008EDC56 /* Configuration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
+		92699F6F1EEC9CBD008EDC56 /* WelcomeFormViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeFormViewController.swift; sourceTree = "<group>"; };
+		92699F731EEC9D0A008EDC56 /* WelcomeFormView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeFormView.swift; sourceTree = "<group>"; };
+		92699F761EEC9D33008EDC56 /* ForwardAccessoryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForwardAccessoryView.swift; sourceTree = "<group>"; };
+		92699F791EEC9D5F008EDC56 /* AdmissionFormViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdmissionFormViewController.swift; sourceTree = "<group>"; };
+		92699F7C1EEC9D7D008EDC56 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		92699F7F1EEC9D90008EDC56 /* LogInDataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInDataStore.swift; sourceTree = "<group>"; };
+		92699F821EEC9DA8008EDC56 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		92699F851EEC9DB9008EDC56 /* SignUpDataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpDataStore.swift; sourceTree = "<group>"; };
+		92699F881EEC9DD2008EDC56 /* NameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NameViewController.swift; sourceTree = "<group>"; };
+		92699F8B1EEC9DE0008EDC56 /* NameDataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NameDataStore.swift; sourceTree = "<group>"; };
+		92699F8D1EEC9EF4008EDC56 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		92C66ECE1EE1370100CA8292 /* HippiesEcosystem.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HippiesEcosystem.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92C66ED11EE1370100CA8292 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		92C66ED81EE1370100CA8292 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -140,6 +162,103 @@
 			name = Configurations;
 			sourceTree = "<group>";
 		};
+		92699F6B1EEC9C22008EDC56 /* Login/SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				92699F711EEC9CC7008EDC56 /* Forms */,
+				92699F7B1EEC9D6B008EDC56 /* Log In */,
+				92699F811EEC9D95008EDC56 /* Sign Up */,
+			);
+			name = Login/SignUp;
+			sourceTree = "<group>";
+		};
+		92699F711EEC9CC7008EDC56 /* Forms */ = {
+			isa = PBXGroup;
+			children = (
+				92699F751EEC9D2A008EDC56 /* Subviews */,
+				92699F721EEC9CEC008EDC56 /* Welcome */,
+				92699F781EEC9D4B008EDC56 /* Admission */,
+			);
+			name = Forms;
+			sourceTree = "<group>";
+		};
+		92699F721EEC9CEC008EDC56 /* Welcome */ = {
+			isa = PBXGroup;
+			children = (
+				92699F731EEC9D0A008EDC56 /* WelcomeFormView.swift */,
+				92699F6F1EEC9CBD008EDC56 /* WelcomeFormViewController.swift */,
+			);
+			name = Welcome;
+			sourceTree = "<group>";
+		};
+		92699F751EEC9D2A008EDC56 /* Subviews */ = {
+			isa = PBXGroup;
+			children = (
+				92699F761EEC9D33008EDC56 /* ForwardAccessoryView.swift */,
+			);
+			name = Subviews;
+			sourceTree = "<group>";
+		};
+		92699F781EEC9D4B008EDC56 /* Admission */ = {
+			isa = PBXGroup;
+			children = (
+				92699F791EEC9D5F008EDC56 /* AdmissionFormViewController.swift */,
+			);
+			name = Admission;
+			sourceTree = "<group>";
+		};
+		92699F7B1EEC9D6B008EDC56 /* Log In */ = {
+			isa = PBXGroup;
+			children = (
+				92699F7E1EEC9D83008EDC56 /* Data Store */,
+				92699F7C1EEC9D7D008EDC56 /* LoginViewController.swift */,
+			);
+			name = "Log In";
+			sourceTree = "<group>";
+		};
+		92699F7E1EEC9D83008EDC56 /* Data Store */ = {
+			isa = PBXGroup;
+			children = (
+				92699F7F1EEC9D90008EDC56 /* LogInDataStore.swift */,
+			);
+			name = "Data Store";
+			sourceTree = "<group>";
+		};
+		92699F811EEC9D95008EDC56 /* Sign Up */ = {
+			isa = PBXGroup;
+			children = (
+				92699F841EEC9DAE008EDC56 /* Data Store */,
+				92699F871EEC9DC5008EDC56 /* Name */,
+				92699F821EEC9DA8008EDC56 /* SignUpViewController.swift */,
+			);
+			name = "Sign Up";
+			sourceTree = "<group>";
+		};
+		92699F841EEC9DAE008EDC56 /* Data Store */ = {
+			isa = PBXGroup;
+			children = (
+				92699F851EEC9DB9008EDC56 /* SignUpDataStore.swift */,
+			);
+			name = "Data Store";
+			sourceTree = "<group>";
+		};
+		92699F871EEC9DC5008EDC56 /* Name */ = {
+			isa = PBXGroup;
+			children = (
+				92699F8A1EEC9DD7008EDC56 /* Data Store */,
+				92699F881EEC9DD2008EDC56 /* NameViewController.swift */,
+			);
+			name = Name;
+			sourceTree = "<group>";
+		};
+		92699F8A1EEC9DD7008EDC56 /* Data Store */ = {
+			isa = PBXGroup;
+			children = (
+				92699F8B1EEC9DE0008EDC56 /* NameDataStore.swift */,
+			);
+			name = "Data Store";
+			sourceTree = "<group>";
+		};
 		92C66EC51EE1370100CA8292 = {
 			isa = PBXGroup;
 			children = (
@@ -161,6 +280,7 @@
 		92C66ED01EE1370100CA8292 /* HippiesEcosystem */ = {
 			isa = PBXGroup;
 			children = (
+				92699F6B1EEC9C22008EDC56 /* Login/SignUp */,
 				92C66F0C1EE20EB200CA8292 /* Tracking */,
 				92C66F011EE1431400CA8292 /* Home */,
 				92C66EE31EE137EA00CA8292 /* Inventory */,
@@ -236,6 +356,7 @@
 			children = (
 				92C66EFC1EE140D100CA8292 /* Internal */,
 				92C66EFB1EE140CC00CA8292 /* Database */,
+				92699F8D1EEC9EF4008EDC56 /* User.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -628,6 +749,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92699F7A1EEC9D5F008EDC56 /* AdmissionFormViewController.swift in Sources */,
 				92C66F511EE2EDFF00CA8292 /* CutListDataStore.swift in Sources */,
 				92C66F171EE2123200CA8292 /* CuttingFormDataStore.swift in Sources */,
 				92C66F461EE2693B00CA8292 /* PickItemDataStore.swift in Sources */,
@@ -635,9 +757,13 @@
 				92C66F351EE2566100CA8292 /* OrderParse.swift in Sources */,
 				92C66F1D1EE22D1F00CA8292 /* SewingFormViewController.swift in Sources */,
 				92C66F2D1EE2353A00CA8292 /* QualityFormViewController.swift in Sources */,
+				92699F891EEC9DD2008EDC56 /* NameViewController.swift in Sources */,
 				92C66F001EE1420900CA8292 /* FabricParse.swift in Sources */,
+				92699F8C1EEC9DE0008EDC56 /* NameDataStore.swift in Sources */,
 				92C66F261EE231BD00CA8292 /* PackageFormDataStore.swift in Sources */,
 				92C66EEF1EE13C5B00CA8292 /* Helpers.swift in Sources */,
+				92699F861EEC9DB9008EDC56 /* SignUpDataStore.swift in Sources */,
+				92699F771EEC9D33008EDC56 /* ForwardAccessoryView.swift in Sources */,
 				92C66EED1EE13AC900CA8292 /* CustomColors.swift in Sources */,
 				92C66F121EE20F7200CA8292 /* TrackingFormView.swift in Sources */,
 				92C66F0F1EE20F1D00CA8292 /* TrackingFormViewController.swift in Sources */,
@@ -653,23 +779,29 @@
 				92C66F141EE211EB00CA8292 /* CuttingFormViewController.swift in Sources */,
 				92C66F0B1EE16EB400CA8292 /* InputInventoryDataStore.swift in Sources */,
 				92C66F431EE25CA800CA8292 /* PickItemTableViewCell.swift in Sources */,
+				92699F8E1EEC9EF4008EDC56 /* User.swift in Sources */,
 				92C66F221EE22DEA00CA8292 /* TrackingFormDataStore.swift in Sources */,
 				92C66EEA1EE13A8100CA8292 /* CustomSearchBar.swift in Sources */,
 				92C66ED21EE1370100CA8292 /* AppDelegate.swift in Sources */,
 				92C66F3D1EE25ABF00CA8292 /* LineItem.swift in Sources */,
+				92699F801EEC9D90008EDC56 /* LogInDataStore.swift in Sources */,
 				92C66F481EE2E4A400CA8292 /* PickOrderDataStore.swift in Sources */,
 				92699F6A1EE8EA93008EDC56 /* Configuration.swift in Sources */,
 				92699F691EE8EA93008EDC56 /* Enviroment.swift in Sources */,
 				92C66F191EE212D800CA8292 /* LineItemParse.swift in Sources */,
+				92699F831EEC9DA8008EDC56 /* SignUpViewController.swift in Sources */,
 				92C66F401EE25C3400CA8292 /* PickListItemViewController.swift in Sources */,
 				92C66F3A1EE2570D00CA8292 /* PickOrderTableViewCell.swift in Sources */,
 				92C66EF41EE13D3600CA8292 /* MainSearchingDataStore.swift in Sources */,
 				92C66F051EE1490600CA8292 /* ProductType.swift in Sources */,
 				92C66EFE1EE1417F00CA8292 /* ProductTypeParse.swift in Sources */,
+				92699F7D1EEC9D7D008EDC56 /* LoginViewController.swift in Sources */,
 				92C66F4D1EE2EBED00CA8292 /* CutListView.swift in Sources */,
+				92699F701EEC9CBD008EDC56 /* WelcomeFormViewController.swift in Sources */,
 				92C66F031EE1433400CA8292 /* HomeViewController.swift in Sources */,
 				92C66F2F1EE2354800CA8292 /* QualityFormDataStore.swift in Sources */,
 				92C66F371EE2569F00CA8292 /* Order.swift in Sources */,
+				92699F741EEC9D0A008EDC56 /* WelcomeFormView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

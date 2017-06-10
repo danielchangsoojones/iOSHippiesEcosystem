@@ -18,12 +18,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         registerParseSubclasses()
         setParseConfiguration()
-//        setInitialVC(vc: UINavigationController(rootViewController: PickListOrderViewController()))
-        setHomeVC()
+        if User.current() == nil {
+            toSignUpVC()
+        } else {
+            //already logged in
+            setHomeVC()
+        }
         return true
     }
     
     fileprivate func registerParseSubclasses() {
+        User.registerSubclass()
         ProductTypeParse.registerSubclass()
         FabricParse.registerSubclass()
         LineItemParse.registerSubclass()
@@ -40,6 +45,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         print(appConfiguration.environment.applicationId)
         print(appConfiguration.environment.server)
         Parse.initialize(with: configuration)
+    }
+    
+    fileprivate func toSignUpVC() {
+        let signUpVC = SignUpViewController()
+        let navController = UINavigationController(rootViewController: signUpVC)
+        setInitialVC(vc: navController)
     }
     
     fileprivate func setHomeVC() {
