@@ -25,4 +25,5 @@ class LineItemParse: PFObject, PFSubclassing {
     @NSManaged var title: String
     @NSManaged var variant_title: String
     @NSManaged var productVariant: ProductVariantParse
+    @NSManaged var order: OrderParse
 }
