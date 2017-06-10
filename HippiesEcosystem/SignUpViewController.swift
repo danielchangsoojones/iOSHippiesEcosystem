@@ -56,3 +56,11 @@ extension SignUpViewController {
         pushVC(logInVC)
     }
 }
+
+extension SignUpViewController {
+    static func show(from presentingVC: UIViewController) {
+        let signUpVC = SignUpViewController()
+        let navController = UINavigationController(rootViewController: signUpVC)
+        presentingVC.presentVC(navController)
+    }
+}
