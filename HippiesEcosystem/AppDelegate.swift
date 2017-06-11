@@ -42,8 +42,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             $0.applicationId = appConfiguration.environment.applicationId
             $0.server = appConfiguration.environment.server
         }
-        print(appConfiguration.environment.applicationId)
-        print(appConfiguration.environment.server)
         Parse.initialize(with: configuration)
     }
     

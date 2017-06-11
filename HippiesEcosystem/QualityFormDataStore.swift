@@ -25,7 +25,6 @@ class QualityFormDataStore: TrackingFormDataStore {
     }
     
     func checkIfItemShouldArchive(lineItemParse: LineItemParse) {
-        //TODO: check if we can get orderID without include key in query
         let orderID = lineItemParse.order.objectId ?? ""
         PFCloud.callFunction(inBackground: "tryLineItemsArchive", withParameters: ["orderID": orderID], block: {
             (results: Any?, error: Error?) -> Void in
