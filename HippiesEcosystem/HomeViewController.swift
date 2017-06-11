@@ -17,8 +17,9 @@ class HomeViewController: UIViewController {
         case packaging = "Packaging"
         case shipped = "Shipped"
         case cutList = "Cut List"
+        case logOut = "Log Out"
         
-        static let all : [Categories] = [.inputInventory, .cutting, .sewing, .packaging, .pickList, .shipped, .cutList]
+        static let all : [Categories] = [.inputInventory, .cutting, .sewing, .packaging, .pickList, .shipped, .cutList, .logOut]
     }
     
     var theTableView: UITableView!
@@ -74,6 +75,9 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
             targetVC = QualityFormViewController()
         case .cutList:
             targetVC = CutListViewController()
+        case .logOut:
+            logOut()
+            return
         }
         
         pushWithTitle(vc: targetVC)
@@ -88,5 +92,10 @@ extension HomeViewController {
         }
         
         pushVC(vc)
+    }
+    
+    func logOut() {
+        User.logOut()
+        SignUpViewController.show(from: self)
     }
 }
