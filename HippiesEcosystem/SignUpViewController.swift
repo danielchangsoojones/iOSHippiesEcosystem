@@ -41,14 +41,8 @@ class SignUpViewController: AdmissionFormViewController {
 
 extension SignUpViewController {
     func addLoginButton() {
-        let button = UIButton()
-        button.setTitle("Log In", for: .normal)
-        button.setTitleColor(.white, for: .normal)
-        button.addTarget(self, action: #selector(logInButtonPressed), for: .touchUpInside)
-        self.view.addSubview(button)
-        button.snp.makeConstraints { (make) in
-            make.trailing.top.equalToSuperview().inset(10)
-        }
+        let button = UIBarButtonItem(title: "Log In", style: .plain, target: self, action: #selector(logInButtonPressed))
+        navigationItem.rightBarButtonItem = button
     }
     
     func logInButtonPressed() {

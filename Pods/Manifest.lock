@@ -1,6 +1,7 @@
 PODS:
   - BEMCheckBox (1.4.0)
   - Bolts/Tasks (1.8.4)
+  - BRYXBanner (0.7.2)
   - EZSwiftExtensions (1.9)
   - Former (1.5.1)
   - Parse (1.14.4):
@@ -10,26 +11,31 @@ PODS:
     - Parse (~> 1.9)
   - SCLAlertView (0.7.0)
   - SnapKit (3.2.0)
+  - TextFieldEffects (1.3.2)
 
 DEPENDENCIES:
   - BEMCheckBox
+  - BRYXBanner
   - EZSwiftExtensions
   - Former
   - Parse
   - ParseUI
   - SCLAlertView
   - SnapKit (~> 3.0)
+  - TextFieldEffects
 
 SPEC CHECKSUMS:
   BEMCheckBox: e18e4a148905b290bd03d98b767651c104f4eda3
   Bolts: 8a7995239dbe724f9cba2248b766d48b7ebdd322
+  BRYXBanner: ed407a56c53f2add0aaa16f810062eac48d802cf
   EZSwiftExtensions: ce22bf6fc5c6e7c883fec413300b006e123735d0
   Former: 0b48a812c0d93b092b908d1b0574d0fd95c6b6f9
   Parse: b0aa91d2c435e53d4a9af26e741e014c9b35c42e
   ParseUI: af2eba584799da4a9fbdac0e178662d7438b502e
   SCLAlertView: 8a14ffc40590c619e183eed2298b854385f30be1
   SnapKit: 1ca44df72cfa543218d177cb8aab029d10d86ea7
+  TextFieldEffects: 9e5cce561ea39c75b86e9d3637601727a67e8b23
 
-PODFILE CHECKSUM: 0b86a4e4d593aab4534e612931f2e5c4c055093c
+PODFILE CHECKSUM: 6fae6c2a9e8f949cf47a113fc778de3eecabc9d9
 
 COCOAPODS: 1.2.1

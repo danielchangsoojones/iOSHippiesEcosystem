@@ -25,7 +25,7 @@ class AdmissionFormViewController: WelcomeFormViewController {
 //extension for commonality between login/signup
 extension AdmissionFormViewController: AdmissionFormDataStoreDelegate {
     func displayError(title: String, subtitle: String) {
-        Helpers.showBanner(title: title, subtitle: subtitle)
+        BannerHelper.showBanner(title: title, subtitle: subtitle)
     }
     
     func stopSpinner() {
@@ -41,7 +41,7 @@ extension AdmissionFormViewController: AdmissionFormDataStoreDelegate {
     func validateEmail() -> Bool {
         if let email = theTopTextField?.text {
             if !email.isEmail {
-                Helpers.showBanner(title: "Invalid Email", subtitle: "You must input a proper email")
+                BannerHelper.showBanner(title: "Invalid Email", subtitle: "You must input a proper email")
                 return false
             }
         }
@@ -51,7 +51,7 @@ extension AdmissionFormViewController: AdmissionFormDataStoreDelegate {
     func validatePassword() -> Bool {
         if let password = theBottomTextField?.text {
             if password.isBlank {
-                Helpers.showBanner(title: "Invalid Password", subtitle: "You must input a password")
+                BannerHelper.showBanner(title: "Invalid Password", subtitle: "You must input a password")
                 return false
             }
         }

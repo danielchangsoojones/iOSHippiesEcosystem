@@ -36,11 +36,11 @@ class NameViewController: WelcomeFormViewController {
         }
         
         if firstName.isEmpty {
-            Helpers.showBanner(title: "First Name Missing", subtitle: "please input your first name", bannerType: .error)
+            BannerHelper.showBanner(title: "First Name Missing", subtitle: "please input your first name", bannerType: .error)
             return false
         }
         if lastName.isEmpty {
-            Helpers.showBanner(title: "Last Name Missing", subtitle: "please input your last name", bannerType: .error)
+            BannerHelper.showBanner(title: "Last Name Missing", subtitle: "please input your last name", bannerType: .error)
             return false
         }
         
@@ -51,7 +51,7 @@ class NameViewController: WelcomeFormViewController {
         super.forwardButtonPressed(sender: sender)
         if isComplete {
             dataStore.save(firstName: theTopTextField?.text ?? "", lastName: theBottomTextField?.text ?? "")
-            presentVC(AgreementViewController())
+            Helpers.enterApplication(from: self)
         }
     }
 }

@@ -13,5 +13,7 @@ target 'HippiesEcosystem' do
   pod "Former"
   pod 'SCLAlertView'
   pod 'BEMCheckBox'
+  pod "TextFieldEffects"
+  pod 'BRYXBanner'
 
 end

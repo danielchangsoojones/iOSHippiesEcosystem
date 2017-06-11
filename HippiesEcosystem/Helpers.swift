@@ -29,4 +29,18 @@ struct Helpers {
         button.setCornerRadius(radius: 15)
         return button
     }
+    
+    static func enterApplication(from presentingVC: UIViewController) {
+        let homeViewController = HomeViewController()
+        let navController = UINavigationController(rootViewController: homeViewController)
+        presentingVC.presentVC(navController)
+    }
+    
+    static func getKeyboardHeight(notification: NSNotification) -> CGFloat {
+        if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
+            let keyboardHeight = keyboardSize.height
+            return keyboardHeight
+        }
+        return 0
+    }
 }
