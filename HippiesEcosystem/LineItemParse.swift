@@ -17,6 +17,7 @@ class LineItemParse: PFObject, PFSubclassing {
     @NSManaged var shopifyLineItemID: Double
     @NSManaged var quantity: Int
     @NSManaged var state: String
+    @NSManaged var isInitiated: Bool
     @NSManaged var isCut: Bool
     @NSManaged var isSewn: Bool
     @NSManaged var isPackaged: Bool
