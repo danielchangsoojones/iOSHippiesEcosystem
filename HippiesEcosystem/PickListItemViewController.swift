@@ -11,10 +11,6 @@ import BEMCheckBox
 import SCLAlertView
 
 class PickListItemViewController: UIViewController {
-    struct Constants {
-        static let cellHeight: CGFloat = 100
-    }
-    
     var tableView : UITableView!
     
     var lineItems: [LineItem] = []
@@ -89,7 +85,7 @@ extension PickListItemViewController: UITableViewDelegate, UITableViewDataSource
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return Constants.cellHeight
+        return PickItemTableViewCell.Constants.cellHeight
     }
 }
 

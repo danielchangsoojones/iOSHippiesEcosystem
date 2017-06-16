@@ -9,69 +9,25 @@
 import UIKit
 import BEMCheckBox
 
-class PickItemTableViewCell: UITableViewCell {
+class PickItemTableViewCell: CheckTableViewCell {
     override var reuseIdentifier: String? {
-        return PickItemTableViewCell.identifier
+        return PickItemTableViewCell.cellIdentifier
     }
     
-    var stackView: UIStackView!
     var idLabel: UILabel!
-    var itemTitleLabel: UILabel!
-    var sizeLabel: UILabel!
-    var checkBox: BEMCheckBox!
     
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        selectionStyle = .none
-        checkBoxSetup()
-        stackViewSetup()
+        idLabelSetup()
     }
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func set(lineItem: LineItem) {
-        itemTitleLabel.text = lineItem.title
+    override func set(lineItem: LineItem) {
+        super.set(lineItem: lineItem)
         idLabel.text = "Item ID: " + lineItem.shopifyID
-        sizeLabel.text = lineItem.size
-    }
-    
-    fileprivate func checkBoxSetup() {
-        let side = PickListItemViewController.Constants.cellHeight / 2
-        checkBox = BEMCheckBox(frame: CGRect(x: 0, y: 0, w: side, h: side))
-        checkBox.boxType = .square
-        self.addSubview(checkBox)
-        checkBox.snp.makeConstraints { (make) in
-            make.centerY.equalToSuperview()
-            make.trailing.equalToSuperview().inset(10)
-        }
-    }
-    
-    fileprivate func stackViewSetup() {
-        stackView = UIStackView()
-        stackView.axis = .vertical
-        stackView.alignment = .leading
-        stackView.distribution = .fillProportionally
-        self.addSubview(stackView)
-        stackView.snp.makeConstraints { (make) in
-            make.leading.equalToSuperview().inset(10)
-            make.top.bottom.equalToSuperview()
-            make.trailing.equalTo(checkBox.snp.leading)
-        }
-        itemTitleLabelSetup()
-        sizeLabelSetup()
-        idLabelSetup()
-    }
-    
-    fileprivate func itemTitleLabelSetup() {
-        itemTitleLabel = UILabel()
-        stackView.addArrangedSubview(itemTitleLabel)
-    }
-    
-    fileprivate func sizeLabelSetup() {
-        sizeLabel = UILabel()
-        stackView.addArrangedSubview(sizeLabel)
     }
     
     fileprivate func idLabelSetup() {
@@ -81,5 +37,5 @@ class PickItemTableViewCell: UITableViewCell {
 }
 
 extension PickItemTableViewCell {
-    static let identifier = "pickItemTableCell"
+    static let cellIdentifier = "pickItemTableCell"
 }
