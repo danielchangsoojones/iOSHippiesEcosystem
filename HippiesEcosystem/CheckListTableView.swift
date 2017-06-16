@@ -14,7 +14,7 @@ class CheckListTableView: UITableView {
     var lineItems: [LineItem] = []
     
     var isComplete: Bool {
-        return completes.contains(false)
+        return !completes.contains(false)
     }
     
     init(frame: CGRect, lineItems: [LineItem]) {
@@ -22,8 +22,9 @@ class CheckListTableView: UITableView {
         rowHeight = CheckTableViewCell.Constants.cellHeight
         registerCell()
         self.lineItems = lineItems
-        setCompletes()
         dataSource = self
+        setCompletes()
+        
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -54,10 +55,6 @@ extension CheckListTableView: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return lineItems.count
-    }
-    
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return CheckTableViewCell.Constants.cellHeight
     }
     
     func dequeueCell(indexPath: IndexPath) -> CheckTableViewCell {
