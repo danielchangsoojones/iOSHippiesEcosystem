@@ -16,7 +16,7 @@ class CheckListViewController: UIViewController {
     var rightBarButtonTitle: String {
         return "Next"
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableViewSetup()

@@ -12,6 +12,10 @@ import SCLAlertView
 
 class PickListItemViewController: CheckListViewController {
     var dataStore: PickItemDataStore?
+    
+    override var rightBarButtonTitle: String {
+        return "Save"
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()

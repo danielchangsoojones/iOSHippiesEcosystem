@@ -573,9 +573,9 @@
 		92C66F2A1EE2350D00CA8292 /* Ship */ = {
 			isa = PBXGroup;
 			children = (
+				92C66F2B1EE2352000CA8292 /* Data Store */,
 				9251F26D1EF3899700A6E1BD /* Enter Order ID */,
 				9251F2701EF3943C00A6E1BD /* Line Item Checklist */,
-				92C66F2B1EE2352000CA8292 /* Data Store */,
 			);
 			name = Ship;
 			sourceTree = "<group>";

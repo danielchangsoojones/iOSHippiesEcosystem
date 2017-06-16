@@ -18,6 +18,7 @@ class Order: NSObject {
             orderParse.name = newValue
         }
     }
+    var lineItems: [LineItem] = []
     
     init(orderParse: OrderParse) {
         super.init()
