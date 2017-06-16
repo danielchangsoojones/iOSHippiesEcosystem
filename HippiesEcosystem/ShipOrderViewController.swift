@@ -1,21 +1,18 @@
 //
-//  QualityFormViewController.swift
+//  ShipViewController.swift
 //  HippiesEcosystem
 //
-//  Created by Daniel Jones on 6/2/17.
+//  Created by Daniel Jones on 6/15/17.
 //  Copyright © 2017 Chong500Productions. All rights reserved.
 //
 
 import UIKit
 
-class QualityFormViewController: TrackingFormViewController {
-    
-    override var dataStore: TrackingFormDataStore {
-        return QualityFormDataStore(delegate: self)
-    }
-
+class ShipOrderViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
