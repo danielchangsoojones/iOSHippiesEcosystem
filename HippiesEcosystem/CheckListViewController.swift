@@ -11,7 +11,14 @@ import SCLAlertView
 
 class CheckListViewController: UIViewController {
     var tableView: CheckListTableView!
-    var lineItems: [LineItem] = []
+    var lineItems: [LineItem] = [] {
+        didSet {
+            if isViewLoaded {
+                tableView.lineItems = lineItems
+                tableView.reloadData()
+            }
+        }
+    }
     
     var rightBarButtonTitle: String {
         return "Next"
@@ -29,7 +36,7 @@ class CheckListViewController: UIViewController {
     }
     
     func tableViewSetup() {
-        tableView = PickItemTableView(frame: self.view.bounds, lineItems: lineItems)
+        tableView = CheckListTableView(frame: self.view.bounds, lineItems: lineItems)
         self.view.addSubview(tableView)
     }
     
