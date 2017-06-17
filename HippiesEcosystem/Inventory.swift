@@ -19,8 +19,6 @@ class Inventory {
             return inventoryParse.productVariant.size
         }
     }
-    
-    
     var inventoryParse: InventoryParse!
     
     init(inventoryParse: InventoryParse) {
