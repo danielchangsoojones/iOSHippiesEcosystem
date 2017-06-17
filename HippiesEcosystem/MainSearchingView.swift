@@ -59,7 +59,7 @@ extension MainSearchingView {
     }
     
     fileprivate func searchBarSetup() {
-        theSearchBar.placeholder = "product to add to inventory..."
+        theSearchBar.placeholder = "name of the product..."
         theSearchAreaView.addSubview(theSearchBar)
         theSearchBar.snp.makeConstraints { (make) in
             let verticalInset: CGFloat = 5.0

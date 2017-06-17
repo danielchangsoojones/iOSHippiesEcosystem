@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9251F2911EF4E0F300A6E1BD /* RemoveInventoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9251F2901EF4E0F300A6E1BD /* RemoveInventoryViewController.swift */; };
+		9251F2951EF4E37000A6E1BD /* InventoryManagementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9251F2941EF4E37000A6E1BD /* InventoryManagementViewController.swift */; };
+		9251F2981EF4EDD800A6E1BD /* RemoveInventoryDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9251F2971EF4EDD800A6E1BD /* RemoveInventoryDataStore.swift */; };
+		9251F29B1EF4EF9300A6E1BD /* Inventory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9251F29A1EF4EF9300A6E1BD /* Inventory.swift */; };
+		9251F29E1EF4EFDB00A6E1BD /* InventoryParse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9251F29D1EF4EFDB00A6E1BD /* InventoryParse.swift */; };
 		92699F691EE8EA93008EDC56 /* Enviroment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92699F671EE8EA93008EDC56 /* Enviroment.swift */; };
 		92699F6A1EE8EA93008EDC56 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92699F681EE8EA93008EDC56 /* Configuration.swift */; };
 		92699F701EEC9CBD008EDC56 /* WelcomeFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92699F6F1EEC9CBD008EDC56 /* WelcomeFormViewController.swift */; };
@@ -70,6 +75,11 @@
 		135E1988B26BD50D4A1461E7 /* Pods-HippiesEcosystem.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HippiesEcosystem.release.xcconfig"; path = "Pods/Target Support Files/Pods-HippiesEcosystem/Pods-HippiesEcosystem.release.xcconfig"; sourceTree = "<group>"; };
 		527E5FB96BF6BA46DABF0DD0 /* Pods-HippiesEcosystem.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HippiesEcosystem.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HippiesEcosystem/Pods-HippiesEcosystem.debug.xcconfig"; sourceTree = "<group>"; };
 		8B60980DBB0B09CDC321CF0C /* Pods-HippiesEcosystem.debug (staging).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HippiesEcosystem.debug (staging).xcconfig"; path = "Pods/Target Support Files/Pods-HippiesEcosystem/Pods-HippiesEcosystem.debug (staging).xcconfig"; sourceTree = "<group>"; };
+		9251F2901EF4E0F300A6E1BD /* RemoveInventoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoveInventoryViewController.swift; sourceTree = "<group>"; };
+		9251F2941EF4E37000A6E1BD /* InventoryManagementViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InventoryManagementViewController.swift; sourceTree = "<group>"; };
+		9251F2971EF4EDD800A6E1BD /* RemoveInventoryDataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoveInventoryDataStore.swift; sourceTree = "<group>"; };
+		9251F29A1EF4EF9300A6E1BD /* Inventory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Inventory.swift; sourceTree = "<group>"; };
+		9251F29D1EF4EFDB00A6E1BD /* InventoryParse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InventoryParse.swift; sourceTree = "<group>"; };
 		92699F671EE8EA93008EDC56 /* Enviroment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Enviroment.swift; sourceTree = "<group>"; };
 		92699F681EE8EA93008EDC56 /* Configuration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 		92699F6F1EEC9CBD008EDC56 /* WelcomeFormViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeFormViewController.swift; sourceTree = "<group>"; };
@@ -153,6 +163,57 @@
 				C94F17F7AB18AA5749DB7653 /* Pods-HippiesEcosystem.debug (production).xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		9251F28F1EF4E09F00A6E1BD /* Remove */ = {
+			isa = PBXGroup;
+			children = (
+				9251F2961EF4EDC800A6E1BD /* Data Store */,
+				9251F2901EF4E0F300A6E1BD /* RemoveInventoryViewController.swift */,
+			);
+			name = Remove;
+			sourceTree = "<group>";
+		};
+		9251F2921EF4E35600A6E1BD /* Management */ = {
+			isa = PBXGroup;
+			children = (
+				9251F2931EF4E35B00A6E1BD /* Super */,
+				92C66EE41EE137F600CA8292 /* Inputting */,
+				9251F28F1EF4E09F00A6E1BD /* Remove */,
+			);
+			name = Management;
+			sourceTree = "<group>";
+		};
+		9251F2931EF4E35B00A6E1BD /* Super */ = {
+			isa = PBXGroup;
+			children = (
+				9251F2941EF4E37000A6E1BD /* InventoryManagementViewController.swift */,
+			);
+			name = Super;
+			sourceTree = "<group>";
+		};
+		9251F2961EF4EDC800A6E1BD /* Data Store */ = {
+			isa = PBXGroup;
+			children = (
+				9251F2971EF4EDD800A6E1BD /* RemoveInventoryDataStore.swift */,
+			);
+			name = "Data Store";
+			sourceTree = "<group>";
+		};
+		9251F2991EF4EF8700A6E1BD /* Inventory */ = {
+			isa = PBXGroup;
+			children = (
+				9251F29A1EF4EF9300A6E1BD /* Inventory.swift */,
+			);
+			name = Inventory;
+			sourceTree = "<group>";
+		};
+		9251F29C1EF4EFCF00A6E1BD /* Inventory */ = {
+			isa = PBXGroup;
+			children = (
+				9251F29D1EF4EFDB00A6E1BD /* InventoryParse.swift */,
+			);
+			name = Inventory;
 			sourceTree = "<group>";
 		};
 		92699F661EE8EA88008EDC56 /* Configurations */ = {
@@ -307,9 +368,8 @@
 		92C66EE31EE137EA00CA8292 /* Inventory */ = {
 			isa = PBXGroup;
 			children = (
-				92C66F061EE167FB00CA8292 /* New Group */,
+				9251F2921EF4E35600A6E1BD /* Management */,
 				92C66EE51EE1380000CA8292 /* Search */,
-				92C66EE41EE137F600CA8292 /* Inputting */,
 			);
 			name = Inventory;
 			sourceTree = "<group>";
@@ -375,6 +435,7 @@
 		92C66EFB1EE140CC00CA8292 /* Database */ = {
 			isa = PBXGroup;
 			children = (
+				9251F29C1EF4EFCF00A6E1BD /* Inventory */,
 				92C66F591EE532E100CA8292 /* Product */,
 				92C66F581EE532D800CA8292 /* Ordering */,
 			);
@@ -384,6 +445,7 @@
 		92C66EFC1EE140D100CA8292 /* Internal */ = {
 			isa = PBXGroup;
 			children = (
+				9251F2991EF4EF8700A6E1BD /* Inventory */,
 				92C66F571EE532CE00CA8292 /* Product */,
 				92C66F561EE532BE00CA8292 /* Ordering */,
 			);
@@ -396,13 +458,6 @@
 				92C66F021EE1433400CA8292 /* HomeViewController.swift */,
 			);
 			name = Home;
-			sourceTree = "<group>";
-		};
-		92C66F061EE167FB00CA8292 /* New Group */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = "New Group";
 			sourceTree = "<group>";
 		};
 		92C66F091EE16E9000CA8292 /* Data Store */ = {
@@ -764,8 +819,10 @@
 				92C66F511EE2EDFF00CA8292 /* CutListDataStore.swift in Sources */,
 				92C66F171EE2123200CA8292 /* CuttingFormDataStore.swift in Sources */,
 				92C66F461EE2693B00CA8292 /* PickItemDataStore.swift in Sources */,
+				9251F2951EF4E37000A6E1BD /* InventoryManagementViewController.swift in Sources */,
 				92C66F281EE2342900CA8292 /* PackageFormViewController.swift in Sources */,
 				92C66F351EE2566100CA8292 /* OrderParse.swift in Sources */,
+				9251F29E1EF4EFDB00A6E1BD /* InventoryParse.swift in Sources */,
 				92C66F1D1EE22D1F00CA8292 /* SewingFormViewController.swift in Sources */,
 				92C66F2D1EE2353A00CA8292 /* QualityFormViewController.swift in Sources */,
 				92699F891EEC9DD2008EDC56 /* NameViewController.swift in Sources */,
@@ -777,6 +834,7 @@
 				92699F771EEC9D33008EDC56 /* ForwardAccessoryView.swift in Sources */,
 				92C66EED1EE13AC900CA8292 /* CustomColors.swift in Sources */,
 				92C66F121EE20F7200CA8292 /* TrackingFormView.swift in Sources */,
+				9251F29B1EF4EF9300A6E1BD /* Inventory.swift in Sources */,
 				92C66F0F1EE20F1D00CA8292 /* TrackingFormViewController.swift in Sources */,
 				92C66F551EE5327C00CA8292 /* ProductVariant.swift in Sources */,
 				92C66F531EE5322000CA8292 /* ProductVariantParse.swift in Sources */,
@@ -784,12 +842,14 @@
 				92C66F081EE1681B00CA8292 /* InputInventoryViewController.swift in Sources */,
 				92C66F321EE2559B00CA8292 /* PickOrderViewController.swift in Sources */,
 				92C66EF91EE13EB800CA8292 /* MainSearchTableViewCell.swift in Sources */,
+				9251F2981EF4EDD800A6E1BD /* RemoveInventoryDataStore.swift in Sources */,
 				92C66EF11EE13CF900CA8292 /* ProductSearchViewController.swift in Sources */,
 				92C66F4B1EE2E9C100CA8292 /* CutListViewController.swift in Sources */,
 				92C66F1F1EE22D5D00CA8292 /* SewingFormDataStore.swift in Sources */,
 				92C66F141EE211EB00CA8292 /* CuttingFormViewController.swift in Sources */,
 				92C66F0B1EE16EB400CA8292 /* InputInventoryDataStore.swift in Sources */,
 				92C66F431EE25CA800CA8292 /* PickItemTableViewCell.swift in Sources */,
+				9251F2911EF4E0F300A6E1BD /* RemoveInventoryViewController.swift in Sources */,
 				92699F8E1EEC9EF4008EDC56 /* User.swift in Sources */,
 				92C66F221EE22DEA00CA8292 /* TrackingFormDataStore.swift in Sources */,
 				92C66EEA1EE13A8100CA8292 /* CustomSearchBar.swift in Sources */,

@@ -15,4 +15,5 @@ class ProductVariantParse: PFObject, PFSubclassing {
     }
     
     @NSManaged var size: String
+    @NSManaged var productType: ProductTypeParse
 }

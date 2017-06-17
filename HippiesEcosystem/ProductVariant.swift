@@ -9,12 +9,6 @@
 import Foundation
 
 class ProductVariant: NSObject {
-    var size: String {
-        get {
-            return productVariantParse.size
-        }
-    }
-    
     var productVariantParse: ProductVariantParse!
     
     init(productVariantParse: ProductVariantParse) {

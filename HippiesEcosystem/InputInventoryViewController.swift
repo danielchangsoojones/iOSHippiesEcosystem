@@ -9,24 +9,16 @@
 import UIKit
 import Former
 
-class InputInventoryViewController: UIViewController {
-    let tableView: UITableView = UITableView(frame: CGRect.zero, style: .grouped)
-    lazy var former: Former = Former(tableView: self.tableView)
-    var sizeRow: InlinePickerRowFormer<FormInlinePickerCell, String>!
+class InputInventoryViewController: InventoryManagementViewController {
     var addingQuantityRow: InlinePickerRowFormer<FormInlinePickerCell, Int>!
     
     var dataStore: InputInventoryDataStore?
-    var productType: ProductType!
     
-    let sizes = ["XS", "S", "M", "L", "XL", "XXL", "One Size"]
-    let quantities: [Int] = [1, 2, 3, 4, 5, 6, 7, 8 , 9, 10, 11, 12, 13, 14, 15, -1, -2, -3]
+    let quantities: [Int] = [1, 2, 3, 4, 5, 6, 7, 8 , 9, 10, 11, 12, 13, 14, 15]
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableViewSetup()
         dataStoreSetup()
-        rightBarButtonItemSetup()
-        sizeRowSetup()
         addingQuantityRowSetup()
     }
 
@@ -39,35 +31,13 @@ class InputInventoryViewController: UIViewController {
         dataStore = InputInventoryDataStore(delegate: self)
     }
     
-    fileprivate func tableViewSetup() {
-        tableView.frame = self.view.bounds
-        self.view.addSubview(tableView)
-    }
-    
-    fileprivate func append(rows: [RowFormer], headerTitle: String) -> SectionFormer? {
-        let header = LabelViewFormer<FormLabelHeaderView>()
-        header.text = headerTitle
-        let section = SectionFormer(rowFormers: rows)
-            .set(headerViewFormer: header)
-        former.append(sectionFormer: section)
-        return section
+    override func save(productType: ProductType, size: String) {
+        let quantity = quantities[addingQuantityRow.selectedRow]
+        dataStore?.saveInventory(productType: productType, quantity: quantity, size: size)
     }
 }
 
 extension InputInventoryViewController {
-    fileprivate func sizeRowSetup() {
-        sizeRow = InlinePickerRowFormer<FormInlinePickerCell, String>(cellSetup: {
-            $0.titleLabel.text = "Size"
-        })
-        sizeRow.configure { (row) in
-            row.pickerItems = sizes.map {
-                InlinePickerItem(title: $0)
-            }
-        }
-        
-        _ = append(rows: [sizeRow], headerTitle: "Category")
-    }
-    
     fileprivate func addingQuantityRowSetup() {
         addingQuantityRow = InlinePickerRowFormer<FormInlinePickerCell, Int>(cellSetup: nil)
         addingQuantityRow.configure { (row) in
@@ -77,21 +47,6 @@ extension InputInventoryViewController {
         }
         
         _ = append(rows: [addingQuantityRow], headerTitle: "nums")
-    }
-}
-
-
-
-extension InputInventoryViewController {
-    fileprivate func rightBarButtonItemSetup() {
-        let saveButton = UIBarButtonItem(barButtonSystemItem: .save, target: self, action: #selector(save(sender:)))
-        self.navigationItem.rightBarButtonItem = saveButton
-    }
-    
-    func save(sender: UIBarButtonItem) {
-        let quantity = quantities[addingQuantityRow.selectedRow]
-        let size = sizes[sizeRow.selectedRow]
-        dataStore?.saveInventory(productType: productType, quantity: quantity, size: size)
     }
 }
 

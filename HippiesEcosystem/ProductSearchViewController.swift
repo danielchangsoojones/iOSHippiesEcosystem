@@ -10,6 +10,11 @@ import UIKit
 import EZSwiftExtensions
 
 class ProductSearchViewController: UIViewController {
+    enum ResulAction {
+        case remove
+        case input
+    }
+    
     var theSearchBar: CustomSearchBar!
     var theTableView: UITableView!
     var theSpinnerView: UIView?
@@ -19,9 +24,19 @@ class ProductSearchViewController: UIViewController {
             hasLoadedDatabaseOnce = true
         }
     }
-    var hasLoadedDatabaseOnce: Bool = false
     
+    var hasLoadedDatabaseOnce: Bool = false
     var dataStore: MainSearchingDataStore?
+    var resultAction: ResulAction = .input
+    
+    init(resultAction: ResulAction) {
+        super.init(nibName: nil, bundle: nil)
+        self.resultAction = resultAction
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,10 +57,6 @@ class ProductSearchViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    }
-    
-    override var prefersStatusBarHidden: Bool {
-        return true
     }
     
     func dataStoreSetup() {
@@ -86,14 +97,21 @@ extension ProductSearchViewController: UITableViewDelegate, UITableViewDataSourc
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let productType = results[indexPath.row]
-        segueToInputInventoryVC(product: productType)
+        segueToInventoryVC(product: productType)
     }
     
-    func segueToInputInventoryVC(product: ProductType) {
-        let inputInventoryVC = InputInventoryViewController()
-        inputInventoryVC.title = product.title
-        inputInventoryVC.productType = product
-        pushVC(inputInventoryVC)
+    func segueToInventoryVC(product: ProductType) {
+        var targetVC: InventoryManagementViewController!
+        
+        switch resultAction {
+        case .input:
+            targetVC = InputInventoryViewController(productType: product)
+        case .remove:
+            targetVC = RemoveInventoryViewController(productType: product)
+        }
+        
+        targetVC.title = product.title
+        pushVC(targetVC)
     }
 }
 
