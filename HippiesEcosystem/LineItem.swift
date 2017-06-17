@@ -9,12 +9,37 @@
 import Foundation
 
 class LineItem: NSObject {
+    enum State: String {
+        case open
+        case archived
+    }
+    
+    var state: State {
+        get {
+            if let state = State(rawValue: lineItemParse.state) {
+                return state
+            }
+            
+            return .open
+        }
+        set {
+            lineItemParse.state = newValue.rawValue
+        }
+    }
     var isPicked: Bool {
         get {
             return lineItemParse.isPicked
         }
         set {
             lineItemParse.isPicked = newValue
+        }
+    }
+    var isShipped: Bool {
+        get {
+            return lineItemParse.isShipped
+        }
+        set {
+            lineItemParse.isShipped = newValue
         }
     }
     var shopifyID: String {
@@ -31,6 +56,12 @@ class LineItem: NSObject {
     var title: String {
         get {
             return lineItemParse.title
+        }
+    }
+    var order: Order {
+        get {
+            let order = Order(orderParse: lineItemParse.order)
+            return order
         }
     }
     

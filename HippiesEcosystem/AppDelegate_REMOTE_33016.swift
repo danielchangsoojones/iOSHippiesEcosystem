@@ -22,6 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             toSignUpVC()
         } else {
             //already logged in
+//            setInitialVC(vc: UINavigationController(rootViewController: ShipLineItemsViewController(orderID: 1965)))
             setHomeVC()
         }
         return true
@@ -34,7 +35,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         LineItemParse.registerSubclass()
         OrderParse.registerSubclass()
         ProductVariantParse.registerSubclass()
-        InventoryParse.registerSubclass()
         AddressParse.registerSubclass()
     }
     

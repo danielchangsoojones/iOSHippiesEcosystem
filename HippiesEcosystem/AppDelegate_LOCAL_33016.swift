@@ -35,7 +35,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         OrderParse.registerSubclass()
         ProductVariantParse.registerSubclass()
         InventoryParse.registerSubclass()
-        AddressParse.registerSubclass()
     }
     
     fileprivate func setParseConfiguration() {

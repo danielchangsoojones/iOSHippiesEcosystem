@@ -7,11 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+<<<<<<< HEAD
 		9251F2911EF4E0F300A6E1BD /* RemoveInventoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9251F2901EF4E0F300A6E1BD /* RemoveInventoryViewController.swift */; };
 		9251F2951EF4E37000A6E1BD /* InventoryManagementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9251F2941EF4E37000A6E1BD /* InventoryManagementViewController.swift */; };
 		9251F2981EF4EDD800A6E1BD /* RemoveInventoryDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9251F2971EF4EDD800A6E1BD /* RemoveInventoryDataStore.swift */; };
 		9251F29B1EF4EF9300A6E1BD /* Inventory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9251F29A1EF4EF9300A6E1BD /* Inventory.swift */; };
 		9251F29E1EF4EFDB00A6E1BD /* InventoryParse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9251F29D1EF4EFDB00A6E1BD /* InventoryParse.swift */; };
+=======
 		9251F26C1EF388C800A6E1BD /* ShipOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9251F26B1EF388C800A6E1BD /* ShipOrderViewController.swift */; };
 		9251F26F1EF389AE00A6E1BD /* ShipOrderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9251F26E1EF389AE00A6E1BD /* ShipOrderView.swift */; };
 		9251F2721EF3945C00A6E1BD /* ShipLineItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9251F2711EF3945C00A6E1BD /* ShipLineItemsViewController.swift */; };
@@ -29,6 +31,7 @@
 		9251F2B11EF5DD8800A6E1BD /* FinishShipViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9251F2B01EF5DD8800A6E1BD /* FinishShipViewController.swift */; };
 		9251F2B31EF5DDC900A6E1BD /* FinishShipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9251F2B21EF5DDC900A6E1BD /* FinishShipView.swift */; };
 		9251F2B61EF5DF9500A6E1BD /* FinishShipDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9251F2B51EF5DF9500A6E1BD /* FinishShipDataStore.swift */; };
+>>>>>>> feature/shipping
 		92699F691EE8EA93008EDC56 /* Enviroment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92699F671EE8EA93008EDC56 /* Enviroment.swift */; };
 		92699F6A1EE8EA93008EDC56 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92699F681EE8EA93008EDC56 /* Configuration.swift */; };
 		92699F701EEC9CBD008EDC56 /* WelcomeFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92699F6F1EEC9CBD008EDC56 /* WelcomeFormViewController.swift */; };
@@ -90,11 +93,13 @@
 		135E1988B26BD50D4A1461E7 /* Pods-HippiesEcosystem.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HippiesEcosystem.release.xcconfig"; path = "Pods/Target Support Files/Pods-HippiesEcosystem/Pods-HippiesEcosystem.release.xcconfig"; sourceTree = "<group>"; };
 		527E5FB96BF6BA46DABF0DD0 /* Pods-HippiesEcosystem.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HippiesEcosystem.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HippiesEcosystem/Pods-HippiesEcosystem.debug.xcconfig"; sourceTree = "<group>"; };
 		8B60980DBB0B09CDC321CF0C /* Pods-HippiesEcosystem.debug (staging).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HippiesEcosystem.debug (staging).xcconfig"; path = "Pods/Target Support Files/Pods-HippiesEcosystem/Pods-HippiesEcosystem.debug (staging).xcconfig"; sourceTree = "<group>"; };
+<<<<<<< HEAD
 		9251F2901EF4E0F300A6E1BD /* RemoveInventoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoveInventoryViewController.swift; sourceTree = "<group>"; };
 		9251F2941EF4E37000A6E1BD /* InventoryManagementViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InventoryManagementViewController.swift; sourceTree = "<group>"; };
 		9251F2971EF4EDD800A6E1BD /* RemoveInventoryDataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoveInventoryDataStore.swift; sourceTree = "<group>"; };
 		9251F29A1EF4EF9300A6E1BD /* Inventory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Inventory.swift; sourceTree = "<group>"; };
 		9251F29D1EF4EFDB00A6E1BD /* InventoryParse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InventoryParse.swift; sourceTree = "<group>"; };
+=======
 		9251F26B1EF388C800A6E1BD /* ShipOrderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShipOrderViewController.swift; sourceTree = "<group>"; };
 		9251F26E1EF389AE00A6E1BD /* ShipOrderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShipOrderView.swift; sourceTree = "<group>"; };
 		9251F2711EF3945C00A6E1BD /* ShipLineItemsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShipLineItemsViewController.swift; sourceTree = "<group>"; };
@@ -112,6 +117,7 @@
 		9251F2B01EF5DD8800A6E1BD /* FinishShipViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinishShipViewController.swift; sourceTree = "<group>"; };
 		9251F2B21EF5DDC900A6E1BD /* FinishShipView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinishShipView.swift; sourceTree = "<group>"; };
 		9251F2B51EF5DF9500A6E1BD /* FinishShipDataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinishShipDataStore.swift; sourceTree = "<group>"; };
+>>>>>>> feature/shipping
 		92699F671EE8EA93008EDC56 /* Enviroment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Enviroment.swift; sourceTree = "<group>"; };
 		92699F681EE8EA93008EDC56 /* Configuration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 		92699F6F1EEC9CBD008EDC56 /* WelcomeFormViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeFormViewController.swift; sourceTree = "<group>"; };
@@ -195,6 +201,7 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+<<<<<<< HEAD
 		9251F28F1EF4E09F00A6E1BD /* Remove */ = {
 			isa = PBXGroup;
 			children = (
@@ -226,26 +233,7 @@
 			isa = PBXGroup;
 			children = (
 				9251F2971EF4EDD800A6E1BD /* RemoveInventoryDataStore.swift */,
-			);
-			name = "Data Store";
-			sourceTree = "<group>";
-		};
-		9251F2991EF4EF8700A6E1BD /* Inventory */ = {
-			isa = PBXGroup;
-			children = (
-				9251F29A1EF4EF9300A6E1BD /* Inventory.swift */,
-			);
-			name = Inventory;
-			sourceTree = "<group>";
-		};
-		9251F29C1EF4EFCF00A6E1BD /* Inventory */ = {
-			isa = PBXGroup;
-			children = (
-				9251F29D1EF4EFDB00A6E1BD /* InventoryParse.swift */,
-			);
-			name = Inventory;
-			sourceTree = "<group>";
-		};
+=======
 		9251F26D1EF3899700A6E1BD /* Enter Order ID */ = {
 			isa = PBXGroup;
 			children = (
@@ -303,10 +291,27 @@
 			isa = PBXGroup;
 			children = (
 				9251F2881EF3E99800A6E1BD /* ShipLineItemsDataStore.swift */,
+>>>>>>> feature/shipping
 			);
 			name = "Data Store";
 			sourceTree = "<group>";
 		};
+<<<<<<< HEAD
+		9251F2991EF4EF8700A6E1BD /* Inventory */ = {
+			isa = PBXGroup;
+			children = (
+				9251F29A1EF4EF9300A6E1BD /* Inventory.swift */,
+			);
+			name = Inventory;
+			sourceTree = "<group>";
+		};
+		9251F29C1EF4EFCF00A6E1BD /* Inventory */ = {
+			isa = PBXGroup;
+			children = (
+				9251F29D1EF4EFDB00A6E1BD /* InventoryParse.swift */,
+			);
+			name = Inventory;
+=======
 		9251F28A1EF4C11C00A6E1BD /* Order Note */ = {
 			isa = PBXGroup;
 			children = (
@@ -358,6 +363,7 @@
 				9251F2B51EF5DF9500A6E1BD /* FinishShipDataStore.swift */,
 			);
 			name = "Data Store";
+>>>>>>> feature/shipping
 			sourceTree = "<group>";
 		};
 		92699F661EE8EA88008EDC56 /* Configurations */ = {
@@ -977,9 +983,12 @@
 				9251F2811EF3D49100A6E1BD /* PickItemTableView.swift in Sources */,
 				92C66EED1EE13AC900CA8292 /* CustomColors.swift in Sources */,
 				92C66F121EE20F7200CA8292 /* TrackingFormView.swift in Sources */,
+<<<<<<< HEAD
 				9251F29B1EF4EF9300A6E1BD /* Inventory.swift in Sources */,
+=======
 				9251F2A11EF5BB8900A6E1BD /* ShipAddressViewController.swift in Sources */,
 				9251F2891EF3E99800A6E1BD /* ShipLineItemsDataStore.swift in Sources */,
+>>>>>>> feature/shipping
 				92C66F0F1EE20F1D00CA8292 /* TrackingFormViewController.swift in Sources */,
 				92C66F551EE5327C00CA8292 /* ProductVariant.swift in Sources */,
 				92C66F531EE5322000CA8292 /* ProductVariantParse.swift in Sources */,

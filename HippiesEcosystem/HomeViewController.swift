@@ -73,7 +73,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         case .pickList:
             targetVC = PickListOrderViewController()
         case .shipped:
-            targetVC = QualityFormViewController()
+            targetVC = ShipOrderViewController()
         case .cutList:
             targetVC = CutListViewController()
         case .removeInventory:
