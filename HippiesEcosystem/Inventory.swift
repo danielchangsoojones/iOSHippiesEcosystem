@@ -9,16 +9,6 @@
 import Foundation
 
 class Inventory {
-    var title: String {
-        get {
-           return inventoryParse.productVariant.productType.title
-        }
-    }
-    var size: String {
-        get {
-            return inventoryParse.productVariant.size
-        }
-    }
     var inventoryParse: InventoryParse!
     
     init(inventoryParse: InventoryParse) {

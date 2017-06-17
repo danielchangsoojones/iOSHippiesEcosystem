@@ -11,6 +11,7 @@ import SCLAlertView
 
 class RemoveInventoryViewController: InventoryManagementViewController {
     var dataStore: RemoveInventoryDataStore?
+    var size: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,6 +33,7 @@ class RemoveInventoryViewController: InventoryManagementViewController {
     }
     
     override func save(productType: ProductType, size: String) {
+        self.size = size
         navigationItem.rightBarButtonItem?.isEnabled = false
         dataStore?.removeInventory(productType: productType, size: size)
     }
@@ -46,7 +48,8 @@ extension RemoveInventoryViewController: RemoveInventoryDataDelegate {
         alertView.addButton("Done") {
             self.popVC()
         }
-        let subTitle = "Removed " + inventory.title + " " + inventory.size
+        let size = self.size ?? ""
+        let subTitle = "Removed: " + productType.title + "-" + size
         alertView.showSuccess("Success", subTitle: subTitle)
     }
     
