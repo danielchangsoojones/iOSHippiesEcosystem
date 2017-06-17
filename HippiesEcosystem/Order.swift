@@ -23,6 +23,12 @@ class Order: NSObject {
             return orderParse.note
         }
     }
+    var address: Address {
+        get {
+            let address = Address(addressParse: orderParse.address)
+            return address
+        }
+    }
     var lineItems: [LineItem] = []
     
     init(orderParse: OrderParse) {

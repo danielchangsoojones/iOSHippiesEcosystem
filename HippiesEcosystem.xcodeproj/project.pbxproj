@@ -17,7 +17,6 @@
 		9251F2891EF3E99800A6E1BD /* ShipLineItemsDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9251F2881EF3E99800A6E1BD /* ShipLineItemsDataStore.swift */; };
 		9251F28C1EF4C15400A6E1BD /* OrderNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9251F28B1EF4C15400A6E1BD /* OrderNoteViewController.swift */; };
 		9251F2A11EF5BB8900A6E1BD /* ShipAddressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9251F2A01EF5BB8900A6E1BD /* ShipAddressViewController.swift */; };
-		9251F2A31EF5BBA100A6E1BD /* ShipAddressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9251F2A21EF5BBA100A6E1BD /* ShipAddressView.swift */; };
 		9251F2A71EF5BD5300A6E1BD /* OrderInformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9251F2A61EF5BD5300A6E1BD /* OrderInformationView.swift */; };
 		9251F2A91EF5BD8500A6E1BD /* OrderInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9251F2A81EF5BD8500A6E1BD /* OrderInformationViewController.swift */; };
 		9251F2AC1EF5C0E300A6E1BD /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9251F2AB1EF5C0E300A6E1BD /* Address.swift */; };
@@ -94,7 +93,6 @@
 		9251F2881EF3E99800A6E1BD /* ShipLineItemsDataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShipLineItemsDataStore.swift; sourceTree = "<group>"; };
 		9251F28B1EF4C15400A6E1BD /* OrderNoteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderNoteViewController.swift; sourceTree = "<group>"; };
 		9251F2A01EF5BB8900A6E1BD /* ShipAddressViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShipAddressViewController.swift; sourceTree = "<group>"; };
-		9251F2A21EF5BBA100A6E1BD /* ShipAddressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShipAddressView.swift; sourceTree = "<group>"; };
 		9251F2A61EF5BD5300A6E1BD /* OrderInformationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderInformationView.swift; sourceTree = "<group>"; };
 		9251F2A81EF5BD8500A6E1BD /* OrderInformationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderInformationViewController.swift; sourceTree = "<group>"; };
 		9251F2AB1EF5C0E300A6E1BD /* Address.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Address.swift; sourceTree = "<group>"; };
@@ -256,7 +254,6 @@
 			isa = PBXGroup;
 			children = (
 				9251F2A01EF5BB8900A6E1BD /* ShipAddressViewController.swift */,
-				9251F2A21EF5BBA100A6E1BD /* ShipAddressView.swift */,
 			);
 			name = Address;
 			sourceTree = "<group>";
@@ -897,7 +894,6 @@
 				92C66F171EE2123200CA8292 /* CuttingFormDataStore.swift in Sources */,
 				92C66F461EE2693B00CA8292 /* PickItemDataStore.swift in Sources */,
 				92C66F281EE2342900CA8292 /* PackageFormViewController.swift in Sources */,
-				9251F2A31EF5BBA100A6E1BD /* ShipAddressView.swift in Sources */,
 				92C66F351EE2566100CA8292 /* OrderParse.swift in Sources */,
 				92C66F1D1EE22D1F00CA8292 /* SewingFormViewController.swift in Sources */,
 				92699F891EEC9DD2008EDC56 /* NameViewController.swift in Sources */,

@@ -14,6 +14,13 @@ class AddressParse: PFObject, PFSubclassing {
         return "Address"
     }
     
-    @NSManaged var name: String
-    @NSManaged var note: String?
+    @NSManaged var firstName: String
+    @NSManaged var lastName: String
+    @NSManaged var phone: Double
+    @NSManaged var addressOne: String
+    @NSManaged var addressTwo: String?
+    @NSManaged var city: String
+    @NSManaged var state: String
+    @NSManaged var zip: Int
+    @NSManaged var country: String
 }

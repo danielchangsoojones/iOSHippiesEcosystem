@@ -22,9 +22,7 @@ class ShipAddressViewController: OrderInformationViewController {
     }
     
     fileprivate func setContent() {
-        //TODO: set the address as the infoTextView
-//        infoTextView.text = order.note
+        infoTextView.text = order.address.toString()
         instructionLabel.text = "Does the shipping sticker match this address?"
     }
-
 }
