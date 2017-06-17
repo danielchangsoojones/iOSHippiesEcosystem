@@ -27,7 +27,6 @@ class OrderInformationView: UIView {
     
     fileprivate func instructionLabelSetup() {
         instructionLabel = UILabel()
-        instructionLabel.text = "Does the order conform to its note?"
         instructionLabel.numberOfLines = 0
         instructionLabel.font = UIFont.systemFont(ofSize: 30)
         instructionLabel.textAlignment = .center

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ShipAddressViewController: UIViewController {
+class ShipAddressViewController: OrderInformationViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,6 +19,12 @@ class ShipAddressViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    fileprivate func setContent() {
+        //TODO: set the address as the infoTextView
+//        infoTextView.text = order.note
+        instructionLabel.text = "Does the shipping sticker match this address?"
     }
 
 }
