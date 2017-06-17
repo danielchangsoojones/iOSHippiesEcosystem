@@ -9,11 +9,17 @@
 import UIKit
 
 class ShipAddressView: UIView {
+    var instructionLabel: UILabel!
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
     }
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    fileprivate func instructionLabelSetup() {
+        
     }
 }
