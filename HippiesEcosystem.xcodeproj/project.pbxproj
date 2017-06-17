@@ -64,7 +64,6 @@
 		92C66F221EE22DEA00CA8292 /* TrackingFormDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C66F211EE22DEA00CA8292 /* TrackingFormDataStore.swift */; };
 		92C66F261EE231BD00CA8292 /* PackageFormDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C66F251EE231BD00CA8292 /* PackageFormDataStore.swift */; };
 		92C66F281EE2342900CA8292 /* PackageFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C66F271EE2342900CA8292 /* PackageFormViewController.swift */; };
-		92C66F2F1EE2354800CA8292 /* QualityFormDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C66F2E1EE2354800CA8292 /* QualityFormDataStore.swift */; };
 		92C66F321EE2559B00CA8292 /* PickOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C66F311EE2559B00CA8292 /* PickOrderViewController.swift */; };
 		92C66F351EE2566100CA8292 /* OrderParse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C66F341EE2566100CA8292 /* OrderParse.swift */; };
 		92C66F371EE2569F00CA8292 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C66F361EE2569F00CA8292 /* Order.swift */; };
@@ -145,7 +144,6 @@
 		92C66F211EE22DEA00CA8292 /* TrackingFormDataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrackingFormDataStore.swift; sourceTree = "<group>"; };
 		92C66F251EE231BD00CA8292 /* PackageFormDataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PackageFormDataStore.swift; sourceTree = "<group>"; };
 		92C66F271EE2342900CA8292 /* PackageFormViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PackageFormViewController.swift; sourceTree = "<group>"; };
-		92C66F2E1EE2354800CA8292 /* QualityFormDataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QualityFormDataStore.swift; sourceTree = "<group>"; };
 		92C66F311EE2559B00CA8292 /* PickOrderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickOrderViewController.swift; sourceTree = "<group>"; };
 		92C66F341EE2566100CA8292 /* OrderParse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderParse.swift; sourceTree = "<group>"; };
 		92C66F361EE2569F00CA8292 /* Order.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
@@ -655,21 +653,12 @@
 		92C66F2A1EE2350D00CA8292 /* Ship */ = {
 			isa = PBXGroup;
 			children = (
-				92C66F2B1EE2352000CA8292 /* Data Store */,
 				9251F26D1EF3899700A6E1BD /* Enter Order ID */,
 				9251F2701EF3943C00A6E1BD /* Line Item Checklist */,
 				9251F2A41EF5BCE300A6E1BD /* Accessory Information */,
 				9251F2AF1EF5DD6100A6E1BD /* Finish */,
 			);
 			name = Ship;
-			sourceTree = "<group>";
-		};
-		92C66F2B1EE2352000CA8292 /* Data Store */ = {
-			isa = PBXGroup;
-			children = (
-				92C66F2E1EE2354800CA8292 /* QualityFormDataStore.swift */,
-			);
-			name = "Data Store";
 			sourceTree = "<group>";
 		};
 		92C66F301EE2556800CA8292 /* Data Store */ = {
@@ -978,7 +967,6 @@
 				92699F701EEC9CBD008EDC56 /* WelcomeFormViewController.swift in Sources */,
 				9251F2AC1EF5C0E300A6E1BD /* Address.swift in Sources */,
 				92C66F031EE1433400CA8292 /* HomeViewController.swift in Sources */,
-				92C66F2F1EE2354800CA8292 /* QualityFormDataStore.swift in Sources */,
 				9251F2B11EF5DD8800A6E1BD /* FinishShipViewController.swift in Sources */,
 				92C66F371EE2569F00CA8292 /* Order.swift in Sources */,
 				92699F741EEC9D0A008EDC56 /* WelcomeFormView.swift in Sources */,
