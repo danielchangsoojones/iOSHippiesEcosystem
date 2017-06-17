@@ -25,7 +25,7 @@ class Order: NSObject {
     }
     var address: Address {
         get {
-            let address = Address(addressParse: orderParse.address)
+            let address = Address(addressParse: orderParse.shippingAddress)
             return address
         }
     }

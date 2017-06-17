@@ -12,8 +12,7 @@ class ShipAddressViewController: OrderInformationViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        setContent()
     }
 
     override func didReceiveMemoryWarning() {
@@ -24,5 +23,9 @@ class ShipAddressViewController: OrderInformationViewController {
     fileprivate func setContent() {
         infoTextView.text = order.address.toString()
         instructionLabel.text = "Does the shipping sticker match this address?"
+    }
+    
+    override func yesPressed() {
+        print("yes press")
     }
 }

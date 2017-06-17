@@ -16,14 +16,13 @@ class Address {
     }
     var phoneNumber: String {
         get {
-            let phoneString = String(format: "%g", addressParse.phone)
-            return phoneString
+            return addressParse.phone
         }
     }
     var street: String {
         get {
             if let addressTwo = addressParse.addressTwo {
-                return addressParse.addressOne + "/n" + addressTwo
+                return addressParse.addressOne + "\n" + addressTwo
             }
             
             return addressParse.addressOne
@@ -44,7 +43,7 @@ class Address {
             return addressParse.country
         }
     }
-    var zip: Int {
+    var zip: String {
         get {
             return addressParse.zip
         }
@@ -59,9 +58,9 @@ class Address {
     func toString() -> String {
         let nameLine = fullName
         let streetLine = street
-        let regionLine = city + ", " + state + " " + zip.toString
+        let regionLine = city + ", " + state + ", " + zip
         let countryLine = country
-        let address = nameLine + "/n" + streetLine + "/n" + regionLine + "/n" + countryLine
+        let address = nameLine + "\n" + streetLine + "\n" + regionLine + "\n" + countryLine
         return address
     }
 }

@@ -16,11 +16,11 @@ class AddressParse: PFObject, PFSubclassing {
     
     @NSManaged var firstName: String
     @NSManaged var lastName: String
-    @NSManaged var phone: Double
+    @NSManaged var phone: String
     @NSManaged var addressOne: String
     @NSManaged var addressTwo: String?
     @NSManaged var city: String
     @NSManaged var state: String
-    @NSManaged var zip: Int
+    @NSManaged var zip: String
     @NSManaged var country: String
 }

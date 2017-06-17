@@ -31,7 +31,7 @@ class ShipLineItemsDataStore {
         query.whereKey("order", matchesQuery: orderQuery)
         
         query.includeKey("order")
-        query.includeKey("order.address")
+        query.includeKey("order.shippingAddress")
         query.findObjectsInBackground { (lineItemsParse, error) in
             if let lineItemsParse = lineItemsParse {
                 let lineItems: [LineItem] = lineItemsParse.map({ (lineItemParse: LineItemParse) -> LineItem in

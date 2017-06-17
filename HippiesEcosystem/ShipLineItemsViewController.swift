@@ -88,6 +88,7 @@ extension ShipLineItemsViewController {
     }
     
     func segueToAddressVC(order: Order) {
-        //TODO: segue to the address vc
+        let shipAddressVC = ShipAddressViewController(order: order)
+        pushVC(shipAddressVC)
     }
 }
