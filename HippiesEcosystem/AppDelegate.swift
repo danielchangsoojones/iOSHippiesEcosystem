@@ -34,6 +34,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         LineItemParse.registerSubclass()
         OrderParse.registerSubclass()
         ProductVariantParse.registerSubclass()
+        InventoryParse.registerSubclass()
     }
     
     fileprivate func setParseConfiguration() {
