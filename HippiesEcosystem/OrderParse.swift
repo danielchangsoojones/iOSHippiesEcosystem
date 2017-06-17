@@ -18,4 +18,6 @@ class OrderParse: PFObject, PFSubclassing {
     @NSManaged var name: String
     @NSManaged var note: String?
     @NSManaged var shippingAddress: AddressParse
+    @NSManaged var shipmentStatus: String
+    @NSManaged var shopifyID: Double
 }

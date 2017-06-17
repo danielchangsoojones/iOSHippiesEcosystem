@@ -9,6 +9,11 @@
 import Foundation
 
 class Order: NSObject {
+    enum ShipmentStatus: String {
+        case open
+        case internalShippingBin = "internal shipping bin"
+    }
+    
     var orderParse: OrderParse!
     var name: String {
         get {
@@ -33,6 +38,23 @@ class Order: NSObject {
         get {
             let address = Address(addressParse: orderParse.shippingAddress)
             return address
+        }
+    }
+    var shipmentStatus: ShipmentStatus {
+        get {
+            if let status = ShipmentStatus(rawValue: orderParse.shipmentStatus) {
+                return status
+            }
+            
+            return .open
+        }
+        set {
+            orderParse.shipmentStatus = newValue.rawValue
+        }
+    }
+    var shopifyID: Double {
+        get {
+            return orderParse.shopifyID
         }
     }
     var lineItems: [LineItem] = []
