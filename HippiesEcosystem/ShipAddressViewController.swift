@@ -26,6 +26,7 @@ class ShipAddressViewController: OrderInformationViewController {
     }
     
     override func yesPressed() {
-        print("yes press")
+        let finishShipVC = FinishShipViewController(order: order)
+        pushVC(finishShipVC)
     }
 }

@@ -18,6 +18,12 @@ class Order: NSObject {
             orderParse.name = newValue
         }
     }
+    var shortName: String {
+        get {
+            let shortenedName = name.trimmingCharacters(in: CharacterSet(charactersIn: "01234567890").inverted)
+            return "#" + shortenedName
+        }
+    }
     var note: String? {
         get {
             return orderParse.note
