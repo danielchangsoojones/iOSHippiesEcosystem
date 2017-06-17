@@ -8,25 +8,10 @@
 
 import UIKit
 
-class OrderNoteViewController: UIViewController {
-    var noteTextView: UITextView!
-    var yesButton: UIButton!
-    
-    var order: Order!
-    
-    init(order: Order) {
-        super.init(nibName: nil, bundle: nil)
-        self.order = order
-        self.title = order.name
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
+class OrderNoteViewController: OrderInformationViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        viewSetup()
+        setContent()
     }
 
     override func didReceiveMemoryWarning() {
@@ -34,18 +19,13 @@ class OrderNoteViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    fileprivate func viewSetup() {
-        let orderNoteView = OrderNoteView(frame: self.view.frame)
-        self.view = orderNoteView
-        noteTextView = orderNoteView.noteTextView
-        noteTextView.text = order.note
-        yesButton = orderNoteView.yesButton
-        yesButton.addTarget(self, action: #selector(yesPressed), for: .touchUpInside)
+    override func yesPressed() {
+        let shippingAddressVC = ShipAddressViewController(order: order)
+        pushVC(shippingAddressVC)
     }
-}
-
-extension OrderNoteViewController {
-    func yesPressed() {
-        //Segue to the address vc
+    
+    fileprivate func setContent() {
+        infoTextView.text = order.note
+        instructionLabel.text = "Does the order conform to its note?"
     }
 }
