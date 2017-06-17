@@ -53,7 +53,7 @@ class OrderNoteView: UIView {
     }
     
     fileprivate func yesButtonSetup() {
-        yesButton = createActionButton(title: "YES", color: .green)
+        yesButton = createActionButton(title: "YES", color: CustomColors.JellyTeal)
         self.addSubview(yesButton)
         yesButton.snp.makeConstraints { (make) in
             make.centerX.equalToSuperview()

@@ -17,6 +17,7 @@ class OrderNoteViewController: UIViewController {
     init(order: Order) {
         super.init(nibName: nil, bundle: nil)
         self.order = order
+        self.title = order.name
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -37,6 +38,7 @@ class OrderNoteViewController: UIViewController {
         let orderNoteView = OrderNoteView(frame: self.view.frame)
         self.view = orderNoteView
         noteTextView = orderNoteView.noteTextView
+        noteTextView.text = order.note
         yesButton = orderNoteView.yesButton
         yesButton.addTarget(self, action: #selector(yesPressed), for: .touchUpInside)
     }

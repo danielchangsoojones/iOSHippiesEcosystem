@@ -17,7 +17,7 @@ class ShipLineItemsViewController: CheckListViewController {
     init(orderID: Int) {
         super.init(nibName: nil, bundle: nil)
         self.orderID = orderID
-        self.title = "#" + orderID.toString
+        self.title = order?.name
     }
     
     var dataStore: ShipLineItemsDataStore?
@@ -44,7 +44,7 @@ class ShipLineItemsViewController: CheckListViewController {
     
     override func proceed() {
         if let order = order {
-            if let _ = order.note {
+            if let note = order.note, !note.isBlank {
                 segueToOrderNoteVC(order: order)
             } else {
                 segueToAddressVC(order: order)
