@@ -8,10 +8,9 @@
 
 import Foundation
 import Parse
-import SCLAlertView
 
 protocol ShipLineItemsDataDelegate {
-    func recieved(lineItems: [LineItem])
+    func recieved(order: Order?)
     func recieved(error: Error)
 }
 
@@ -31,12 +30,15 @@ class ShipLineItemsDataStore {
         orderQuery.whereKey("name", hasPrefix: getOrderNames(from: orderID))
         query.whereKey("order", matchesQuery: orderQuery)
         
+        query.includeKey("order")
         query.findObjectsInBackground { (lineItemsParse, error) in
             if let lineItemsParse = lineItemsParse {
                 let lineItems: [LineItem] = lineItemsParse.map({ (lineItemParse: LineItemParse) -> LineItem in
                     return LineItem(lineItemParse: lineItemParse)
                 })
-                self.delegate?.recieved(lineItems: lineItems)
+                let order = lineItems.first?.order
+                order?.lineItems = lineItems
+                self.delegate?.recieved(order: order)
             } else if let error = error {
                 self.delegate?.recieved(error: error)
             }

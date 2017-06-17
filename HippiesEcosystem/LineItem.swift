@@ -33,6 +33,12 @@ class LineItem: NSObject {
             return lineItemParse.title
         }
     }
+    var order: Order {
+        get {
+            let order = Order(orderParse: lineItemParse.order)
+            return order
+        }
+    }
     
     var lineItemParse: LineItemParse!
     

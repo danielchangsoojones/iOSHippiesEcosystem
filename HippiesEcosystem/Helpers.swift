@@ -43,4 +43,30 @@ struct Helpers {
         }
         return 0
     }
+    
+    static func showActivityIndicatory(uiView: UIView) -> UIView {
+        let container: UIView = UIView()
+        container.frame = uiView.frame
+        container.center = uiView.center
+        container.backgroundColor = UIColor.white.withAlphaComponent(0.3)
+        
+        let loadingView: UIView = UIView()
+        loadingView.frame = CGRect(x: 0.0, y: 0.0, w: 80.0, h: 80.0)
+        loadingView.center = uiView.center
+        loadingView.backgroundColor = UIColor(r: 0.25, g: 0.25, b: 0.25, a: 0.7)
+        loadingView.clipsToBounds = true
+        loadingView.layer.cornerRadius = 10
+        
+        let actInd: UIActivityIndicatorView = UIActivityIndicatorView()
+        actInd.frame = CGRect(x: 0.0, y: 0.0, w: 40.0, h: 40.0)
+        actInd.activityIndicatorViewStyle =
+            UIActivityIndicatorViewStyle.whiteLarge
+        actInd.center = CGPoint(x: loadingView.frame.size.width / 2, y: loadingView.frame.size.height / 2)
+        loadingView.addSubview(actInd)
+        container.addSubview(loadingView)
+        uiView.addSubview(container)
+        actInd.startAnimating()
+        
+        return container
+    }
 }

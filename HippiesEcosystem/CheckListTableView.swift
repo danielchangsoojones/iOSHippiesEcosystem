@@ -11,7 +11,11 @@ import BEMCheckBox
 
 class CheckListTableView: UITableView {
     fileprivate var completes: [Bool] = []
-    var lineItems: [LineItem] = []
+    var lineItems: [LineItem] = [] {
+        didSet {
+            setCompletes()
+        }
+    }
     
     var isComplete: Bool {
         return !completes.contains(false)
@@ -23,8 +27,6 @@ class CheckListTableView: UITableView {
         registerCell()
         self.lineItems = lineItems
         dataSource = self
-        setCompletes()
-        
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -32,8 +34,7 @@ class CheckListTableView: UITableView {
     }
     
     func setCompletes() {
-        //TODO: if we ever had multiple sections, then the completes would only be available for the first section
-        for _ in 0..<numberOfRows(inSection: 0) {
+        for _ in lineItems {
             completes.append(false)
         }
     }

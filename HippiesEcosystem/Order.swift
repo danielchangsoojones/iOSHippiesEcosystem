@@ -18,6 +18,11 @@ class Order: NSObject {
             orderParse.name = newValue
         }
     }
+    var note: String? {
+        get {
+            return orderParse.note
+        }
+    }
     var lineItems: [LineItem] = []
     
     init(orderParse: OrderParse) {
