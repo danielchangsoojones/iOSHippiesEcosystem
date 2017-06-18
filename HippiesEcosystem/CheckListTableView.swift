@@ -21,11 +21,10 @@ class CheckListTableView: UITableView {
         return !completes.contains(false)
     }
     
-    init(frame: CGRect, lineItems: [LineItem]) {
+    init(frame: CGRect) {
         super.init(frame: frame, style: .plain)
         rowHeight = CheckTableViewCell.Constants.cellHeight
         registerCell()
-        self.lineItems = lineItems
         dataSource = self
     }
     

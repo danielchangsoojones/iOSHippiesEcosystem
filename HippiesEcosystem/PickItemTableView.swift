@@ -9,8 +9,8 @@
 import UIKit
 
 class PickItemTableView: CheckListTableView {
-    override init(frame: CGRect, lineItems: [LineItem]) {
-        super.init(frame: frame, lineItems: lineItems)
+    override init(frame: CGRect) {
+        super.init(frame: frame)
     }
     
     required init?(coder aDecoder: NSCoder) {

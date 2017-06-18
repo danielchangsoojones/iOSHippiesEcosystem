@@ -29,7 +29,8 @@ class PickListItemViewController: CheckListViewController {
     }
     
     override func tableViewSetup() {
-        tableView = PickItemTableView(frame: self.view.bounds, lineItems: lineItems)
+        tableView = PickItemTableView(frame: self.view.bounds)
+        tableView.lineItems = lineItems
         self.view.addSubview(tableView)
     }
     

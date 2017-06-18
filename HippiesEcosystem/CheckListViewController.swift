@@ -36,7 +36,8 @@ class CheckListViewController: UIViewController {
     }
     
     func tableViewSetup() {
-        tableView = CheckListTableView(frame: self.view.bounds, lineItems: lineItems)
+        tableView = CheckListTableView(frame: self.view.bounds)
+        tableView.lineItems = lineItems
         self.view.addSubview(tableView)
     }
     
