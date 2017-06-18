@@ -34,7 +34,6 @@ class RemoveInventoryViewController: InventoryManagementViewController {
     
     override func save(productType: ProductType, size: String) {
         self.size = size
-        navigationItem.rightBarButtonItem?.isEnabled = false
         dataStore?.removeInventory(productType: productType, size: size)
     }
 }
