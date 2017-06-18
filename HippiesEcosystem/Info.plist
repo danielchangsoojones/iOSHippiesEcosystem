@@ -36,5 +36,9 @@
 	<string>$(CONFIGURATION)</string>
 	<key>ITSAppUsesNonExemptEncryption</key>
 	<false/>
+    <key>LSApplicationQueriesSchemes</key>
+    <array>
+        <string>itms-beta</string>
+    </array>
 </dict>
 </plist>

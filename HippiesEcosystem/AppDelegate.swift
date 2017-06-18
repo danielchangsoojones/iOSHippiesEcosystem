@@ -24,6 +24,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             //already logged in
             setHomeVC()
         }
+        VersionNumberParse.check()
         return true
     }
     
@@ -36,6 +37,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         ProductVariantParse.registerSubclass()
         InventoryParse.registerSubclass()
         AddressParse.registerSubclass()
+        VersionNumberParse.registerSubclass()
     }
     
     fileprivate func setParseConfiguration() {
