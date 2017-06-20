@@ -23,8 +23,8 @@ class TrackingFormDataStore {
     
     func save(id: Double) {
         //override in subclasses
-        let query = LineItemParse.query() as! PFQuery<LineItemParse>
-        query.whereKey("shopifyLineItemID", equalTo: id)
+        let query = ItemParse.query() as! PFQuery<ItemParse>
+        query.whereKey("uniqueID", equalTo: id)
         query.getFirstObjectInBackground { (lineItemParse, error) in
             if let lineItemParse = lineItemParse {
                 self.recieved(lineItemParse: lineItemParse)

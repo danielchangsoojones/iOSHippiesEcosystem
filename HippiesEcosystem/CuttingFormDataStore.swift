@@ -11,7 +11,9 @@ import Parse
 
 class CuttingFormDataStore: TrackingFormDataStore {
     override func recieved(lineItemParse: LineItemParse) {
-        lineItemParse.isCut = true
+        let isCut = CutParse()
+        isCut.user = User.current() ?? User()
+        lineItemParse.item.isCut = isCut
         super.recieved(lineItemParse: lineItemParse)
     }
 }

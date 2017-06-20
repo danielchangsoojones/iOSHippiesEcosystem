@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		922FA7951EF71EC000B908FB /* VersionNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922FA7941EF71EC000B908FB /* VersionNumber.swift */; };
+		922FA7991EF98DAD00B908FB /* CutParse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922FA7981EF98DAD00B908FB /* CutParse.swift */; };
+		922FA79B1EF98E3300B908FB /* TrackParse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922FA79A1EF98E3300B908FB /* TrackParse.swift */; };
 		9251F26C1EF388C800A6E1BD /* ShipOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9251F26B1EF388C800A6E1BD /* ShipOrderViewController.swift */; };
 		9251F26F1EF389AE00A6E1BD /* ShipOrderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9251F26E1EF389AE00A6E1BD /* ShipOrderView.swift */; };
 		9251F2721EF3945C00A6E1BD /* ShipLineItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9251F2711EF3945C00A6E1BD /* ShipLineItemsViewController.swift */; };
@@ -92,6 +94,8 @@
 		527E5FB96BF6BA46DABF0DD0 /* Pods-HippiesEcosystem.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HippiesEcosystem.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HippiesEcosystem/Pods-HippiesEcosystem.debug.xcconfig"; sourceTree = "<group>"; };
 		8B60980DBB0B09CDC321CF0C /* Pods-HippiesEcosystem.debug (staging).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HippiesEcosystem.debug (staging).xcconfig"; path = "Pods/Target Support Files/Pods-HippiesEcosystem/Pods-HippiesEcosystem.debug (staging).xcconfig"; sourceTree = "<group>"; };
 		922FA7941EF71EC000B908FB /* VersionNumber.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VersionNumber.swift; sourceTree = "<group>"; };
+		922FA7981EF98DAD00B908FB /* CutParse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CutParse.swift; sourceTree = "<group>"; };
+		922FA79A1EF98E3300B908FB /* TrackParse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrackParse.swift; sourceTree = "<group>"; };
 		9251F26B1EF388C800A6E1BD /* ShipOrderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShipOrderViewController.swift; sourceTree = "<group>"; };
 		9251F26E1EF389AE00A6E1BD /* ShipOrderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShipOrderView.swift; sourceTree = "<group>"; };
 		9251F2711EF3945C00A6E1BD /* ShipLineItemsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShipLineItemsViewController.swift; sourceTree = "<group>"; };
@@ -195,6 +199,15 @@
 				C94F17F7AB18AA5749DB7653 /* Pods-HippiesEcosystem.debug (production).xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		922FA7971EF98D8B00B908FB /* Tracking */ = {
+			isa = PBXGroup;
+			children = (
+				922FA79A1EF98E3300B908FB /* TrackParse.swift */,
+				922FA7981EF98DAD00B908FB /* CutParse.swift */,
+			);
+			name = Tracking;
 			sourceTree = "<group>";
 		};
 		9251F26D1EF3899700A6E1BD /* Enter Order ID */ = {
@@ -312,6 +325,7 @@
 		9251F29C1EF4EFCF00A6E1BD /* Item */ = {
 			isa = PBXGroup;
 			children = (
+				922FA7971EF98D8B00B908FB /* Tracking */,
 				9251F29D1EF4EFDB00A6E1BD /* ItemParse.swift */,
 			);
 			name = Item;
@@ -983,6 +997,7 @@
 				92C66F121EE20F7200CA8292 /* TrackingFormView.swift in Sources */,
 				9251F29B1EF4EF9300A6E1BD /* Item.swift in Sources */,
 				9251F2A11EF5BB8900A6E1BD /* ShipAddressViewController.swift in Sources */,
+				922FA7991EF98DAD00B908FB /* CutParse.swift in Sources */,
 				9251F2891EF3E99800A6E1BD /* ShipLineItemsDataStore.swift in Sources */,
 				92C66F0F1EE20F1D00CA8292 /* TrackingFormViewController.swift in Sources */,
 				92C66F551EE5327C00CA8292 /* ProductVariant.swift in Sources */,
@@ -1008,6 +1023,7 @@
 				92C66ED21EE1370100CA8292 /* AppDelegate.swift in Sources */,
 				92C66F3D1EE25ABF00CA8292 /* LineItem.swift in Sources */,
 				92699F801EEC9D90008EDC56 /* LogInDataStore.swift in Sources */,
+				922FA79B1EF98E3300B908FB /* TrackParse.swift in Sources */,
 				92C66F481EE2E4A400CA8292 /* PickOrderDataStore.swift in Sources */,
 				92699F6A1EE8EA93008EDC56 /* Configuration.swift in Sources */,
 				92699F691EE8EA93008EDC56 /* Enviroment.swift in Sources */,

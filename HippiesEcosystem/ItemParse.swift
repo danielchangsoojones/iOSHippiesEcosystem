@@ -16,4 +16,5 @@ class ItemParse: PFObject, PFSubclassing {
     
     @NSManaged var productVariant: ProductVariantParse
     @NSManaged var lineItem: LineItemParse
+    @NSManaged var isCut: CutParse
 }

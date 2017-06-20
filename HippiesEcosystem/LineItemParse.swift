@@ -18,7 +18,6 @@ class LineItemParse: PFObject, PFSubclassing {
     @NSManaged var quantity: Int
     @NSManaged var state: String
     @NSManaged var isInitiated: Bool
-    @NSManaged var isCut: Bool
     @NSManaged var isSewn: Bool
     @NSManaged var isPackaged: Bool
     @NSManaged var isPicked: Bool
@@ -27,4 +26,5 @@ class LineItemParse: PFObject, PFSubclassing {
     @NSManaged var variant_title: String
     @NSManaged var productVariant: ProductVariantParse
     @NSManaged var order: OrderParse
+    @NSManaged var item: ItemParse
 }
