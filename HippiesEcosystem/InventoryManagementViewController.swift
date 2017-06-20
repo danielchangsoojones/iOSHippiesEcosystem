@@ -80,6 +80,7 @@ extension InventoryManagementViewController {
     }
     
     func save(sender: UIBarButtonItem) {
+        sender.isEnabled = false
         let size = sizes[sizeRow.selectedRow]
         save(productType: productType, size: size)
     }

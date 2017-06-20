@@ -8,10 +8,10 @@
 
 import Foundation
 import Parse
-import SCLAlertView
 
 protocol InputInventoryDataDelegate {
     func successfullySavedInventory()
+    func received(error: Error)
 }
 
 class InputInventoryDataStore {
@@ -28,7 +28,7 @@ class InputInventoryDataStore {
             if let _ = results {
                 self.delegate?.successfullySavedInventory()
             } else if let error = error {
-                SCLAlertView().showError("Error saving", subTitle: error.localizedDescription)
+                self.delegate?.received(error: error)
             }
         })
     }

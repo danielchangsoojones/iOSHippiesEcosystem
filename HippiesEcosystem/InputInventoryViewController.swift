@@ -8,6 +8,7 @@
 
 import UIKit
 import Former
+import SCLAlertView
 
 class InputInventoryViewController: InventoryManagementViewController {
     var addingQuantityRow: InlinePickerRowFormer<FormInlinePickerCell, Int>!
@@ -53,5 +54,10 @@ extension InputInventoryViewController {
 extension InputInventoryViewController: InputInventoryDataDelegate {
     func successfullySavedInventory() {
         popVC()
+    }
+    
+    func received(error: Error) {
+        navigationItem.rightBarButtonItem?.isEnabled = true
+        SCLAlertView().showError("Error saving", subTitle: error.localizedDescription)
     }
 }
