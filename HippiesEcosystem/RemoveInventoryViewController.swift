@@ -39,7 +39,7 @@ class RemoveInventoryViewController: InventoryManagementViewController {
 }
 
 extension RemoveInventoryViewController: RemoveInventoryDataDelegate {
-    func removed(inventory: Inventory) {
+    func removed(inventory: Item) {
         let appearance = SCLAlertView.SCLAppearance(
             showCloseButton: false
         )

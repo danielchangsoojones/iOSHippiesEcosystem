@@ -35,7 +35,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         LineItemParse.registerSubclass()
         OrderParse.registerSubclass()
         ProductVariantParse.registerSubclass()
-        InventoryParse.registerSubclass()
+        ItemParse.registerSubclass()
         AddressParse.registerSubclass()
         VersionNumberParse.registerSubclass()
     }

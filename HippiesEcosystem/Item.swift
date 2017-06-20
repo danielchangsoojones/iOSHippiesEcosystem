@@ -1,5 +1,5 @@
 //
-//  Inventory.swift
+//  Item.swift
 //  HippiesEcosystem
 //
 //  Created by Daniel Jones on 6/16/17.
@@ -8,10 +8,10 @@
 
 import Foundation
 
-class Inventory {
-    var inventoryParse: InventoryParse!
+class Item {
+    var itemParse: ItemParse!
     
-    init(inventoryParse: InventoryParse) {
-        self.inventoryParse = inventoryParse
+    init(itemParse: ItemParse) {
+        self.itemParse = itemParse
     }
 }

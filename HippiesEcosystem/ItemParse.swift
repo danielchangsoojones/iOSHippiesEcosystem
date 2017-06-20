@@ -1,5 +1,5 @@
 //
-//  InventoryParse.swift
+//  ItemParse.swift
 //  HippiesEcosystem
 //
 //  Created by Daniel Jones on 6/16/17.
@@ -9,9 +9,9 @@
 import Foundation
 import Parse
 
-class InventoryParse: PFObject, PFSubclassing {
+class ItemParse: PFObject, PFSubclassing {
     class func parseClassName() -> String {
-        return "Inventory"
+        return "Item"
     }
     
     @NSManaged var productVariant: ProductVariantParse
