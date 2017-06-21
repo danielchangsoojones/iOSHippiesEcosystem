@@ -7,6 +7,12 @@
 //
 
 import Foundation
+import Parse
+import SCLAlertView
+
+protocol SearchColorDataDelegate: MainSearchingDelegate {
+    func successfullyCreatedCutList(for fabric: Fabric)
+}
 
 class SearchColorDataStore: MainSearchingDataStore {
     override func querySearchResults(text: String) {
@@ -22,5 +28,16 @@ class SearchColorDataStore: MainSearchingDataStore {
         }
         
         return []
+    }
+    
+    func getCutListFor(fabric: Fabric) {
+        PFCloud.callFunction(inBackground: "getOneColorCutList", withParameters: ["color" : fabric.color], block: {
+            (results: Any?, error: Error?) -> Void in
+            if let _ = results, let delegate = self.delegate as? SearchColorDataDelegate {
+                delegate.successfullyCreatedCutList(for: fabric)
+            } else if let error = error {
+                SCLAlertView().showError("Error", subTitle: error.localizedDescription)
+            }
+        })
     }
 }
