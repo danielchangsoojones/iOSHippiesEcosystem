@@ -55,6 +55,8 @@
 		929C59181EFA3D6F00AAC363 /* SearchColorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929C59171EFA3D6F00AAC363 /* SearchColorViewController.swift */; };
 		929C591C1EFA42DB00AAC363 /* MainSearchingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929C591B1EFA42DB00AAC363 /* MainSearchingViewController.swift */; };
 		929C591F1EFA494B00AAC363 /* ProductSearchDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929C591E1EFA494B00AAC363 /* ProductSearchDataStore.swift */; };
+		929C59241EFA4DD800AAC363 /* SearchColorDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929C59231EFA4DD800AAC363 /* SearchColorDataStore.swift */; };
+		929C59261EFA4E9B00AAC363 /* Fabric.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929C59251EFA4E9B00AAC363 /* Fabric.swift */; };
 		92C66ED21EE1370100CA8292 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C66ED11EE1370100CA8292 /* AppDelegate.swift */; };
 		92C66ED91EE1370100CA8292 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92C66ED81EE1370100CA8292 /* Assets.xcassets */; };
 		92C66EDC1EE1370100CA8292 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92C66EDA1EE1370100CA8292 /* LaunchScreen.storyboard */; };
@@ -150,6 +152,8 @@
 		929C59171EFA3D6F00AAC363 /* SearchColorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchColorViewController.swift; sourceTree = "<group>"; };
 		929C591B1EFA42DB00AAC363 /* MainSearchingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainSearchingViewController.swift; sourceTree = "<group>"; };
 		929C591E1EFA494B00AAC363 /* ProductSearchDataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductSearchDataStore.swift; sourceTree = "<group>"; };
+		929C59231EFA4DD800AAC363 /* SearchColorDataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchColorDataStore.swift; sourceTree = "<group>"; };
+		929C59251EFA4E9B00AAC363 /* Fabric.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fabric.swift; sourceTree = "<group>"; };
 		92C66ECE1EE1370100CA8292 /* HippiesEcosystem.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HippiesEcosystem.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92C66ED11EE1370100CA8292 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		92C66ED81EE1370100CA8292 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -548,7 +552,8 @@
 		929C59161EFA3D3F00AAC363 /* One Color Cuts */ = {
 			isa = PBXGroup;
 			children = (
-				929C59171EFA3D6F00AAC363 /* SearchColorViewController.swift */,
+				929C59201EFA4D9600AAC363 /* Data Store */,
+				929C59211EFA4DA600AAC363 /* Search */,
 			);
 			name = "One Color Cuts";
 			sourceTree = "<group>";
@@ -567,6 +572,30 @@
 			isa = PBXGroup;
 			children = (
 				92C66EF31EE13D3600CA8292 /* MainSearchingDataStore.swift */,
+			);
+			name = "Data Store";
+			sourceTree = "<group>";
+		};
+		929C59201EFA4D9600AAC363 /* Data Store */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Data Store";
+			sourceTree = "<group>";
+		};
+		929C59211EFA4DA600AAC363 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				929C59221EFA4DC600AAC363 /* Data Store */,
+				929C59171EFA3D6F00AAC363 /* SearchColorViewController.swift */,
+			);
+			name = Search;
+			sourceTree = "<group>";
+		};
+		929C59221EFA4DC600AAC363 /* Data Store */ = {
+			isa = PBXGroup;
+			children = (
+				929C59231EFA4DD800AAC363 /* SearchColorDataStore.swift */,
 			);
 			name = "Data Store";
 			sourceTree = "<group>";
@@ -901,6 +930,7 @@
 			children = (
 				92C66F541EE5327C00CA8292 /* ProductVariant.swift */,
 				92C66F041EE1490600CA8292 /* ProductType.swift */,
+				929C59251EFA4E9B00AAC363 /* Fabric.swift */,
 			);
 			name = Product;
 			sourceTree = "<group>";
@@ -1057,6 +1087,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				922FA7951EF71EC000B908FB /* VersionNumber.swift in Sources */,
+				929C59241EFA4DD800AAC363 /* SearchColorDataStore.swift in Sources */,
 				92699F7A1EEC9D5F008EDC56 /* AdmissionFormViewController.swift in Sources */,
 				9251F27B1EF3CB7B00A6E1BD /* CheckListTableView.swift in Sources */,
 				92C66F511EE2EDFF00CA8292 /* CutListDataStore.swift in Sources */,
@@ -1133,6 +1164,7 @@
 				92C66EFE1EE1417F00CA8292 /* ProductTypeParse.swift in Sources */,
 				92699F7D1EEC9D7D008EDC56 /* LoginViewController.swift in Sources */,
 				9251F2B61EF5DF9500A6E1BD /* FinishShipDataStore.swift in Sources */,
+				929C59261EFA4E9B00AAC363 /* Fabric.swift in Sources */,
 				92699F941EED03C5008EDC56 /* Banner.swift in Sources */,
 				92C66F4D1EE2EBED00CA8292 /* CutListView.swift in Sources */,
 				92699F701EEC9CBD008EDC56 /* WelcomeFormViewController.swift in Sources */,

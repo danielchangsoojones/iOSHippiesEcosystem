@@ -8,16 +8,24 @@
 
 import UIKit
 
-class SearchColorViewController: UIViewController {
-
+class SearchColorViewController: MainSearchingViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func dataStoreSetup() {
+        dataStore = SearchColorDataStore(delegate: self)
+    }
+    
+    override func createCell(indexPath: IndexPath) -> MainSearchTableViewCell {
+        let fabric = results[indexPath.row] as! Fabric
+        let cell = MainSearchTableViewCell(title: fabric.color)
+        return cell
     }
 }
