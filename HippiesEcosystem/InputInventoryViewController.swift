@@ -10,17 +10,12 @@ import UIKit
 import Former
 import SCLAlertView
 
-class InputInventoryViewController: InventoryManagementViewController {
-    var addingQuantityRow: InlinePickerRowFormer<FormInlinePickerCell, Int>!
-    
+class InputInventoryViewController: QuantityManagementViewController {
     var dataStore: InputInventoryDataStore?
     
-    let quantities: [Int] = [1, 2, 3, 4, 5, 6, 7, 8 , 9, 10, 11, 12, 13, 14, 15]
-
     override func viewDidLoad() {
         super.viewDidLoad()
         dataStoreSetup()
-        addingQuantityRowSetup()
     }
 
     override func didReceiveMemoryWarning() {
@@ -33,21 +28,7 @@ class InputInventoryViewController: InventoryManagementViewController {
     }
     
     override func save(productType: ProductType, size: String) {
-        let quantity = quantities[addingQuantityRow.selectedRow]
         dataStore?.saveInventory(productType: productType, quantity: quantity, size: size)
-    }
-}
-
-extension InputInventoryViewController {
-    fileprivate func addingQuantityRowSetup() {
-        addingQuantityRow = InlinePickerRowFormer<FormInlinePickerCell, Int>(cellSetup: nil)
-        addingQuantityRow.configure { (row) in
-            row.pickerItems = quantities.map {
-                return InlinePickerItem(title: $0.toString, value: $0)
-            }
-        }
-        
-        _ = append(rows: [addingQuantityRow], headerTitle: "nums")
     }
 }
 

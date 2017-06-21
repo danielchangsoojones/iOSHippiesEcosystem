@@ -9,8 +9,7 @@
 import Foundation
 
 class PackageFormDataStore: TrackingFormDataStore {
-    override func recieved(lineItemParse: LineItemParse) {
-        lineItemParse.isPackaged = true
-        super.recieved(lineItemParse: lineItemParse)
+    override func recieved(itemParse: ItemParse) {
+        super.recieved(itemParse: itemParse)
     }
 }

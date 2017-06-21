@@ -9,8 +9,7 @@
 import Foundation
 
 class SewingFormDataStore: TrackingFormDataStore {
-    override func recieved(lineItemParse: LineItemParse) {
-        lineItemParse.isSewn = true
-        super.recieved(lineItemParse: lineItemParse)
+    override func recieved(itemParse: ItemParse) {
+        super.recieved(itemParse: itemParse)
     }
 }

@@ -46,6 +46,9 @@
 		92699F8C1EEC9DE0008EDC56 /* NameDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92699F8B1EEC9DE0008EDC56 /* NameDataStore.swift */; };
 		92699F8E1EEC9EF4008EDC56 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92699F8D1EEC9EF4008EDC56 /* User.swift */; };
 		92699F941EED03C5008EDC56 /* Banner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92699F931EED03C5008EDC56 /* Banner.swift */; };
+		929C59081EF9DEC300AAC363 /* MultipleCutsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929C59071EF9DEC300AAC363 /* MultipleCutsViewController.swift */; };
+		929C590A1EF9DF8D00AAC363 /* QuantityManagementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929C59091EF9DF8D00AAC363 /* QuantityManagementViewController.swift */; };
+		929C590E1EF9E0BE00AAC363 /* MultipleCutsDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929C590D1EF9E0BE00AAC363 /* MultipleCutsDataStore.swift */; };
 		92C66ED21EE1370100CA8292 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C66ED11EE1370100CA8292 /* AppDelegate.swift */; };
 		92C66ED91EE1370100CA8292 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92C66ED81EE1370100CA8292 /* Assets.xcassets */; };
 		92C66EDC1EE1370100CA8292 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92C66EDA1EE1370100CA8292 /* LaunchScreen.storyboard */; };
@@ -132,6 +135,9 @@
 		92699F8B1EEC9DE0008EDC56 /* NameDataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NameDataStore.swift; sourceTree = "<group>"; };
 		92699F8D1EEC9EF4008EDC56 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		92699F931EED03C5008EDC56 /* Banner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Banner.swift; sourceTree = "<group>"; };
+		929C59071EF9DEC300AAC363 /* MultipleCutsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultipleCutsViewController.swift; sourceTree = "<group>"; };
+		929C59091EF9DF8D00AAC363 /* QuantityManagementViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuantityManagementViewController.swift; sourceTree = "<group>"; };
+		929C590D1EF9E0BE00AAC363 /* MultipleCutsDataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultipleCutsDataStore.swift; sourceTree = "<group>"; };
 		92C66ECE1EE1370100CA8292 /* HippiesEcosystem.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HippiesEcosystem.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92C66ED11EE1370100CA8292 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		92C66ED81EE1370100CA8292 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -302,6 +308,7 @@
 			isa = PBXGroup;
 			children = (
 				9251F2941EF4E37000A6E1BD /* InventoryManagementViewController.swift */,
+				929C59091EF9DF8D00AAC363 /* QuantityManagementViewController.swift */,
 			);
 			name = Super;
 			sourceTree = "<group>";
@@ -490,6 +497,31 @@
 			name = Alerts;
 			sourceTree = "<group>";
 		};
+		929C59061EF9DD0300AAC363 /* Multiple Cuts */ = {
+			isa = PBXGroup;
+			children = (
+				929C590B1EF9E09500AAC363 /* Input */,
+			);
+			name = "Multiple Cuts";
+			sourceTree = "<group>";
+		};
+		929C590B1EF9E09500AAC363 /* Input */ = {
+			isa = PBXGroup;
+			children = (
+				929C590C1EF9E0AC00AAC363 /* Data Store */,
+				929C59071EF9DEC300AAC363 /* MultipleCutsViewController.swift */,
+			);
+			name = Input;
+			sourceTree = "<group>";
+		};
+		929C590C1EF9E0AC00AAC363 /* Data Store */ = {
+			isa = PBXGroup;
+			children = (
+				929C590D1EF9E0BE00AAC363 /* MultipleCutsDataStore.swift */,
+			);
+			name = "Data Store";
+			sourceTree = "<group>";
+		};
 		92C66EC51EE1370100CA8292 = {
 			isa = PBXGroup;
 			children = (
@@ -640,6 +672,7 @@
 				92C66F231EE2316F00CA8292 /* Packaging */,
 				92C66F291EE234F400CA8292 /* Picking */,
 				92C66F2A1EE2350D00CA8292 /* Ship */,
+				929C59061EF9DD0300AAC363 /* Multiple Cuts */,
 			);
 			name = Tracking;
 			sourceTree = "<group>";
@@ -987,6 +1020,7 @@
 				92C66F1D1EE22D1F00CA8292 /* SewingFormViewController.swift in Sources */,
 				92699F891EEC9DD2008EDC56 /* NameViewController.swift in Sources */,
 				92C66F001EE1420900CA8292 /* FabricParse.swift in Sources */,
+				929C59081EF9DEC300AAC363 /* MultipleCutsViewController.swift in Sources */,
 				92699F8C1EEC9DE0008EDC56 /* NameDataStore.swift in Sources */,
 				92C66F261EE231BD00CA8292 /* PackageFormDataStore.swift in Sources */,
 				92C66EEF1EE13C5B00CA8292 /* Helpers.swift in Sources */,
@@ -996,6 +1030,7 @@
 				92C66EED1EE13AC900CA8292 /* CustomColors.swift in Sources */,
 				92C66F121EE20F7200CA8292 /* TrackingFormView.swift in Sources */,
 				9251F29B1EF4EF9300A6E1BD /* Item.swift in Sources */,
+				929C590E1EF9E0BE00AAC363 /* MultipleCutsDataStore.swift in Sources */,
 				9251F2A11EF5BB8900A6E1BD /* ShipAddressViewController.swift in Sources */,
 				922FA7991EF98DAD00B908FB /* CutParse.swift in Sources */,
 				9251F2891EF3E99800A6E1BD /* ShipLineItemsDataStore.swift in Sources */,
@@ -1027,6 +1062,7 @@
 				92C66F481EE2E4A400CA8292 /* PickOrderDataStore.swift in Sources */,
 				92699F6A1EE8EA93008EDC56 /* Configuration.swift in Sources */,
 				92699F691EE8EA93008EDC56 /* Enviroment.swift in Sources */,
+				929C590A1EF9DF8D00AAC363 /* QuantityManagementViewController.swift in Sources */,
 				9251F2AE1EF5C12D00A6E1BD /* AddressParse.swift in Sources */,
 				92C66F191EE212D800CA8292 /* LineItemParse.swift in Sources */,
 				92699F831EEC9DA8008EDC56 /* SignUpViewController.swift in Sources */,

@@ -18,9 +18,10 @@ class HomeViewController: UIViewController {
         case shipped = "Shipped"
         case cutList = "Cut List"
         case removeInventory = "Remove Inventory"
+        case multipleCuts = "Multiple Cuts"
         case logOut = "Log Out"
         
-        static let all : [Categories] = [.inputInventory, .cutting, .sewing, .packaging, .pickList, .shipped, .cutList, .removeInventory, .logOut ]
+        static let all : [Categories] = [.inputInventory, .cutting, .sewing, .packaging, .pickList, .shipped, .cutList, .removeInventory, .multipleCuts, .logOut]
     }
     
     var theTableView: UITableView!
@@ -78,6 +79,8 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
             targetVC = CutListViewController()
         case .removeInventory:
             targetVC = ProductSearchViewController(resultAction: .remove)
+        case .multipleCuts:
+            targetVC = ProductSearchViewController(resultAction: .multipleCut)
         case .logOut:
             logOut()
             return

@@ -10,10 +10,10 @@ import Foundation
 import Parse
 
 class CuttingFormDataStore: TrackingFormDataStore {
-    override func recieved(lineItemParse: LineItemParse) {
+    override func recieved(itemParse: ItemParse) {
         let isCut = CutParse()
         isCut.user = User.current() ?? User()
-        lineItemParse.item.isCut = isCut
-        super.recieved(lineItemParse: lineItemParse)
+        itemParse.isCut = isCut
+        super.recieved(itemParse: itemParse)
     }
 }

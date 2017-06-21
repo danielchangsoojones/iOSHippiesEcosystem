@@ -13,6 +13,7 @@ class ProductSearchViewController: UIViewController {
     enum ResulAction {
         case remove
         case input
+        case multipleCut
     }
     
     var theSearchBar: CustomSearchBar!
@@ -108,6 +109,8 @@ extension ProductSearchViewController: UITableViewDelegate, UITableViewDataSourc
             targetVC = InputInventoryViewController(productType: product)
         case .remove:
             targetVC = RemoveInventoryViewController(productType: product)
+        case .multipleCut:
+            targetVC = MultipleCutsViewController(productType: product)
         }
         
         targetVC.title = product.title
