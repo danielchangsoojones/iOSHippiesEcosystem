@@ -13,7 +13,7 @@ class CuttingFormDataStore: TrackingFormDataStore {
     override func recieved(itemParse: ItemParse) {
         let isCut = CutParse()
         isCut.user = User.current() ?? User()
-        itemParse.isCut = isCut
+        itemParse.cut = isCut
         super.recieved(itemParse: itemParse)
     }
 }

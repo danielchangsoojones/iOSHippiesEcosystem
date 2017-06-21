@@ -10,6 +10,11 @@ import Foundation
 
 class SewingFormDataStore: TrackingFormDataStore {
     override func recieved(itemParse: ItemParse) {
-        super.recieved(itemParse: itemParse)
+        if let currentUser = User.current() {
+            let sewnParse = SewnParse()
+            sewnParse.addUniqueObject(currentUser, forKey: "users")
+            itemParse.sewn = sewnParse
+            super.recieved(itemParse: itemParse)
+        }
     }
 }

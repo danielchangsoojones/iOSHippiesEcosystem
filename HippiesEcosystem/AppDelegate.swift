@@ -38,6 +38,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         ItemParse.registerSubclass()
         AddressParse.registerSubclass()
         VersionNumberParse.registerSubclass()
+        SewnParse.registerSubclass()
+        CutParse.registerSubclass()
+        PackageParse.registerSubclass()
     }
     
     fileprivate func setParseConfiguration() {

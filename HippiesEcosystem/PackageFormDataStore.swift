@@ -10,6 +10,9 @@ import Foundation
 
 class PackageFormDataStore: TrackingFormDataStore {
     override func recieved(itemParse: ItemParse) {
+        let package = Package()
+        package.state = .waiting_for_identified_pick
+        itemParse.package = package.packageParse
         super.recieved(itemParse: itemParse)
     }
 }

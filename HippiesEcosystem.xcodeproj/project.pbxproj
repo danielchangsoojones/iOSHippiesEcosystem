@@ -49,6 +49,9 @@
 		929C59081EF9DEC300AAC363 /* MultipleCutsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929C59071EF9DEC300AAC363 /* MultipleCutsViewController.swift */; };
 		929C590A1EF9DF8D00AAC363 /* QuantityManagementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929C59091EF9DF8D00AAC363 /* QuantityManagementViewController.swift */; };
 		929C590E1EF9E0BE00AAC363 /* MultipleCutsDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929C590D1EF9E0BE00AAC363 /* MultipleCutsDataStore.swift */; };
+		929C59101EFA1BDA00AAC363 /* SewnParse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929C590F1EFA1BDA00AAC363 /* SewnParse.swift */; };
+		929C59121EFA1EFD00AAC363 /* PackageParse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929C59111EFA1EFD00AAC363 /* PackageParse.swift */; };
+		929C59151EFA214B00AAC363 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929C59141EFA214B00AAC363 /* Package.swift */; };
 		92C66ED21EE1370100CA8292 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C66ED11EE1370100CA8292 /* AppDelegate.swift */; };
 		92C66ED91EE1370100CA8292 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92C66ED81EE1370100CA8292 /* Assets.xcassets */; };
 		92C66EDC1EE1370100CA8292 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92C66EDA1EE1370100CA8292 /* LaunchScreen.storyboard */; };
@@ -138,6 +141,9 @@
 		929C59071EF9DEC300AAC363 /* MultipleCutsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultipleCutsViewController.swift; sourceTree = "<group>"; };
 		929C59091EF9DF8D00AAC363 /* QuantityManagementViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuantityManagementViewController.swift; sourceTree = "<group>"; };
 		929C590D1EF9E0BE00AAC363 /* MultipleCutsDataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultipleCutsDataStore.swift; sourceTree = "<group>"; };
+		929C590F1EFA1BDA00AAC363 /* SewnParse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SewnParse.swift; sourceTree = "<group>"; };
+		929C59111EFA1EFD00AAC363 /* PackageParse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PackageParse.swift; sourceTree = "<group>"; };
+		929C59141EFA214B00AAC363 /* Package.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 		92C66ECE1EE1370100CA8292 /* HippiesEcosystem.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HippiesEcosystem.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92C66ED11EE1370100CA8292 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		92C66ED81EE1370100CA8292 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -212,6 +218,8 @@
 			children = (
 				922FA79A1EF98E3300B908FB /* TrackParse.swift */,
 				922FA7981EF98DAD00B908FB /* CutParse.swift */,
+				929C590F1EFA1BDA00AAC363 /* SewnParse.swift */,
+				929C59111EFA1EFD00AAC363 /* PackageParse.swift */,
 			);
 			name = Tracking;
 			sourceTree = "<group>";
@@ -324,6 +332,7 @@
 		9251F2991EF4EF8700A6E1BD /* Item */ = {
 			isa = PBXGroup;
 			children = (
+				929C59131EFA214200AAC363 /* Tracking */,
 				9251F29A1EF4EF9300A6E1BD /* Item.swift */,
 			);
 			name = Item;
@@ -520,6 +529,14 @@
 				929C590D1EF9E0BE00AAC363 /* MultipleCutsDataStore.swift */,
 			);
 			name = "Data Store";
+			sourceTree = "<group>";
+		};
+		929C59131EFA214200AAC363 /* Tracking */ = {
+			isa = PBXGroup;
+			children = (
+				929C59141EFA214B00AAC363 /* Package.swift */,
+			);
+			name = Tracking;
 			sourceTree = "<group>";
 		};
 		92C66EC51EE1370100CA8292 = {
@@ -1024,6 +1041,7 @@
 				92699F8C1EEC9DE0008EDC56 /* NameDataStore.swift in Sources */,
 				92C66F261EE231BD00CA8292 /* PackageFormDataStore.swift in Sources */,
 				92C66EEF1EE13C5B00CA8292 /* Helpers.swift in Sources */,
+				929C59101EFA1BDA00AAC363 /* SewnParse.swift in Sources */,
 				92699F861EEC9DB9008EDC56 /* SignUpDataStore.swift in Sources */,
 				92699F771EEC9D33008EDC56 /* ForwardAccessoryView.swift in Sources */,
 				9251F2811EF3D49100A6E1BD /* PickItemTableView.swift in Sources */,
@@ -1063,6 +1081,7 @@
 				92699F6A1EE8EA93008EDC56 /* Configuration.swift in Sources */,
 				92699F691EE8EA93008EDC56 /* Enviroment.swift in Sources */,
 				929C590A1EF9DF8D00AAC363 /* QuantityManagementViewController.swift in Sources */,
+				929C59121EFA1EFD00AAC363 /* PackageParse.swift in Sources */,
 				9251F2AE1EF5C12D00A6E1BD /* AddressParse.swift in Sources */,
 				92C66F191EE212D800CA8292 /* LineItemParse.swift in Sources */,
 				92699F831EEC9DA8008EDC56 /* SignUpViewController.swift in Sources */,
@@ -1070,6 +1089,7 @@
 				92C66F3A1EE2570D00CA8292 /* PickOrderTableViewCell.swift in Sources */,
 				9251F2721EF3945C00A6E1BD /* ShipLineItemsViewController.swift in Sources */,
 				9251F26C1EF388C800A6E1BD /* ShipOrderViewController.swift in Sources */,
+				929C59151EFA214B00AAC363 /* Package.swift in Sources */,
 				92C66EF41EE13D3600CA8292 /* MainSearchingDataStore.swift in Sources */,
 				9251F28C1EF4C15400A6E1BD /* OrderNoteViewController.swift in Sources */,
 				92C66F051EE1490600CA8292 /* ProductType.swift in Sources */,
