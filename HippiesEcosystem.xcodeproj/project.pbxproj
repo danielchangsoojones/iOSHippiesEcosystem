@@ -52,6 +52,9 @@
 		929C59101EFA1BDA00AAC363 /* SewnParse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929C590F1EFA1BDA00AAC363 /* SewnParse.swift */; };
 		929C59121EFA1EFD00AAC363 /* PackageParse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929C59111EFA1EFD00AAC363 /* PackageParse.swift */; };
 		929C59151EFA214B00AAC363 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929C59141EFA214B00AAC363 /* Package.swift */; };
+		929C59181EFA3D6F00AAC363 /* SearchColorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929C59171EFA3D6F00AAC363 /* SearchColorViewController.swift */; };
+		929C591C1EFA42DB00AAC363 /* MainSearchingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929C591B1EFA42DB00AAC363 /* MainSearchingViewController.swift */; };
+		929C591F1EFA494B00AAC363 /* ProductSearchDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929C591E1EFA494B00AAC363 /* ProductSearchDataStore.swift */; };
 		92C66ED21EE1370100CA8292 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C66ED11EE1370100CA8292 /* AppDelegate.swift */; };
 		92C66ED91EE1370100CA8292 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92C66ED81EE1370100CA8292 /* Assets.xcassets */; };
 		92C66EDC1EE1370100CA8292 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92C66EDA1EE1370100CA8292 /* LaunchScreen.storyboard */; };
@@ -144,6 +147,9 @@
 		929C590F1EFA1BDA00AAC363 /* SewnParse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SewnParse.swift; sourceTree = "<group>"; };
 		929C59111EFA1EFD00AAC363 /* PackageParse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PackageParse.swift; sourceTree = "<group>"; };
 		929C59141EFA214B00AAC363 /* Package.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
+		929C59171EFA3D6F00AAC363 /* SearchColorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchColorViewController.swift; sourceTree = "<group>"; };
+		929C591B1EFA42DB00AAC363 /* MainSearchingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainSearchingViewController.swift; sourceTree = "<group>"; };
+		929C591E1EFA494B00AAC363 /* ProductSearchDataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductSearchDataStore.swift; sourceTree = "<group>"; };
 		92C66ECE1EE1370100CA8292 /* HippiesEcosystem.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HippiesEcosystem.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92C66ED11EE1370100CA8292 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		92C66ED81EE1370100CA8292 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -539,6 +545,32 @@
 			name = Tracking;
 			sourceTree = "<group>";
 		};
+		929C59161EFA3D3F00AAC363 /* One Color Cuts */ = {
+			isa = PBXGroup;
+			children = (
+				929C59171EFA3D6F00AAC363 /* SearchColorViewController.swift */,
+			);
+			name = "One Color Cuts";
+			sourceTree = "<group>";
+		};
+		929C59191EFA3E6800AAC363 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				929C591A1EFA3E7300AAC363 /* Data Store */,
+				929C591B1EFA42DB00AAC363 /* MainSearchingViewController.swift */,
+				92C66EE61EE1382600CA8292 /* MainSearchingView.swift */,
+			);
+			name = Search;
+			sourceTree = "<group>";
+		};
+		929C591A1EFA3E7300AAC363 /* Data Store */ = {
+			isa = PBXGroup;
+			children = (
+				92C66EF31EE13D3600CA8292 /* MainSearchingDataStore.swift */,
+			);
+			name = "Data Store";
+			sourceTree = "<group>";
+		};
 		92C66EC51EE1370100CA8292 = {
 			isa = PBXGroup;
 			children = (
@@ -564,6 +596,7 @@
 				92C66F0C1EE20EB200CA8292 /* Tracking */,
 				92C66F011EE1431400CA8292 /* Home */,
 				92C66EE31EE137EA00CA8292 /* Inventory */,
+				929C59191EFA3E6800AAC363 /* Search */,
 				9251F2761EF3989900A6E1BD /* Checklist */,
 				92C66ED11EE1370100CA8292 /* AppDelegate.swift */,
 				92C66ED81EE1370100CA8292 /* Assets.xcassets */,
@@ -599,7 +632,6 @@
 				92C66EF21EE13D2300CA8292 /* Data Store */,
 				92C66EE81EE13A6900CA8292 /* Subviews */,
 				92C66EF01EE13CF900CA8292 /* ProductSearchViewController.swift */,
-				92C66EE61EE1382600CA8292 /* MainSearchingView.swift */,
 			);
 			name = Search;
 			sourceTree = "<group>";
@@ -627,7 +659,7 @@
 		92C66EF21EE13D2300CA8292 /* Data Store */ = {
 			isa = PBXGroup;
 			children = (
-				92C66EF31EE13D3600CA8292 /* MainSearchingDataStore.swift */,
+				929C591E1EFA494B00AAC363 /* ProductSearchDataStore.swift */,
 			);
 			name = "Data Store";
 			sourceTree = "<group>";
@@ -690,6 +722,7 @@
 				92C66F291EE234F400CA8292 /* Picking */,
 				92C66F2A1EE2350D00CA8292 /* Ship */,
 				929C59061EF9DD0300AAC363 /* Multiple Cuts */,
+				929C59161EFA3D3F00AAC363 /* One Color Cuts */,
 			);
 			name = Tracking;
 			sourceTree = "<group>";
@@ -1030,6 +1063,7 @@
 				9251F2A71EF5BD5300A6E1BD /* OrderInformationView.swift in Sources */,
 				92C66F171EE2123200CA8292 /* CuttingFormDataStore.swift in Sources */,
 				92C66F461EE2693B00CA8292 /* PickItemDataStore.swift in Sources */,
+				929C591F1EFA494B00AAC363 /* ProductSearchDataStore.swift in Sources */,
 				9251F2951EF4E37000A6E1BD /* InventoryManagementViewController.swift in Sources */,
 				92C66F281EE2342900CA8292 /* PackageFormViewController.swift in Sources */,
 				92C66F351EE2566100CA8292 /* OrderParse.swift in Sources */,
@@ -1041,6 +1075,7 @@
 				92699F8C1EEC9DE0008EDC56 /* NameDataStore.swift in Sources */,
 				92C66F261EE231BD00CA8292 /* PackageFormDataStore.swift in Sources */,
 				92C66EEF1EE13C5B00CA8292 /* Helpers.swift in Sources */,
+				929C59181EFA3D6F00AAC363 /* SearchColorViewController.swift in Sources */,
 				929C59101EFA1BDA00AAC363 /* SewnParse.swift in Sources */,
 				92699F861EEC9DB9008EDC56 /* SignUpDataStore.swift in Sources */,
 				92699F771EEC9D33008EDC56 /* ForwardAccessoryView.swift in Sources */,
@@ -1104,6 +1139,7 @@
 				9251F2AC1EF5C0E300A6E1BD /* Address.swift in Sources */,
 				92C66F031EE1433400CA8292 /* HomeViewController.swift in Sources */,
 				9251F2B11EF5DD8800A6E1BD /* FinishShipViewController.swift in Sources */,
+				929C591C1EFA42DB00AAC363 /* MainSearchingViewController.swift in Sources */,
 				92C66F371EE2569F00CA8292 /* Order.swift in Sources */,
 				92699F741EEC9D0A008EDC56 /* WelcomeFormView.swift in Sources */,
 			);
