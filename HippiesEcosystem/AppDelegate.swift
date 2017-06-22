@@ -42,6 +42,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         CutParse.registerSubclass()
         PackageParse.registerSubclass()
         PickParse.registerSubclass()
+        ShipParse.registerSubclass()
     }
     
     fileprivate func setParseConfiguration() {

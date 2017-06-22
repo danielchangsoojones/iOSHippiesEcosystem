@@ -25,7 +25,7 @@ class FinishShipDataStore {
         order.shipmentStatus = .internalShippingBin
         var objectArray: [PFObject] = [order.orderParse]
         for lineItem in order.lineItems {
-//            lineItem.isShipped = true
+            lineItem.isShipped = true
             lineItem.state = .archived
             objectArray.append(lineItem.lineItemParse)
         }

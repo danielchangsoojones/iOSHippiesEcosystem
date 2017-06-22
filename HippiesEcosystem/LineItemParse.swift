@@ -23,4 +23,5 @@ class LineItemParse: PFObject, PFSubclassing {
     @NSManaged var order: OrderParse
     @NSManaged var item: ItemParse
     @NSManaged var pick: PickParse?
+    @NSManaged var ship: ShipParse?
 }

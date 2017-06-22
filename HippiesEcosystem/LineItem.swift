@@ -40,14 +40,20 @@ class LineItem: NSObject {
             }
         }
     }
-//    var isShipped: Bool {
-//        get {
-//            return lineItemParse.isShipped
-//        }
-//        set {
-//            lineItemParse.isShipped = newValue
-//        }
-//    }
+    var isShipped: Bool {
+        get {
+            return lineItemParse.ship != nil
+        }
+        set {
+            if newValue && lineItemParse.ship == nil {
+                let shipParse = ShipParse()
+                if let currentUser = User.current() {
+                    shipParse.user = currentUser
+                }
+                lineItemParse.ship = shipParse
+            }
+        }
+    }
     var shopifyID: String {
         get {
             let removedZeroID = String(format: "%g", lineItemParse.shopifyLineItemID)
