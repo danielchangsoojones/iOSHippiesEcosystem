@@ -12,7 +12,6 @@ class Package {
     enum State: String {
         case waiting_for_identified_pick = "waiting for identified pick"
         case in_inventory = "in inventory"
-        case waiting_for_inventory_placement = "waiting for inventory placement"
     }
     var state: State {
         get {

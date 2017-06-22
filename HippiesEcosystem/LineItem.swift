@@ -28,20 +28,26 @@ class LineItem: NSObject {
     }
     var isPicked: Bool {
         get {
-            return lineItemParse.isPicked
+            return lineItemParse.pick != nil
         }
         set {
-            lineItemParse.isPicked = newValue
+            if newValue && lineItemParse.pick == nil {
+                let pickParse = PickParse()
+                if let currentUser = User.current() {
+                    pickParse.user = currentUser
+                }
+                lineItemParse.pick = pickParse
+            }
         }
     }
-    var isShipped: Bool {
-        get {
-            return lineItemParse.isShipped
-        }
-        set {
-            lineItemParse.isShipped = newValue
-        }
-    }
+//    var isShipped: Bool {
+//        get {
+//            return lineItemParse.isShipped
+//        }
+//        set {
+//            lineItemParse.isShipped = newValue
+//        }
+//    }
     var shopifyID: String {
         get {
             let removedZeroID = String(format: "%g", lineItemParse.shopifyLineItemID)

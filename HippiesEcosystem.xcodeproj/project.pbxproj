@@ -57,6 +57,7 @@
 		929C591F1EFA494B00AAC363 /* ProductSearchDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929C591E1EFA494B00AAC363 /* ProductSearchDataStore.swift */; };
 		929C59241EFA4DD800AAC363 /* SearchColorDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929C59231EFA4DD800AAC363 /* SearchColorDataStore.swift */; };
 		929C59261EFA4E9B00AAC363 /* Fabric.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929C59251EFA4E9B00AAC363 /* Fabric.swift */; };
+		92B5E4BC1EFC61200027FD16 /* PickParse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B5E4BB1EFC61200027FD16 /* PickParse.swift */; };
 		92C66ED21EE1370100CA8292 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C66ED11EE1370100CA8292 /* AppDelegate.swift */; };
 		92C66ED91EE1370100CA8292 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92C66ED81EE1370100CA8292 /* Assets.xcassets */; };
 		92C66EDC1EE1370100CA8292 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92C66EDA1EE1370100CA8292 /* LaunchScreen.storyboard */; };
@@ -154,6 +155,7 @@
 		929C591E1EFA494B00AAC363 /* ProductSearchDataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductSearchDataStore.swift; sourceTree = "<group>"; };
 		929C59231EFA4DD800AAC363 /* SearchColorDataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchColorDataStore.swift; sourceTree = "<group>"; };
 		929C59251EFA4E9B00AAC363 /* Fabric.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fabric.swift; sourceTree = "<group>"; };
+		92B5E4BB1EFC61200027FD16 /* PickParse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickParse.swift; sourceTree = "<group>"; };
 		92C66ECE1EE1370100CA8292 /* HippiesEcosystem.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HippiesEcosystem.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92C66ED11EE1370100CA8292 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		92C66ED81EE1370100CA8292 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -600,6 +602,31 @@
 			name = "Data Store";
 			sourceTree = "<group>";
 		};
+		92B5E4B91EFC60D90027FD16 /* Line Item */ = {
+			isa = PBXGroup;
+			children = (
+				92B5E4BA1EFC60EA0027FD16 /* Tracking */,
+				92C66F181EE212D800CA8292 /* LineItemParse.swift */,
+			);
+			name = "Line Item";
+			sourceTree = "<group>";
+		};
+		92B5E4BA1EFC60EA0027FD16 /* Tracking */ = {
+			isa = PBXGroup;
+			children = (
+				92B5E4BB1EFC61200027FD16 /* PickParse.swift */,
+			);
+			name = Tracking;
+			sourceTree = "<group>";
+		};
+		92B5E4BD1EFC65030027FD16 /* Line Item */ = {
+			isa = PBXGroup;
+			children = (
+				92C66F3C1EE25ABF00CA8292 /* LineItem.swift */,
+			);
+			name = "Line Item";
+			sourceTree = "<group>";
+		};
 		92C66EC51EE1370100CA8292 = {
 			isa = PBXGroup;
 			children = (
@@ -918,8 +945,8 @@
 		92C66F561EE532BE00CA8292 /* Ordering */ = {
 			isa = PBXGroup;
 			children = (
+				92B5E4BD1EFC65030027FD16 /* Line Item */,
 				92C66F361EE2569F00CA8292 /* Order.swift */,
-				92C66F3C1EE25ABF00CA8292 /* LineItem.swift */,
 				9251F2AB1EF5C0E300A6E1BD /* Address.swift */,
 			);
 			name = Ordering;
@@ -938,7 +965,7 @@
 		92C66F581EE532D800CA8292 /* Ordering */ = {
 			isa = PBXGroup;
 			children = (
-				92C66F181EE212D800CA8292 /* LineItemParse.swift */,
+				92B5E4B91EFC60D90027FD16 /* Line Item */,
 				92C66F341EE2566100CA8292 /* OrderParse.swift */,
 				9251F2AD1EF5C12D00A6E1BD /* AddressParse.swift */,
 			);
@@ -1138,6 +1165,7 @@
 				92699F8E1EEC9EF4008EDC56 /* User.swift in Sources */,
 				92C66F221EE22DEA00CA8292 /* TrackingFormDataStore.swift in Sources */,
 				92C66EEA1EE13A8100CA8292 /* CustomSearchBar.swift in Sources */,
+				92B5E4BC1EFC61200027FD16 /* PickParse.swift in Sources */,
 				9251F26F1EF389AE00A6E1BD /* ShipOrderView.swift in Sources */,
 				92C66ED21EE1370100CA8292 /* AppDelegate.swift in Sources */,
 				92C66F3D1EE25ABF00CA8292 /* LineItem.swift in Sources */,

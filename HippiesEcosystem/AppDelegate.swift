@@ -41,6 +41,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         SewnParse.registerSubclass()
         CutParse.registerSubclass()
         PackageParse.registerSubclass()
+        PickParse.registerSubclass()
     }
     
     fileprivate func setParseConfiguration() {
