@@ -9,10 +9,8 @@
 import Foundation
 import Parse
 
-class SewnParse: PFObject, PFSubclassing {
+class SewnParse: TrackParse, PFSubclassing {
     class func parseClassName() -> String {
         return "Sewn"
     }
-    
-    @NSManaged var users: [User]
 }
