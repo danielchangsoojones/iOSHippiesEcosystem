@@ -42,13 +42,22 @@ class PickOrderDataStore {
                 if let innerArray = innerArray as? NSArray, let orderParse = innerArray[0] as? OrderParse, let lineItemsParse = innerArray[1] as? [LineItemParse] {
                     let order = Order(orderParse: orderParse)
                     let lineItems = lineItemsParse.map({ (lineItemParse: LineItemParse) -> LineItem in
-                        return LineItem(lineItemParse: lineItemParse)
+                        let lineItem = LineItem(lineItemParse: lineItemParse)
+                        return lineItem
                     })
                     orders.append(order)
                     orderDictionary[order] = lineItems
                 }
             }
         }
-        return (orders, orderDictionary)
+        let sortedOrders = sort(orders: orders)
+        return (sortedOrders, orderDictionary)
+    }
+    
+    private func sort(orders: [Order]) -> [Order] {
+        let sortedOrders = orders.sorted { (previous: Order, next: Order) -> Bool in
+            return previous.nameInt < next.nameInt
+        }
+        return sortedOrders
     }
 }
