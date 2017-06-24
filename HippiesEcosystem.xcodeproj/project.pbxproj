@@ -520,12 +520,12 @@
 			name = Alerts;
 			sourceTree = "<group>";
 		};
-		929C59061EF9DD0300AAC363 /* Multiple Cuts */ = {
+		929C59061EF9DD0300AAC363 /* Input Mike Cuts */ = {
 			isa = PBXGroup;
 			children = (
 				929C590B1EF9E09500AAC363 /* Input */,
 			);
-			name = "Multiple Cuts";
+			name = "Input Mike Cuts";
 			sourceTree = "<group>";
 		};
 		929C590B1EF9E09500AAC363 /* Input */ = {
@@ -780,7 +780,7 @@
 				92C66F231EE2316F00CA8292 /* Packaging */,
 				92C66F291EE234F400CA8292 /* Picking */,
 				92C66F2A1EE2350D00CA8292 /* Ship */,
-				929C59061EF9DD0300AAC363 /* Multiple Cuts */,
+				929C59061EF9DD0300AAC363 /* Input Mike Cuts */,
 				929C59161EFA3D3F00AAC363 /* One Color Cuts */,
 			);
 			name = Tracking;

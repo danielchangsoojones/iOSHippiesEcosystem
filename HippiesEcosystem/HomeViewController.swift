@@ -17,7 +17,7 @@ class HomeViewController: UIViewController {
         case packaging = "Packaging"
         case shipped = "Shipped"
         case removeInventory = "Remove Inventory"
-        case multipleCuts = "Multiple Cuts"
+        case multipleCuts = "Input Mike Cuts"
         case oneColorCutList = "Get One Color Cut List"
         case logOut = "Log Out"
         

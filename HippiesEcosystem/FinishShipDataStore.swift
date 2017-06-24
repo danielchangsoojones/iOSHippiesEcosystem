@@ -30,6 +30,8 @@ class FinishShipDataStore {
             objectArray.append(lineItem.lineItemParse)
         }
         
+        
+        //Be careful on your development database because if you archive an order, it will actually archive the order on shopify.
         PFObject.saveAll(inBackground: objectArray) { (success, error) in
             if success {
                 PFCloud.callFunction(inBackground: "archiveShopifyOrder", withParameters: ["shopifyOrderID": order.shopifyID], block: {
