@@ -59,6 +59,7 @@
 		929C59261EFA4E9B00AAC363 /* Fabric.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929C59251EFA4E9B00AAC363 /* Fabric.swift */; };
 		92B5E4BC1EFC61200027FD16 /* PickParse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B5E4BB1EFC61200027FD16 /* PickParse.swift */; };
 		92B5E4C21EFC66210027FD16 /* ShipParse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B5E4C11EFC66210027FD16 /* ShipParse.swift */; };
+		92B5E4C61EFE31FC0027FD16 /* AggregateInventoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B5E4C51EFE31FC0027FD16 /* AggregateInventoryViewController.swift */; };
 		92C66ED21EE1370100CA8292 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C66ED11EE1370100CA8292 /* AppDelegate.swift */; };
 		92C66ED91EE1370100CA8292 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92C66ED81EE1370100CA8292 /* Assets.xcassets */; };
 		92C66EDC1EE1370100CA8292 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92C66EDA1EE1370100CA8292 /* LaunchScreen.storyboard */; };
@@ -158,6 +159,7 @@
 		929C59251EFA4E9B00AAC363 /* Fabric.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fabric.swift; sourceTree = "<group>"; };
 		92B5E4BB1EFC61200027FD16 /* PickParse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickParse.swift; sourceTree = "<group>"; };
 		92B5E4C11EFC66210027FD16 /* ShipParse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShipParse.swift; sourceTree = "<group>"; };
+		92B5E4C51EFE31FC0027FD16 /* AggregateInventoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AggregateInventoryViewController.swift; sourceTree = "<group>"; };
 		92C66ECE1EE1370100CA8292 /* HippiesEcosystem.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HippiesEcosystem.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92C66ED11EE1370100CA8292 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		92C66ED81EE1370100CA8292 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -630,6 +632,14 @@
 			name = "Line Item";
 			sourceTree = "<group>";
 		};
+		92B5E4C41EFE316D0027FD16 /* Aggregate */ = {
+			isa = PBXGroup;
+			children = (
+				92B5E4C51EFE31FC0027FD16 /* AggregateInventoryViewController.swift */,
+			);
+			name = Aggregate;
+			sourceTree = "<group>";
+		};
 		92C66EC51EE1370100CA8292 = {
 			isa = PBXGroup;
 			children = (
@@ -670,6 +680,7 @@
 		92C66EE31EE137EA00CA8292 /* Inventory */ = {
 			isa = PBXGroup;
 			children = (
+				92B5E4C41EFE316D0027FD16 /* Aggregate */,
 				9251F2921EF4E35600A6E1BD /* Management */,
 				92C66EE51EE1380000CA8292 /* Search */,
 			);
@@ -1154,6 +1165,7 @@
 				92C66F531EE5322000CA8292 /* ProductVariantParse.swift in Sources */,
 				92C66EE71EE1382600CA8292 /* MainSearchingView.swift in Sources */,
 				92C66F081EE1681B00CA8292 /* InputInventoryViewController.swift in Sources */,
+				92B5E4C61EFE31FC0027FD16 /* AggregateInventoryViewController.swift in Sources */,
 				92C66F321EE2559B00CA8292 /* PickOrderViewController.swift in Sources */,
 				9251F2B31EF5DDC900A6E1BD /* FinishShipView.swift in Sources */,
 				9251F2A91EF5BD8500A6E1BD /* OrderInformationViewController.swift in Sources */,

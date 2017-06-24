@@ -13,6 +13,7 @@ class ProductSearchViewController: MainSearchingViewController {
         case remove
         case input
         case multipleCut
+        case aggregateInventory
     }
     
     var resultAction: ResulAction = .input
@@ -62,6 +63,8 @@ extension ProductSearchViewController {
             targetVC = RemoveInventoryViewController(productType: product)
         case .multipleCut:
             targetVC = MultipleCutsViewController(productType: product)
+        case .aggregateInventory:
+            targetVC = 
         }
         
         targetVC.title = product.title
