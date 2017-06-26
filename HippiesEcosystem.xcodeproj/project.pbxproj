@@ -10,6 +10,8 @@
 		922FA7951EF71EC000B908FB /* VersionNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922FA7941EF71EC000B908FB /* VersionNumber.swift */; };
 		922FA7991EF98DAD00B908FB /* CutParse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922FA7981EF98DAD00B908FB /* CutParse.swift */; };
 		922FA79B1EF98E3300B908FB /* TrackParse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922FA79A1EF98E3300B908FB /* TrackParse.swift */; };
+		924957C11F011B6F005BA1C8 /* PickableParse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924957C01F011B6F005BA1C8 /* PickableParse.swift */; };
+		924957C41F0121D2005BA1C8 /* Pickable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924957C31F0121D2005BA1C8 /* Pickable.swift */; };
 		9251F26C1EF388C800A6E1BD /* ShipOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9251F26B1EF388C800A6E1BD /* ShipOrderViewController.swift */; };
 		9251F26F1EF389AE00A6E1BD /* ShipOrderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9251F26E1EF389AE00A6E1BD /* ShipOrderView.swift */; };
 		9251F2721EF3945C00A6E1BD /* ShipLineItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9251F2711EF3945C00A6E1BD /* ShipLineItemsViewController.swift */; };
@@ -109,6 +111,8 @@
 		922FA7941EF71EC000B908FB /* VersionNumber.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VersionNumber.swift; sourceTree = "<group>"; };
 		922FA7981EF98DAD00B908FB /* CutParse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CutParse.swift; sourceTree = "<group>"; };
 		922FA79A1EF98E3300B908FB /* TrackParse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrackParse.swift; sourceTree = "<group>"; };
+		924957C01F011B6F005BA1C8 /* PickableParse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickableParse.swift; sourceTree = "<group>"; };
+		924957C31F0121D2005BA1C8 /* Pickable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pickable.swift; sourceTree = "<group>"; };
 		9251F26B1EF388C800A6E1BD /* ShipOrderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShipOrderViewController.swift; sourceTree = "<group>"; };
 		9251F26E1EF389AE00A6E1BD /* ShipOrderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShipOrderView.swift; sourceTree = "<group>"; };
 		9251F2711EF3945C00A6E1BD /* ShipLineItemsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShipLineItemsViewController.swift; sourceTree = "<group>"; };
@@ -236,6 +240,22 @@
 				929C59111EFA1EFD00AAC363 /* PackageParse.swift */,
 			);
 			name = Tracking;
+			sourceTree = "<group>";
+		};
+		924957BF1F011B5D005BA1C8 /* Pick List */ = {
+			isa = PBXGroup;
+			children = (
+				924957C01F011B6F005BA1C8 /* PickableParse.swift */,
+			);
+			name = "Pick List";
+			sourceTree = "<group>";
+		};
+		924957C21F0121C1005BA1C8 /* Pick List */ = {
+			isa = PBXGroup;
+			children = (
+				924957C31F0121D2005BA1C8 /* Pickable.swift */,
+			);
+			name = "Pick List";
 			sourceTree = "<group>";
 		};
 		9251F26D1EF3899700A6E1BD /* Enter Order ID */ = {
@@ -736,6 +756,7 @@
 		92C66EFB1EE140CC00CA8292 /* Database */ = {
 			isa = PBXGroup;
 			children = (
+				924957BF1F011B5D005BA1C8 /* Pick List */,
 				9251F29C1EF4EFCF00A6E1BD /* Item */,
 				92C66F591EE532E100CA8292 /* Product */,
 				92C66F581EE532D800CA8292 /* Ordering */,
@@ -747,6 +768,7 @@
 		92C66EFC1EE140D100CA8292 /* Internal */ = {
 			isa = PBXGroup;
 			children = (
+				924957C21F0121C1005BA1C8 /* Pick List */,
 				9251F2991EF4EF8700A6E1BD /* Item */,
 				92C66F571EE532CE00CA8292 /* Product */,
 				92C66F561EE532BE00CA8292 /* Ordering */,
@@ -1152,6 +1174,7 @@
 				92B5E4C21EFC66210027FD16 /* ShipParse.swift in Sources */,
 				92C66F551EE5327C00CA8292 /* ProductVariant.swift in Sources */,
 				92C66F531EE5322000CA8292 /* ProductVariantParse.swift in Sources */,
+				924957C41F0121D2005BA1C8 /* Pickable.swift in Sources */,
 				92C66EE71EE1382600CA8292 /* MainSearchingView.swift in Sources */,
 				92C66F081EE1681B00CA8292 /* InputInventoryViewController.swift in Sources */,
 				92C66F321EE2559B00CA8292 /* PickOrderViewController.swift in Sources */,
@@ -1189,6 +1212,7 @@
 				9251F26C1EF388C800A6E1BD /* ShipOrderViewController.swift in Sources */,
 				929C59151EFA214B00AAC363 /* Package.swift in Sources */,
 				92C66EF41EE13D3600CA8292 /* MainSearchingDataStore.swift in Sources */,
+				924957C11F011B6F005BA1C8 /* PickableParse.swift in Sources */,
 				9251F28C1EF4C15400A6E1BD /* OrderNoteViewController.swift in Sources */,
 				92C66F051EE1490600CA8292 /* ProductType.swift in Sources */,
 				9251F2831EF3DEB600A6E1BD /* CheckListViewController.swift in Sources */,
