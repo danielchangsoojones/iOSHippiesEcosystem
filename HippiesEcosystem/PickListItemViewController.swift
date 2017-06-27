@@ -11,6 +11,12 @@ import BEMCheckBox
 import SCLAlertView
 
 class PickListItemViewController: CheckListViewController {
+    var pickable: Pickable! {
+        didSet {
+            self.lineItems = pickable.lineItems
+        }
+    }
+    
     var dataStore: PickItemDataStore?
     
     override var rightBarButtonTitle: String {
@@ -35,7 +41,7 @@ class PickListItemViewController: CheckListViewController {
     }
     
     override func proceed() {
-        self.dataStore?.save(lineItems: lineItems)
+        self.dataStore?.pick(pickable: pickable)
     }
     
     fileprivate func titleSetup() {

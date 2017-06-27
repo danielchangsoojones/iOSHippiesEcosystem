@@ -17,10 +17,17 @@ class Order: NSObject {
     var orderParse: OrderParse!
     var name: String {
         get {
-            return orderParse.name
+            let filteredName = "#" + filter(name: orderParse.name)
+            return filteredName
         }
-        set {
-            orderParse.name = newValue
+    }
+    var nameInt: Int {
+        get {
+            let nums = filter(name: orderParse.name)
+            if let orderNum = nums.toInt() {
+                return orderNum
+            }
+            return 0
         }
     }
     var shortName: String {
@@ -62,5 +69,11 @@ class Order: NSObject {
     init(orderParse: OrderParse) {
         super.init()
         self.orderParse = orderParse
+    }
+    
+    private func filter(name: String) -> String {
+        let numOnlyName = name.components(separatedBy: CharacterSet.decimalDigits.inverted).joined()
+        let truncated = numOnlyName.substring(to: numOnlyName.index(before: numOnlyName.endIndex))
+        return truncated
     }
 }
