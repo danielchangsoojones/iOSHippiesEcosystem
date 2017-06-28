@@ -54,7 +54,7 @@ extension ProductSearchViewController {
     }
     
     func segueToInventoryVC(product: ProductType) {
-        var targetVC: InventoryManagementViewController!
+        var targetVC: UIViewController!
         
         switch resultAction {
         case .input:
@@ -64,7 +64,7 @@ extension ProductSearchViewController {
         case .multipleCut:
             targetVC = MultipleCutsViewController(productType: product)
         case .aggregateInventory:
-            targetVC = 
+            targetVC = AggregateInventoryViewController(productType: product)
         }
         
         targetVC.title = product.title

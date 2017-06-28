@@ -9,7 +9,7 @@
 import Foundation
 import Parse
 
-class ProductTypeParse: PFObject, PFSubclassing {
+class ProductTypeParse: CustomParseObject, PFSubclassing {
     class func parseClassName() -> String {
         return "ProductType"
     }

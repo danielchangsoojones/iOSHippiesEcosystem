@@ -9,7 +9,7 @@
 import Foundation
 import Parse
 
-class PickableParse: PFObject, PFSubclassing {
+class PickableParse: CustomParseObject, PFSubclassing {
     class func parseClassName() -> String {
         return "Pickable"
     }

@@ -9,13 +9,13 @@
 import UIKit
 import Former
 
-class InventoryManagementViewController: UIViewController {
+class InventoryManagementViewController: UIViewController {    
     let tableView: UITableView = UITableView(frame: CGRect.zero, style: .grouped)
     lazy var former: Former = Former(tableView: self.tableView)
     var sizeRow: InlinePickerRowFormer<FormInlinePickerCell, String>!
     
     var productType: ProductType!
-    let sizes = ["XS", "S", "M", "L", "XL", "XXL", "One Size"]
+    let sizes = ProductVariant.sizes
     
     init(productType: ProductType) {
         super.init(nibName: nil, bundle: nil)

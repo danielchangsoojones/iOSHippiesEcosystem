@@ -48,6 +48,10 @@
 		92699F8C1EEC9DE0008EDC56 /* NameDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92699F8B1EEC9DE0008EDC56 /* NameDataStore.swift */; };
 		92699F8E1EEC9EF4008EDC56 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92699F8D1EEC9EF4008EDC56 /* User.swift */; };
 		92699F941EED03C5008EDC56 /* Banner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92699F931EED03C5008EDC56 /* Banner.swift */; };
+		9271EA321F02F1E700A61875 /* AggregateInventoryDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9271EA311F02F1E700A61875 /* AggregateInventoryDataStore.swift */; };
+		9271EA351F03051500A61875 /* CustomParseObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9271EA341F03051500A61875 /* CustomParseObject.swift */; };
+		9271EA3A1F030E8200A61875 /* AggregateInventoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9271EA391F030E8200A61875 /* AggregateInventoryTableViewCell.swift */; };
+		9271EA3D1F0381EB00A61875 /* SizeGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9271EA3C1F0381EB00A61875 /* SizeGroup.swift */; };
 		929C59081EF9DEC300AAC363 /* MultipleCutsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929C59071EF9DEC300AAC363 /* MultipleCutsViewController.swift */; };
 		929C590A1EF9DF8D00AAC363 /* QuantityManagementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929C59091EF9DF8D00AAC363 /* QuantityManagementViewController.swift */; };
 		929C590E1EF9E0BE00AAC363 /* MultipleCutsDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929C590D1EF9E0BE00AAC363 /* MultipleCutsDataStore.swift */; };
@@ -150,6 +154,10 @@
 		92699F8B1EEC9DE0008EDC56 /* NameDataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NameDataStore.swift; sourceTree = "<group>"; };
 		92699F8D1EEC9EF4008EDC56 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		92699F931EED03C5008EDC56 /* Banner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Banner.swift; sourceTree = "<group>"; };
+		9271EA311F02F1E700A61875 /* AggregateInventoryDataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AggregateInventoryDataStore.swift; sourceTree = "<group>"; };
+		9271EA341F03051500A61875 /* CustomParseObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomParseObject.swift; sourceTree = "<group>"; };
+		9271EA391F030E8200A61875 /* AggregateInventoryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AggregateInventoryTableViewCell.swift; sourceTree = "<group>"; };
+		9271EA3C1F0381EB00A61875 /* SizeGroup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SizeGroup.swift; sourceTree = "<group>"; };
 		929C59071EF9DEC300AAC363 /* MultipleCutsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultipleCutsViewController.swift; sourceTree = "<group>"; };
 		929C59091EF9DF8D00AAC363 /* QuantityManagementViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuantityManagementViewController.swift; sourceTree = "<group>"; };
 		929C590D1EF9E0BE00AAC363 /* MultipleCutsDataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultipleCutsDataStore.swift; sourceTree = "<group>"; };
@@ -344,6 +352,7 @@
 				9251F2931EF4E35B00A6E1BD /* Super */,
 				92C66EE41EE137F600CA8292 /* Inputting */,
 				9251F28F1EF4E09F00A6E1BD /* Remove */,
+				92B5E4C41EFE316D0027FD16 /* Aggregate */,
 			);
 			name = Management;
 			sourceTree = "<group>";
@@ -542,6 +551,38 @@
 			name = Alerts;
 			sourceTree = "<group>";
 		};
+		9271EA301F02F1D500A61875 /* Data Store */ = {
+			isa = PBXGroup;
+			children = (
+				9271EA311F02F1E700A61875 /* AggregateInventoryDataStore.swift */,
+			);
+			name = "Data Store";
+			sourceTree = "<group>";
+		};
+		9271EA331F03050600A61875 /* Super */ = {
+			isa = PBXGroup;
+			children = (
+				9271EA341F03051500A61875 /* CustomParseObject.swift */,
+			);
+			name = Super;
+			sourceTree = "<group>";
+		};
+		9271EA361F030E4F00A61875 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				9271EA391F030E8200A61875 /* AggregateInventoryTableViewCell.swift */,
+			);
+			name = Cell;
+			sourceTree = "<group>";
+		};
+		9271EA3B1F0381DC00A61875 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9271EA3C1F0381EB00A61875 /* SizeGroup.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		929C59061EF9DD0300AAC363 /* Input Mike Cuts */ = {
 			isa = PBXGroup;
 			children = (
@@ -655,6 +696,9 @@
 		92B5E4C41EFE316D0027FD16 /* Aggregate */ = {
 			isa = PBXGroup;
 			children = (
+				9271EA3B1F0381DC00A61875 /* Model */,
+				9271EA301F02F1D500A61875 /* Data Store */,
+				9271EA361F030E4F00A61875 /* Cell */,
 				92B5E4C51EFE31FC0027FD16 /* AggregateInventoryViewController.swift */,
 			);
 			name = Aggregate;
@@ -700,7 +744,6 @@
 		92C66EE31EE137EA00CA8292 /* Inventory */ = {
 			isa = PBXGroup;
 			children = (
-				92B5E4C41EFE316D0027FD16 /* Aggregate */,
 				9251F2921EF4E35600A6E1BD /* Management */,
 				92C66EE51EE1380000CA8292 /* Search */,
 			);
@@ -767,6 +810,7 @@
 		92C66EFB1EE140CC00CA8292 /* Database */ = {
 			isa = PBXGroup;
 			children = (
+				9271EA331F03050600A61875 /* Super */,
 				924957BF1F011B5D005BA1C8 /* Pick List */,
 				9251F29C1EF4EFCF00A6E1BD /* Item */,
 				92C66F591EE532E100CA8292 /* Product */,
@@ -1183,6 +1227,7 @@
 				9251F2891EF3E99800A6E1BD /* ShipLineItemsDataStore.swift in Sources */,
 				92C66F0F1EE20F1D00CA8292 /* TrackingFormViewController.swift in Sources */,
 				92B5E4C21EFC66210027FD16 /* ShipParse.swift in Sources */,
+				9271EA3D1F0381EB00A61875 /* SizeGroup.swift in Sources */,
 				92C66F551EE5327C00CA8292 /* ProductVariant.swift in Sources */,
 				92C66F531EE5322000CA8292 /* ProductVariantParse.swift in Sources */,
 				924957C41F0121D2005BA1C8 /* Pickable.swift in Sources */,
@@ -1202,8 +1247,10 @@
 				92C66F431EE25CA800CA8292 /* PickItemTableViewCell.swift in Sources */,
 				9251F2911EF4E0F300A6E1BD /* RemoveInventoryViewController.swift in Sources */,
 				92699F8E1EEC9EF4008EDC56 /* User.swift in Sources */,
+				9271EA351F03051500A61875 /* CustomParseObject.swift in Sources */,
 				92C66F221EE22DEA00CA8292 /* TrackingFormDataStore.swift in Sources */,
 				92C66EEA1EE13A8100CA8292 /* CustomSearchBar.swift in Sources */,
+				9271EA3A1F030E8200A61875 /* AggregateInventoryTableViewCell.swift in Sources */,
 				92B5E4BC1EFC61200027FD16 /* PickParse.swift in Sources */,
 				9251F26F1EF389AE00A6E1BD /* ShipOrderView.swift in Sources */,
 				92C66ED21EE1370100CA8292 /* AppDelegate.swift in Sources */,
@@ -1229,6 +1276,7 @@
 				92C66F051EE1490600CA8292 /* ProductType.swift in Sources */,
 				9251F2831EF3DEB600A6E1BD /* CheckListViewController.swift in Sources */,
 				9251F2781EF398B400A6E1BD /* CheckTableViewCell.swift in Sources */,
+				9271EA321F02F1E700A61875 /* AggregateInventoryDataStore.swift in Sources */,
 				92C66EFE1EE1417F00CA8292 /* ProductTypeParse.swift in Sources */,
 				92699F7D1EEC9D7D008EDC56 /* LoginViewController.swift in Sources */,
 				9251F2B61EF5DF9500A6E1BD /* FinishShipDataStore.swift in Sources */,

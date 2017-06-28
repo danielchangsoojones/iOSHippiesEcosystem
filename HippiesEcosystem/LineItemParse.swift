@@ -9,7 +9,7 @@
 import Foundation
 import Parse
 
-class LineItemParse: PFObject, PFSubclassing {
+class LineItemParse: CustomParseObject, PFSubclassing {
     class func parseClassName() -> String {
         return "LineItem"
     }

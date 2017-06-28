@@ -9,10 +9,8 @@
 import Foundation
 import Parse
 
-class PickParse: PFObject, PFSubclassing {
+class PickParse: TrackParse, PFSubclassing {
     class func parseClassName() -> String {
         return "Pick"
     }
-    
-    @NSManaged var user: User
 }

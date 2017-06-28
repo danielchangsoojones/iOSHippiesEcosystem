@@ -9,7 +9,7 @@
 import Foundation
 import Parse
 
-class FabricParse: PFObject, PFSubclassing {
+class FabricParse: CustomParseObject, PFSubclassing {
     class func parseClassName() -> String {
         return "Fabric"
     }

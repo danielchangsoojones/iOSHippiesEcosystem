@@ -9,6 +9,12 @@
 import Foundation
 
 class Item {
+    var productVariant: ProductVariant {
+        get {
+            let productVariant = ProductVariant(productVariantParse: itemParse.productVariant)
+            return productVariant
+        }
+    }
     var itemParse: ItemParse!
     
     init(itemParse: ItemParse) {

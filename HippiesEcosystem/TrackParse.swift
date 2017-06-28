@@ -9,6 +9,6 @@
 import Foundation
 import Parse
 
-class TrackParse: PFObject {
+class TrackParse: CustomParseObject {
     @NSManaged var user: User
 }

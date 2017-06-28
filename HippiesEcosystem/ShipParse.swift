@@ -9,10 +9,8 @@
 import Foundation
 import Parse
 
-class ShipParse: PFObject, PFSubclassing {
+class ShipParse: TrackParse, PFSubclassing {
     class func parseClassName() -> String {
         return "Ship"
     }
-    
-    @NSManaged var user: User
 }
