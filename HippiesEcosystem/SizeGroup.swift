@@ -11,6 +11,7 @@ import Foundation
 class SizeGroup {
     var items: [Item] = []
     var size: String!
+    var count: Int = 0
     
     init(size: String) {
         self.size = size

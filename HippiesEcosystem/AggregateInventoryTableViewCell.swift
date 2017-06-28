@@ -9,7 +9,7 @@
 import UIKit
 
 protocol AggregateInventoryCellDelegate {
-    func update(count: Int)
+    func update(count: Int, at index: Int)
 }
 
 class AggregateInventoryTableViewCell: UITableViewCell {
@@ -24,7 +24,7 @@ class AggregateInventoryTableViewCell: UITableViewCell {
     var count: Int = 0 {
         didSet {
             if count >= 0 && count != oldValue {
-                delegate?.update(count: count)
+                delegate?.update(count: count, at: tag)
                 countTextField.text = count.toString
             }
         }
@@ -36,6 +36,7 @@ class AggregateInventoryTableViewCell: UITableViewCell {
         sizeLabelSetup()
         buttonStackViewSetup()
         countTextFieldSetup()
+        totalLabelSetup()
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -128,6 +129,18 @@ extension AggregateInventoryTableViewCell {
         if let newCount = textField.text?.toInt() {
             print(newCount)
             count = newCount
+        }
+    }
+}
+
+extension AggregateInventoryTableViewCell {
+    func totalLabelSetup() {
+        let totalLabel = UILabel()
+        totalLabel.text = "Total:"
+        self.addSubview(totalLabel)
+        totalLabel.snp.makeConstraints { (make) in
+            make.centerY.equalToSuperview()
+            make.trailing.equalTo(countTextField.snp.leading).offset(-10)
         }
     }
 }

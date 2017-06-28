@@ -72,3 +72,9 @@ class AggregateInventoryDataStore {
         return sizeGroups
     }
 }
+
+extension AggregateInventoryDataStore {
+    func saveUpdatedCounts(from sizeGroups: [SizeGroup]) {
+        
+    }
+}

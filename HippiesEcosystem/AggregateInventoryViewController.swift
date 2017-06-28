@@ -35,6 +35,7 @@ class AggregateInventoryViewController: UIViewController {
         super.viewDidLoad()
         tableViewSetup()
         dataStoreSetup()
+        rightBarButtonSetup()
     }
 
     override func didReceiveMemoryWarning() {
@@ -56,6 +57,17 @@ class AggregateInventoryViewController: UIViewController {
     }
 }
 
+extension AggregateInventoryViewController {
+    fileprivate func rightBarButtonSetup() {
+        let rightBarButton = UIBarButtonItem(barButtonSystemItem: .save, target: self, action: #selector(save(sender:)))
+        navigationItem.rightBarButtonItem = rightBarButton
+    }
+    
+    func save(sender: UIBarButtonItem) {
+        sender.isEnabled = false
+    }
+}
+
 extension AggregateInventoryViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return sizeGroups.count
@@ -65,11 +77,20 @@ extension AggregateInventoryViewController: UITableViewDelegate, UITableViewData
         let cell = tableView.dequeueReusableCell(withIdentifier: AggregateInventoryTableViewCell.identifier, for: indexPath) as! AggregateInventoryTableViewCell
         let sizeGroup = sizeGroups[indexPath.row]
         cell.set(size: sizeGroup.size, count: sizeGroup.items.count)
+        cell.tag = indexPath.row
+        cell.delegate = self
         return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 100
+    }
+}
+
+extension AggregateInventoryViewController: AggregateInventoryCellDelegate {
+    func update(count: Int, at index: Int) {
+        let sizeGroup = sizeGroups[index]
+        sizeGroup.count = count
     }
 }
 
