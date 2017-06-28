@@ -81,7 +81,7 @@ extension AggregateInventoryDataStore {
 extension AggregateInventoryDataStore {
     func saveUpdatedCounts(from sizeGroups: [SizeGroup]) {
         let productVariantDictionary = createProductVariantDictionary(from: sizeGroups)
-        PFCloud.callFunction(inBackground: "updateInventory", withParameters: ["variantDict" : productVariantDictionary], block: {
+        PFCloud.callFunction(inBackground: "updateInventoryCount", withParameters: ["variantDict" : productVariantDictionary], block: {
             (results: Any?, error: Error?) -> Void in
             if let _ = results {
                 self.delegate?.successfullySaved()

@@ -96,7 +96,7 @@ extension AggregateInventoryTableViewCell {
         let button = UIButton()
         button.setImage(image, for: .normal)
         button.imageView?.contentMode = .scaleAspectFit
-        button.target(forAction: selector, withSender: button)
+        button.addTarget(self, action: selector, for: .touchUpInside)
         return button
     }
     
