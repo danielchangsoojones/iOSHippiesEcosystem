@@ -21,7 +21,7 @@ class AggregateInventoryTableViewCell: UITableViewCell {
     var countTextField: UITextField!
     var buttonStackView: UIStackView!
     
-    var count: Int = 0 {
+    var count: Int = -1 {
         didSet {
             if count >= 0 && count != oldValue {
                 delegate?.update(count: count, at: tag)

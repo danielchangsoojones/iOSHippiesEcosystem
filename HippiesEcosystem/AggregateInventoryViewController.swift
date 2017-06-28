@@ -11,6 +11,7 @@ import SCLAlertView
 
 class AggregateInventoryViewController: UIViewController {
     var tableView: UITableView!
+    var spinnerView: UIView?
     
     var dataStore: AggregateInventoryDataStore?
     var productType: ProductType!
@@ -65,6 +66,8 @@ extension AggregateInventoryViewController {
     
     func save(sender: UIBarButtonItem) {
         sender.isEnabled = false
+        spinnerView = Helpers.showActivityIndicatory(on: self.view)
+        dataStore?.saveUpdatedCounts(from: sizeGroups)
     }
 }
 
@@ -100,13 +103,12 @@ extension AggregateInventoryViewController: AggregateInventoryDataDelegate {
     }
     
     func received(error: Error) {
-        let appearance = SCLAlertView.SCLAppearance (
-            showCloseButton: false
-        )
-        let alertView = SCLAlertView(appearance: appearance)
-        alertView.addButton("Done") {
-            self.popVC()
-        }
-        alertView.showError("Error", subTitle: error.localizedDescription)
+        navigationItem.rightBarButtonItem?.isEnabled = true
+        spinnerView?.removeFromSuperview()
+        SCLAlertView().showError("Error", subTitle: error.localizedDescription)
+    }
+    
+    func successfullySaved() {
+        popVC()
     }
 }

@@ -13,6 +13,18 @@ class SizeGroup {
     var size: String!
     var count: Int = 0
     
+    var productVariant: ProductVariant? {
+        if let item = items.first {
+            return item.productVariant
+        }
+        return nil
+    }
+    var delta: Int {
+        get {
+            return count - items.count
+        }
+    }
+    
     init(size: String) {
         self.size = size
     }

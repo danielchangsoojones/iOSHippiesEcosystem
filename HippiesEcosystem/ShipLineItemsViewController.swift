@@ -28,7 +28,7 @@ class ShipLineItemsViewController: CheckListViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        spinnerView = Helpers.showActivityIndicatory(uiView: self.view)
+        spinnerView = Helpers.showActivityIndicatory(on: self.view)
         dataStoreSetup()
     }
 

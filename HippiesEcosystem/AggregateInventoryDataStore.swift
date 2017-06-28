@@ -12,6 +12,7 @@ import Parse
 protocol AggregateInventoryDataDelegate {
     func received(sizeGroups: [SizeGroup])
     func received(error: Error)
+    func successfullySaved()
 }
 
 class AggregateInventoryDataStore {
@@ -20,7 +21,10 @@ class AggregateInventoryDataStore {
     init(delegate: AggregateInventoryDataDelegate) {
         self.delegate = delegate
     }
-    
+}
+
+//MARK: Load inventory counts
+extension AggregateInventoryDataStore {
     func loadInventories(from productType: ProductType) {
         let query = ItemParse.query() as! PFQuery<ItemParse>
         query.whereKeyDoesNotExist("pick")
@@ -73,8 +77,29 @@ class AggregateInventoryDataStore {
     }
 }
 
+//MARK: Save Updated Counts
 extension AggregateInventoryDataStore {
     func saveUpdatedCounts(from sizeGroups: [SizeGroup]) {
-        
+        let productVariantDictionary = createProductVariantDictionary(from: sizeGroups)
+        PFCloud.callFunction(inBackground: "updateInventory", withParameters: ["variantDict" : productVariantDictionary], block: {
+            (results: Any?, error: Error?) -> Void in
+            if let _ = results {
+                self.delegate?.successfullySaved()
+            } else if let error = error {
+                self.delegate?.received(error: error)
+            }
+        })
+    }
+    
+    private func createProductVariantDictionary(from sizeGroups: [SizeGroup]) -> [String : Int] {
+        //[ProductVariantObjectID : delta]
+        var variantDictionary : [String : Int] = [:]
+        for sizeGroup in sizeGroups {
+            let delta = sizeGroup.delta
+            if let productVariantObjectID = sizeGroup.productVariant?.productVariantParse.objectId, delta != 0 {
+                variantDictionary[productVariantObjectID] = delta
+            }
+        }
+        return variantDictionary
     }
 }
