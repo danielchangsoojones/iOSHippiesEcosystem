@@ -22,12 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             toSignUpVC()
         } else {
             //already logged in
-            
-            //TODO: remove this piece of code
-            setInitialVC(vc: UINavigationController(rootViewController: ProductSearchViewController(resultAction: .aggregateInventory)))
-            
-            
-//            setHomeVC()
+            setHomeVC()
         }
         VersionNumberParse.check()
         return true
