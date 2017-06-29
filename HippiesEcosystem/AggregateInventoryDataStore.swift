@@ -16,6 +16,7 @@ protocol AggregateInventoryDataDelegate {
 }
 
 class AggregateInventoryDataStore {
+    var sizeGroups: [SizeGroup] = []
     var delegate: AggregateInventoryDataDelegate?
     
     init(delegate: AggregateInventoryDataDelegate) {
@@ -25,7 +26,24 @@ class AggregateInventoryDataStore {
 
 //MARK: Load inventory counts
 extension AggregateInventoryDataStore {
+    //TODO: this is probably much better to run in cloud code, since we run a double query
     func loadInventories(from productType: ProductType) {
+        let productVariantQuery = ProductVariantParse.query()! as! PFQuery<ProductVariantParse>
+        productVariantQuery.whereKey("product", equalTo: productType.productTypeParse)
+        productVariantQuery.findObjectsInBackground { (productVariantsParse, error) in
+            if let productVariantsParse = productVariantsParse {
+                let productVariants = productVariantsParse.map({ (p: ProductVariantParse) -> ProductVariant in
+                    return ProductVariant(productVariantParse: p)
+                })
+                self.sizeGroups = self.createSizeGroups(productVariants: productVariants)
+                self.loadItems(from: productType)
+            } else if let error = error {
+                self.delegate?.received(error: error)
+            }
+        }
+    }
+    
+    func loadItems(from productType: ProductType) {
         let query = ItemParse.query() as! PFQuery<ItemParse>
         query.whereKeyDoesNotExist("pick")
         
@@ -45,7 +63,7 @@ extension AggregateInventoryDataStore {
                     let item = Item(itemParse: itemParse)
                     return item
                 })
-                let sizeGroups = self.createSizeGroups(from: items)
+                let sizeGroups = self.updateSizeGroups(with: items)
                 self.delegate?.received(sizeGroups: sizeGroups)
             } else if let error = error {
                 self.delegate?.received(error: error)
@@ -53,27 +71,36 @@ extension AggregateInventoryDataStore {
         }
     }
     
-    private func createSizeGroups(from items: [Item]) -> [SizeGroup] {
-        let sizeGroups: [SizeGroup] = createSizeGroups()
+    private func updateSizeGroups(with items: [Item]) -> [SizeGroup] {
         for item in items {
             let index = sizeGroups.index(where: { (sizeGroup: SizeGroup) -> Bool in
                 return sizeGroup.size == item.productVariant.size
             })
             if let index = index {
                 sizeGroups[index].items.append(item)
+                sizeGroups[index].setOriginalCount()
             }
         }
         return sizeGroups
     }
     
-    private func createSizeGroups() -> [SizeGroup] {
-        let sizes = ProductVariant.sizes
+    private func createSizeGroups(productVariants: [ProductVariant]) -> [SizeGroup] {
         var sizeGroups: [SizeGroup] = []
-        for size in sizes {
-            let sizeGroup = SizeGroup(size: size)
+        for productVariant in productVariants {
+            let sizeGroup = SizeGroup(productVariant: productVariant)
             sizeGroups.append(sizeGroup)
         }
-        return sizeGroups
+        let sortedSizeGroups = sort(sizeGroups)
+        return sortedSizeGroups
+    }
+    
+    private func sort(_ sizeGroups: [SizeGroup]) -> [SizeGroup] {
+        let sizes = ProductVariant.sizes
+        return sizeGroups.sorted(by: { (current: SizeGroup, next: SizeGroup) -> Bool in
+            let currentIndex: Int = sizes.index(of: current.size) ?? 0
+            let nextIndex: Int = sizes.index(of: next.size) ?? 0
+            return nextIndex > currentIndex
+        })
     }
 }
 
@@ -81,14 +108,18 @@ extension AggregateInventoryDataStore {
 extension AggregateInventoryDataStore {
     func saveUpdatedCounts(from sizeGroups: [SizeGroup]) {
         let productVariantDictionary = createProductVariantDictionary(from: sizeGroups)
-        PFCloud.callFunction(inBackground: "updateInventoryCount", withParameters: ["variantDict" : productVariantDictionary], block: {
-            (results: Any?, error: Error?) -> Void in
-            if let _ = results {
-                self.delegate?.successfullySaved()
-            } else if let error = error {
-                self.delegate?.received(error: error)
-            }
-        })
+        if !productVariantDictionary.isEmpty {
+            PFCloud.callFunction(inBackground: "updateInventoryCount", withParameters: ["variantDict" : productVariantDictionary], block: {
+                (results: Any?, error: Error?) -> Void in
+                if let _ = results {
+                    self.delegate?.successfullySaved()
+                } else if let error = error {
+                    self.delegate?.received(error: error)
+                }
+            })
+        } else {
+            self.delegate?.successfullySaved()
+        }
     }
     
     private func createProductVariantDictionary(from sizeGroups: [SizeGroup]) -> [String : Int] {

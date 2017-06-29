@@ -10,22 +10,24 @@ import Foundation
 
 class SizeGroup {
     var items: [Item] = []
-    var size: String!
     var count: Int = 0
-    
-    var productVariant: ProductVariant? {
-        if let item = items.first {
-            return item.productVariant
+    var size: String {
+        get {
+            return productVariant.size
         }
-        return nil
     }
     var delta: Int {
         get {
             return count - items.count
         }
     }
+    var productVariant: ProductVariant!
     
-    init(size: String) {
-        self.size = size
+    init(productVariant: ProductVariant) {
+        self.productVariant = productVariant
+    }
+    
+    func setOriginalCount() {
+        self.count = items.count
     }
 }

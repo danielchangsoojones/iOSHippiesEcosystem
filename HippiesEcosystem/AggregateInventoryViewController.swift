@@ -34,9 +34,16 @@ class AggregateInventoryViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setKeyboardNotifications()
         tableViewSetup()
         dataStoreSetup()
         rightBarButtonSetup()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        //For our keyboard notifications to not be when this view disappears
+        NotificationCenter.default.removeObserver(self)
     }
 
     override func didReceiveMemoryWarning() {
@@ -110,5 +117,22 @@ extension AggregateInventoryViewController: AggregateInventoryDataDelegate {
     
     func successfullySaved() {
         popVC()
+    }
+}
+
+//MARK: keyboard
+extension AggregateInventoryViewController {
+    fileprivate func setKeyboardNotifications() {
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(_:)), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(_:)), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+    }
+    
+    func keyboardWillShow(_ notification: NSNotification){
+        let keyboardHeight = Helpers.getKeyboardHeight(notification: notification)
+        tableView.contentInset.bottom = keyboardHeight
+    }
+    
+    func keyboardWillHide(_ notification: NSNotification){
+        tableView.contentInset.bottom = 0
     }
 }
