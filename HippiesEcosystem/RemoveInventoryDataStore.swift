@@ -10,7 +10,7 @@ import Foundation
 import Parse
 
 protocol RemoveInventoryDataDelegate {
-    func removed(inventory: Inventory)
+    func removed(inventory: Item)
     func recieved(error: Error)
 }
 
@@ -25,8 +25,8 @@ class RemoveInventoryDataStore {
         if let productTypeObjectID = productType.productTypeParse.objectId {
             PFCloud.callFunction(inBackground: "removeInventory", withParameters: ["productTypeObjectID": productTypeObjectID, "size" : size], block: {
                 (result: Any?, error: Error?) -> Void in
-                if let inventoryParse = result as? InventoryParse {
-                    let inventory = Inventory(inventoryParse: inventoryParse)
+                if let itemParse = result as? ItemParse {
+                    let inventory = Item(itemParse: itemParse)
                     self.delegate?.removed(inventory: inventory)
                 } else if let error = error {
                     self.delegate?.recieved(error: error)

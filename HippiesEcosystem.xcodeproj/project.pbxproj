@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		922FA7951EF71EC000B908FB /* VersionNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922FA7941EF71EC000B908FB /* VersionNumber.swift */; };
+		922FA7991EF98DAD00B908FB /* CutParse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922FA7981EF98DAD00B908FB /* CutParse.swift */; };
+		922FA79B1EF98E3300B908FB /* TrackParse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922FA79A1EF98E3300B908FB /* TrackParse.swift */; };
+		924957C11F011B6F005BA1C8 /* PickableParse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924957C01F011B6F005BA1C8 /* PickableParse.swift */; };
+		924957C41F0121D2005BA1C8 /* Pickable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924957C31F0121D2005BA1C8 /* Pickable.swift */; };
 		9251F26C1EF388C800A6E1BD /* ShipOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9251F26B1EF388C800A6E1BD /* ShipOrderViewController.swift */; };
 		9251F26F1EF389AE00A6E1BD /* ShipOrderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9251F26E1EF389AE00A6E1BD /* ShipOrderView.swift */; };
 		9251F2721EF3945C00A6E1BD /* ShipLineItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9251F2711EF3945C00A6E1BD /* ShipLineItemsViewController.swift */; };
@@ -20,8 +24,8 @@
 		9251F2911EF4E0F300A6E1BD /* RemoveInventoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9251F2901EF4E0F300A6E1BD /* RemoveInventoryViewController.swift */; };
 		9251F2951EF4E37000A6E1BD /* InventoryManagementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9251F2941EF4E37000A6E1BD /* InventoryManagementViewController.swift */; };
 		9251F2981EF4EDD800A6E1BD /* RemoveInventoryDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9251F2971EF4EDD800A6E1BD /* RemoveInventoryDataStore.swift */; };
-		9251F29B1EF4EF9300A6E1BD /* Inventory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9251F29A1EF4EF9300A6E1BD /* Inventory.swift */; };
-		9251F29E1EF4EFDB00A6E1BD /* InventoryParse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9251F29D1EF4EFDB00A6E1BD /* InventoryParse.swift */; };
+		9251F29B1EF4EF9300A6E1BD /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9251F29A1EF4EF9300A6E1BD /* Item.swift */; };
+		9251F29E1EF4EFDB00A6E1BD /* ItemParse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9251F29D1EF4EFDB00A6E1BD /* ItemParse.swift */; };
 		9251F2A11EF5BB8900A6E1BD /* ShipAddressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9251F2A01EF5BB8900A6E1BD /* ShipAddressViewController.swift */; };
 		9251F2A71EF5BD5300A6E1BD /* OrderInformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9251F2A61EF5BD5300A6E1BD /* OrderInformationView.swift */; };
 		9251F2A91EF5BD8500A6E1BD /* OrderInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9251F2A81EF5BD8500A6E1BD /* OrderInformationViewController.swift */; };
@@ -44,6 +48,24 @@
 		92699F8C1EEC9DE0008EDC56 /* NameDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92699F8B1EEC9DE0008EDC56 /* NameDataStore.swift */; };
 		92699F8E1EEC9EF4008EDC56 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92699F8D1EEC9EF4008EDC56 /* User.swift */; };
 		92699F941EED03C5008EDC56 /* Banner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92699F931EED03C5008EDC56 /* Banner.swift */; };
+		9271EA321F02F1E700A61875 /* AggregateInventoryDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9271EA311F02F1E700A61875 /* AggregateInventoryDataStore.swift */; };
+		9271EA351F03051500A61875 /* CustomParseObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9271EA341F03051500A61875 /* CustomParseObject.swift */; };
+		9271EA3A1F030E8200A61875 /* AggregateInventoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9271EA391F030E8200A61875 /* AggregateInventoryTableViewCell.swift */; };
+		9271EA3D1F0381EB00A61875 /* SizeGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9271EA3C1F0381EB00A61875 /* SizeGroup.swift */; };
+		929C59081EF9DEC300AAC363 /* MultipleCutsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929C59071EF9DEC300AAC363 /* MultipleCutsViewController.swift */; };
+		929C590A1EF9DF8D00AAC363 /* QuantityManagementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929C59091EF9DF8D00AAC363 /* QuantityManagementViewController.swift */; };
+		929C590E1EF9E0BE00AAC363 /* MultipleCutsDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929C590D1EF9E0BE00AAC363 /* MultipleCutsDataStore.swift */; };
+		929C59101EFA1BDA00AAC363 /* SewnParse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929C590F1EFA1BDA00AAC363 /* SewnParse.swift */; };
+		929C59121EFA1EFD00AAC363 /* PackageParse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929C59111EFA1EFD00AAC363 /* PackageParse.swift */; };
+		929C59151EFA214B00AAC363 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929C59141EFA214B00AAC363 /* Package.swift */; };
+		929C59181EFA3D6F00AAC363 /* SearchColorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929C59171EFA3D6F00AAC363 /* SearchColorViewController.swift */; };
+		929C591C1EFA42DB00AAC363 /* MainSearchingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929C591B1EFA42DB00AAC363 /* MainSearchingViewController.swift */; };
+		929C591F1EFA494B00AAC363 /* ProductSearchDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929C591E1EFA494B00AAC363 /* ProductSearchDataStore.swift */; };
+		929C59241EFA4DD800AAC363 /* SearchColorDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929C59231EFA4DD800AAC363 /* SearchColorDataStore.swift */; };
+		929C59261EFA4E9B00AAC363 /* Fabric.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929C59251EFA4E9B00AAC363 /* Fabric.swift */; };
+		92B5E4BC1EFC61200027FD16 /* PickParse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B5E4BB1EFC61200027FD16 /* PickParse.swift */; };
+		92B5E4C21EFC66210027FD16 /* ShipParse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B5E4C11EFC66210027FD16 /* ShipParse.swift */; };
+		92B5E4C61EFE31FC0027FD16 /* AggregateInventoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B5E4C51EFE31FC0027FD16 /* AggregateInventoryViewController.swift */; };
 		92C66ED21EE1370100CA8292 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C66ED11EE1370100CA8292 /* AppDelegate.swift */; };
 		92C66ED91EE1370100CA8292 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92C66ED81EE1370100CA8292 /* Assets.xcassets */; };
 		92C66EDC1EE1370100CA8292 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92C66EDA1EE1370100CA8292 /* LaunchScreen.storyboard */; };
@@ -92,6 +114,10 @@
 		527E5FB96BF6BA46DABF0DD0 /* Pods-HippiesEcosystem.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HippiesEcosystem.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HippiesEcosystem/Pods-HippiesEcosystem.debug.xcconfig"; sourceTree = "<group>"; };
 		8B60980DBB0B09CDC321CF0C /* Pods-HippiesEcosystem.debug (staging).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HippiesEcosystem.debug (staging).xcconfig"; path = "Pods/Target Support Files/Pods-HippiesEcosystem/Pods-HippiesEcosystem.debug (staging).xcconfig"; sourceTree = "<group>"; };
 		922FA7941EF71EC000B908FB /* VersionNumber.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VersionNumber.swift; sourceTree = "<group>"; };
+		922FA7981EF98DAD00B908FB /* CutParse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CutParse.swift; sourceTree = "<group>"; };
+		922FA79A1EF98E3300B908FB /* TrackParse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrackParse.swift; sourceTree = "<group>"; };
+		924957C01F011B6F005BA1C8 /* PickableParse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickableParse.swift; sourceTree = "<group>"; };
+		924957C31F0121D2005BA1C8 /* Pickable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pickable.swift; sourceTree = "<group>"; };
 		9251F26B1EF388C800A6E1BD /* ShipOrderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShipOrderViewController.swift; sourceTree = "<group>"; };
 		9251F26E1EF389AE00A6E1BD /* ShipOrderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShipOrderView.swift; sourceTree = "<group>"; };
 		9251F2711EF3945C00A6E1BD /* ShipLineItemsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShipLineItemsViewController.swift; sourceTree = "<group>"; };
@@ -104,8 +130,8 @@
 		9251F2901EF4E0F300A6E1BD /* RemoveInventoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoveInventoryViewController.swift; sourceTree = "<group>"; };
 		9251F2941EF4E37000A6E1BD /* InventoryManagementViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InventoryManagementViewController.swift; sourceTree = "<group>"; };
 		9251F2971EF4EDD800A6E1BD /* RemoveInventoryDataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoveInventoryDataStore.swift; sourceTree = "<group>"; };
-		9251F29A1EF4EF9300A6E1BD /* Inventory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Inventory.swift; sourceTree = "<group>"; };
-		9251F29D1EF4EFDB00A6E1BD /* InventoryParse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InventoryParse.swift; sourceTree = "<group>"; };
+		9251F29A1EF4EF9300A6E1BD /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		9251F29D1EF4EFDB00A6E1BD /* ItemParse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemParse.swift; sourceTree = "<group>"; };
 		9251F2A01EF5BB8900A6E1BD /* ShipAddressViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShipAddressViewController.swift; sourceTree = "<group>"; };
 		9251F2A61EF5BD5300A6E1BD /* OrderInformationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderInformationView.swift; sourceTree = "<group>"; };
 		9251F2A81EF5BD8500A6E1BD /* OrderInformationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderInformationViewController.swift; sourceTree = "<group>"; };
@@ -128,6 +154,24 @@
 		92699F8B1EEC9DE0008EDC56 /* NameDataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NameDataStore.swift; sourceTree = "<group>"; };
 		92699F8D1EEC9EF4008EDC56 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		92699F931EED03C5008EDC56 /* Banner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Banner.swift; sourceTree = "<group>"; };
+		9271EA311F02F1E700A61875 /* AggregateInventoryDataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AggregateInventoryDataStore.swift; sourceTree = "<group>"; };
+		9271EA341F03051500A61875 /* CustomParseObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomParseObject.swift; sourceTree = "<group>"; };
+		9271EA391F030E8200A61875 /* AggregateInventoryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AggregateInventoryTableViewCell.swift; sourceTree = "<group>"; };
+		9271EA3C1F0381EB00A61875 /* SizeGroup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SizeGroup.swift; sourceTree = "<group>"; };
+		929C59071EF9DEC300AAC363 /* MultipleCutsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultipleCutsViewController.swift; sourceTree = "<group>"; };
+		929C59091EF9DF8D00AAC363 /* QuantityManagementViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuantityManagementViewController.swift; sourceTree = "<group>"; };
+		929C590D1EF9E0BE00AAC363 /* MultipleCutsDataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultipleCutsDataStore.swift; sourceTree = "<group>"; };
+		929C590F1EFA1BDA00AAC363 /* SewnParse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SewnParse.swift; sourceTree = "<group>"; };
+		929C59111EFA1EFD00AAC363 /* PackageParse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PackageParse.swift; sourceTree = "<group>"; };
+		929C59141EFA214B00AAC363 /* Package.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
+		929C59171EFA3D6F00AAC363 /* SearchColorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchColorViewController.swift; sourceTree = "<group>"; };
+		929C591B1EFA42DB00AAC363 /* MainSearchingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainSearchingViewController.swift; sourceTree = "<group>"; };
+		929C591E1EFA494B00AAC363 /* ProductSearchDataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductSearchDataStore.swift; sourceTree = "<group>"; };
+		929C59231EFA4DD800AAC363 /* SearchColorDataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchColorDataStore.swift; sourceTree = "<group>"; };
+		929C59251EFA4E9B00AAC363 /* Fabric.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fabric.swift; sourceTree = "<group>"; };
+		92B5E4BB1EFC61200027FD16 /* PickParse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickParse.swift; sourceTree = "<group>"; };
+		92B5E4C11EFC66210027FD16 /* ShipParse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShipParse.swift; sourceTree = "<group>"; };
+		92B5E4C51EFE31FC0027FD16 /* AggregateInventoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AggregateInventoryViewController.swift; sourceTree = "<group>"; };
 		92C66ECE1EE1370100CA8292 /* HippiesEcosystem.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HippiesEcosystem.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92C66ED11EE1370100CA8292 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		92C66ED81EE1370100CA8292 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -195,6 +239,33 @@
 				C94F17F7AB18AA5749DB7653 /* Pods-HippiesEcosystem.debug (production).xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		922FA7971EF98D8B00B908FB /* Tracking */ = {
+			isa = PBXGroup;
+			children = (
+				922FA79A1EF98E3300B908FB /* TrackParse.swift */,
+				922FA7981EF98DAD00B908FB /* CutParse.swift */,
+				929C590F1EFA1BDA00AAC363 /* SewnParse.swift */,
+				929C59111EFA1EFD00AAC363 /* PackageParse.swift */,
+			);
+			name = Tracking;
+			sourceTree = "<group>";
+		};
+		924957BF1F011B5D005BA1C8 /* Pick List */ = {
+			isa = PBXGroup;
+			children = (
+				924957C01F011B6F005BA1C8 /* PickableParse.swift */,
+			);
+			name = "Pick List";
+			sourceTree = "<group>";
+		};
+		924957C21F0121C1005BA1C8 /* Pick List */ = {
+			isa = PBXGroup;
+			children = (
+				924957C31F0121D2005BA1C8 /* Pickable.swift */,
+			);
+			name = "Pick List";
 			sourceTree = "<group>";
 		};
 		9251F26D1EF3899700A6E1BD /* Enter Order ID */ = {
@@ -281,6 +352,7 @@
 				9251F2931EF4E35B00A6E1BD /* Super */,
 				92C66EE41EE137F600CA8292 /* Inputting */,
 				9251F28F1EF4E09F00A6E1BD /* Remove */,
+				92B5E4C41EFE316D0027FD16 /* Aggregate */,
 			);
 			name = Management;
 			sourceTree = "<group>";
@@ -289,6 +361,7 @@
 			isa = PBXGroup;
 			children = (
 				9251F2941EF4E37000A6E1BD /* InventoryManagementViewController.swift */,
+				929C59091EF9DF8D00AAC363 /* QuantityManagementViewController.swift */,
 			);
 			name = Super;
 			sourceTree = "<group>";
@@ -301,20 +374,22 @@
 			name = "Data Store";
 			sourceTree = "<group>";
 		};
-		9251F2991EF4EF8700A6E1BD /* Inventory */ = {
+		9251F2991EF4EF8700A6E1BD /* Item */ = {
 			isa = PBXGroup;
 			children = (
-				9251F29A1EF4EF9300A6E1BD /* Inventory.swift */,
+				929C59131EFA214200AAC363 /* Tracking */,
+				9251F29A1EF4EF9300A6E1BD /* Item.swift */,
 			);
-			name = Inventory;
+			name = Item;
 			sourceTree = "<group>";
 		};
-		9251F29C1EF4EFCF00A6E1BD /* Inventory */ = {
+		9251F29C1EF4EFCF00A6E1BD /* Item */ = {
 			isa = PBXGroup;
 			children = (
-				9251F29D1EF4EFDB00A6E1BD /* InventoryParse.swift */,
+				922FA7971EF98D8B00B908FB /* Tracking */,
+				9251F29D1EF4EFDB00A6E1BD /* ItemParse.swift */,
 			);
-			name = Inventory;
+			name = Item;
 			sourceTree = "<group>";
 		};
 		9251F29F1EF5BB6A00A6E1BD /* Address */ = {
@@ -476,6 +551,159 @@
 			name = Alerts;
 			sourceTree = "<group>";
 		};
+		9271EA301F02F1D500A61875 /* Data Store */ = {
+			isa = PBXGroup;
+			children = (
+				9271EA311F02F1E700A61875 /* AggregateInventoryDataStore.swift */,
+			);
+			name = "Data Store";
+			sourceTree = "<group>";
+		};
+		9271EA331F03050600A61875 /* Super */ = {
+			isa = PBXGroup;
+			children = (
+				9271EA341F03051500A61875 /* CustomParseObject.swift */,
+			);
+			name = Super;
+			sourceTree = "<group>";
+		};
+		9271EA361F030E4F00A61875 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				9271EA391F030E8200A61875 /* AggregateInventoryTableViewCell.swift */,
+			);
+			name = Cell;
+			sourceTree = "<group>";
+		};
+		9271EA3B1F0381DC00A61875 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9271EA3C1F0381EB00A61875 /* SizeGroup.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		929C59061EF9DD0300AAC363 /* Input Mike Cuts */ = {
+			isa = PBXGroup;
+			children = (
+				929C590B1EF9E09500AAC363 /* Input */,
+			);
+			name = "Input Mike Cuts";
+			sourceTree = "<group>";
+		};
+		929C590B1EF9E09500AAC363 /* Input */ = {
+			isa = PBXGroup;
+			children = (
+				929C590C1EF9E0AC00AAC363 /* Data Store */,
+				929C59071EF9DEC300AAC363 /* MultipleCutsViewController.swift */,
+			);
+			name = Input;
+			sourceTree = "<group>";
+		};
+		929C590C1EF9E0AC00AAC363 /* Data Store */ = {
+			isa = PBXGroup;
+			children = (
+				929C590D1EF9E0BE00AAC363 /* MultipleCutsDataStore.swift */,
+			);
+			name = "Data Store";
+			sourceTree = "<group>";
+		};
+		929C59131EFA214200AAC363 /* Tracking */ = {
+			isa = PBXGroup;
+			children = (
+				929C59141EFA214B00AAC363 /* Package.swift */,
+			);
+			name = Tracking;
+			sourceTree = "<group>";
+		};
+		929C59161EFA3D3F00AAC363 /* One Color Cuts */ = {
+			isa = PBXGroup;
+			children = (
+				929C59201EFA4D9600AAC363 /* Data Store */,
+				929C59211EFA4DA600AAC363 /* Search */,
+			);
+			name = "One Color Cuts";
+			sourceTree = "<group>";
+		};
+		929C59191EFA3E6800AAC363 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				929C591A1EFA3E7300AAC363 /* Data Store */,
+				929C591B1EFA42DB00AAC363 /* MainSearchingViewController.swift */,
+				92C66EE61EE1382600CA8292 /* MainSearchingView.swift */,
+			);
+			name = Search;
+			sourceTree = "<group>";
+		};
+		929C591A1EFA3E7300AAC363 /* Data Store */ = {
+			isa = PBXGroup;
+			children = (
+				92C66EF31EE13D3600CA8292 /* MainSearchingDataStore.swift */,
+			);
+			name = "Data Store";
+			sourceTree = "<group>";
+		};
+		929C59201EFA4D9600AAC363 /* Data Store */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Data Store";
+			sourceTree = "<group>";
+		};
+		929C59211EFA4DA600AAC363 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				929C59221EFA4DC600AAC363 /* Data Store */,
+				929C59171EFA3D6F00AAC363 /* SearchColorViewController.swift */,
+			);
+			name = Search;
+			sourceTree = "<group>";
+		};
+		929C59221EFA4DC600AAC363 /* Data Store */ = {
+			isa = PBXGroup;
+			children = (
+				929C59231EFA4DD800AAC363 /* SearchColorDataStore.swift */,
+			);
+			name = "Data Store";
+			sourceTree = "<group>";
+		};
+		92B5E4B91EFC60D90027FD16 /* Line Item */ = {
+			isa = PBXGroup;
+			children = (
+				92B5E4BA1EFC60EA0027FD16 /* Tracking */,
+				92C66F181EE212D800CA8292 /* LineItemParse.swift */,
+			);
+			name = "Line Item";
+			sourceTree = "<group>";
+		};
+		92B5E4BA1EFC60EA0027FD16 /* Tracking */ = {
+			isa = PBXGroup;
+			children = (
+				92B5E4BB1EFC61200027FD16 /* PickParse.swift */,
+				92B5E4C11EFC66210027FD16 /* ShipParse.swift */,
+			);
+			name = Tracking;
+			sourceTree = "<group>";
+		};
+		92B5E4BD1EFC65030027FD16 /* Line Item */ = {
+			isa = PBXGroup;
+			children = (
+				92C66F3C1EE25ABF00CA8292 /* LineItem.swift */,
+			);
+			name = "Line Item";
+			sourceTree = "<group>";
+		};
+		92B5E4C41EFE316D0027FD16 /* Aggregate */ = {
+			isa = PBXGroup;
+			children = (
+				9271EA3B1F0381DC00A61875 /* Model */,
+				9271EA301F02F1D500A61875 /* Data Store */,
+				9271EA361F030E4F00A61875 /* Cell */,
+				92B5E4C51EFE31FC0027FD16 /* AggregateInventoryViewController.swift */,
+			);
+			name = Aggregate;
+			sourceTree = "<group>";
+		};
 		92C66EC51EE1370100CA8292 = {
 			isa = PBXGroup;
 			children = (
@@ -501,6 +729,7 @@
 				92C66F0C1EE20EB200CA8292 /* Tracking */,
 				92C66F011EE1431400CA8292 /* Home */,
 				92C66EE31EE137EA00CA8292 /* Inventory */,
+				929C59191EFA3E6800AAC363 /* Search */,
 				9251F2761EF3989900A6E1BD /* Checklist */,
 				92C66ED11EE1370100CA8292 /* AppDelegate.swift */,
 				92C66ED81EE1370100CA8292 /* Assets.xcassets */,
@@ -536,7 +765,6 @@
 				92C66EF21EE13D2300CA8292 /* Data Store */,
 				92C66EE81EE13A6900CA8292 /* Subviews */,
 				92C66EF01EE13CF900CA8292 /* ProductSearchViewController.swift */,
-				92C66EE61EE1382600CA8292 /* MainSearchingView.swift */,
 			);
 			name = Search;
 			sourceTree = "<group>";
@@ -564,7 +792,7 @@
 		92C66EF21EE13D2300CA8292 /* Data Store */ = {
 			isa = PBXGroup;
 			children = (
-				92C66EF31EE13D3600CA8292 /* MainSearchingDataStore.swift */,
+				929C591E1EFA494B00AAC363 /* ProductSearchDataStore.swift */,
 			);
 			name = "Data Store";
 			sourceTree = "<group>";
@@ -582,7 +810,9 @@
 		92C66EFB1EE140CC00CA8292 /* Database */ = {
 			isa = PBXGroup;
 			children = (
-				9251F29C1EF4EFCF00A6E1BD /* Inventory */,
+				9271EA331F03050600A61875 /* Super */,
+				924957BF1F011B5D005BA1C8 /* Pick List */,
+				9251F29C1EF4EFCF00A6E1BD /* Item */,
 				92C66F591EE532E100CA8292 /* Product */,
 				92C66F581EE532D800CA8292 /* Ordering */,
 				922FA7941EF71EC000B908FB /* VersionNumber.swift */,
@@ -593,7 +823,8 @@
 		92C66EFC1EE140D100CA8292 /* Internal */ = {
 			isa = PBXGroup;
 			children = (
-				9251F2991EF4EF8700A6E1BD /* Inventory */,
+				924957C21F0121C1005BA1C8 /* Pick List */,
+				9251F2991EF4EF8700A6E1BD /* Item */,
 				92C66F571EE532CE00CA8292 /* Product */,
 				92C66F561EE532BE00CA8292 /* Ordering */,
 			);
@@ -626,6 +857,8 @@
 				92C66F231EE2316F00CA8292 /* Packaging */,
 				92C66F291EE234F400CA8292 /* Picking */,
 				92C66F2A1EE2350D00CA8292 /* Ship */,
+				929C59061EF9DD0300AAC363 /* Input Mike Cuts */,
+				929C59161EFA3D3F00AAC363 /* One Color Cuts */,
 			);
 			name = Tracking;
 			sourceTree = "<group>";
@@ -792,8 +1025,8 @@
 		92C66F561EE532BE00CA8292 /* Ordering */ = {
 			isa = PBXGroup;
 			children = (
+				92B5E4BD1EFC65030027FD16 /* Line Item */,
 				92C66F361EE2569F00CA8292 /* Order.swift */,
-				92C66F3C1EE25ABF00CA8292 /* LineItem.swift */,
 				9251F2AB1EF5C0E300A6E1BD /* Address.swift */,
 			);
 			name = Ordering;
@@ -804,6 +1037,7 @@
 			children = (
 				92C66F541EE5327C00CA8292 /* ProductVariant.swift */,
 				92C66F041EE1490600CA8292 /* ProductType.swift */,
+				929C59251EFA4E9B00AAC363 /* Fabric.swift */,
 			);
 			name = Product;
 			sourceTree = "<group>";
@@ -811,7 +1045,7 @@
 		92C66F581EE532D800CA8292 /* Ordering */ = {
 			isa = PBXGroup;
 			children = (
-				92C66F181EE212D800CA8292 /* LineItemParse.swift */,
+				92B5E4B91EFC60D90027FD16 /* Line Item */,
 				92C66F341EE2566100CA8292 /* OrderParse.swift */,
 				9251F2AD1EF5C12D00A6E1BD /* AddressParse.swift */,
 			);
@@ -960,35 +1194,46 @@
 			buildActionMask = 2147483647;
 			files = (
 				922FA7951EF71EC000B908FB /* VersionNumber.swift in Sources */,
+				929C59241EFA4DD800AAC363 /* SearchColorDataStore.swift in Sources */,
 				92699F7A1EEC9D5F008EDC56 /* AdmissionFormViewController.swift in Sources */,
 				9251F27B1EF3CB7B00A6E1BD /* CheckListTableView.swift in Sources */,
 				92C66F511EE2EDFF00CA8292 /* CutListDataStore.swift in Sources */,
 				9251F2A71EF5BD5300A6E1BD /* OrderInformationView.swift in Sources */,
 				92C66F171EE2123200CA8292 /* CuttingFormDataStore.swift in Sources */,
 				92C66F461EE2693B00CA8292 /* PickItemDataStore.swift in Sources */,
+				929C591F1EFA494B00AAC363 /* ProductSearchDataStore.swift in Sources */,
 				9251F2951EF4E37000A6E1BD /* InventoryManagementViewController.swift in Sources */,
 				92C66F281EE2342900CA8292 /* PackageFormViewController.swift in Sources */,
 				92C66F351EE2566100CA8292 /* OrderParse.swift in Sources */,
-				9251F29E1EF4EFDB00A6E1BD /* InventoryParse.swift in Sources */,
+				9251F29E1EF4EFDB00A6E1BD /* ItemParse.swift in Sources */,
 				92C66F1D1EE22D1F00CA8292 /* SewingFormViewController.swift in Sources */,
 				92699F891EEC9DD2008EDC56 /* NameViewController.swift in Sources */,
 				92C66F001EE1420900CA8292 /* FabricParse.swift in Sources */,
+				929C59081EF9DEC300AAC363 /* MultipleCutsViewController.swift in Sources */,
 				92699F8C1EEC9DE0008EDC56 /* NameDataStore.swift in Sources */,
 				92C66F261EE231BD00CA8292 /* PackageFormDataStore.swift in Sources */,
 				92C66EEF1EE13C5B00CA8292 /* Helpers.swift in Sources */,
+				929C59181EFA3D6F00AAC363 /* SearchColorViewController.swift in Sources */,
+				929C59101EFA1BDA00AAC363 /* SewnParse.swift in Sources */,
 				92699F861EEC9DB9008EDC56 /* SignUpDataStore.swift in Sources */,
 				92699F771EEC9D33008EDC56 /* ForwardAccessoryView.swift in Sources */,
 				9251F2811EF3D49100A6E1BD /* PickItemTableView.swift in Sources */,
 				92C66EED1EE13AC900CA8292 /* CustomColors.swift in Sources */,
 				92C66F121EE20F7200CA8292 /* TrackingFormView.swift in Sources */,
-				9251F29B1EF4EF9300A6E1BD /* Inventory.swift in Sources */,
+				9251F29B1EF4EF9300A6E1BD /* Item.swift in Sources */,
+				929C590E1EF9E0BE00AAC363 /* MultipleCutsDataStore.swift in Sources */,
 				9251F2A11EF5BB8900A6E1BD /* ShipAddressViewController.swift in Sources */,
+				922FA7991EF98DAD00B908FB /* CutParse.swift in Sources */,
 				9251F2891EF3E99800A6E1BD /* ShipLineItemsDataStore.swift in Sources */,
 				92C66F0F1EE20F1D00CA8292 /* TrackingFormViewController.swift in Sources */,
+				92B5E4C21EFC66210027FD16 /* ShipParse.swift in Sources */,
+				9271EA3D1F0381EB00A61875 /* SizeGroup.swift in Sources */,
 				92C66F551EE5327C00CA8292 /* ProductVariant.swift in Sources */,
 				92C66F531EE5322000CA8292 /* ProductVariantParse.swift in Sources */,
+				924957C41F0121D2005BA1C8 /* Pickable.swift in Sources */,
 				92C66EE71EE1382600CA8292 /* MainSearchingView.swift in Sources */,
 				92C66F081EE1681B00CA8292 /* InputInventoryViewController.swift in Sources */,
+				92B5E4C61EFE31FC0027FD16 /* AggregateInventoryViewController.swift in Sources */,
 				92C66F321EE2559B00CA8292 /* PickOrderViewController.swift in Sources */,
 				9251F2B31EF5DDC900A6E1BD /* FinishShipView.swift in Sources */,
 				9251F2A91EF5BD8500A6E1BD /* OrderInformationViewController.swift in Sources */,
@@ -1002,15 +1247,21 @@
 				92C66F431EE25CA800CA8292 /* PickItemTableViewCell.swift in Sources */,
 				9251F2911EF4E0F300A6E1BD /* RemoveInventoryViewController.swift in Sources */,
 				92699F8E1EEC9EF4008EDC56 /* User.swift in Sources */,
+				9271EA351F03051500A61875 /* CustomParseObject.swift in Sources */,
 				92C66F221EE22DEA00CA8292 /* TrackingFormDataStore.swift in Sources */,
 				92C66EEA1EE13A8100CA8292 /* CustomSearchBar.swift in Sources */,
+				9271EA3A1F030E8200A61875 /* AggregateInventoryTableViewCell.swift in Sources */,
+				92B5E4BC1EFC61200027FD16 /* PickParse.swift in Sources */,
 				9251F26F1EF389AE00A6E1BD /* ShipOrderView.swift in Sources */,
 				92C66ED21EE1370100CA8292 /* AppDelegate.swift in Sources */,
 				92C66F3D1EE25ABF00CA8292 /* LineItem.swift in Sources */,
 				92699F801EEC9D90008EDC56 /* LogInDataStore.swift in Sources */,
+				922FA79B1EF98E3300B908FB /* TrackParse.swift in Sources */,
 				92C66F481EE2E4A400CA8292 /* PickOrderDataStore.swift in Sources */,
 				92699F6A1EE8EA93008EDC56 /* Configuration.swift in Sources */,
 				92699F691EE8EA93008EDC56 /* Enviroment.swift in Sources */,
+				929C590A1EF9DF8D00AAC363 /* QuantityManagementViewController.swift in Sources */,
+				929C59121EFA1EFD00AAC363 /* PackageParse.swift in Sources */,
 				9251F2AE1EF5C12D00A6E1BD /* AddressParse.swift in Sources */,
 				92C66F191EE212D800CA8292 /* LineItemParse.swift in Sources */,
 				92699F831EEC9DA8008EDC56 /* SignUpViewController.swift in Sources */,
@@ -1018,20 +1269,25 @@
 				92C66F3A1EE2570D00CA8292 /* PickOrderTableViewCell.swift in Sources */,
 				9251F2721EF3945C00A6E1BD /* ShipLineItemsViewController.swift in Sources */,
 				9251F26C1EF388C800A6E1BD /* ShipOrderViewController.swift in Sources */,
+				929C59151EFA214B00AAC363 /* Package.swift in Sources */,
 				92C66EF41EE13D3600CA8292 /* MainSearchingDataStore.swift in Sources */,
+				924957C11F011B6F005BA1C8 /* PickableParse.swift in Sources */,
 				9251F28C1EF4C15400A6E1BD /* OrderNoteViewController.swift in Sources */,
 				92C66F051EE1490600CA8292 /* ProductType.swift in Sources */,
 				9251F2831EF3DEB600A6E1BD /* CheckListViewController.swift in Sources */,
 				9251F2781EF398B400A6E1BD /* CheckTableViewCell.swift in Sources */,
+				9271EA321F02F1E700A61875 /* AggregateInventoryDataStore.swift in Sources */,
 				92C66EFE1EE1417F00CA8292 /* ProductTypeParse.swift in Sources */,
 				92699F7D1EEC9D7D008EDC56 /* LoginViewController.swift in Sources */,
 				9251F2B61EF5DF9500A6E1BD /* FinishShipDataStore.swift in Sources */,
+				929C59261EFA4E9B00AAC363 /* Fabric.swift in Sources */,
 				92699F941EED03C5008EDC56 /* Banner.swift in Sources */,
 				92C66F4D1EE2EBED00CA8292 /* CutListView.swift in Sources */,
 				92699F701EEC9CBD008EDC56 /* WelcomeFormViewController.swift in Sources */,
 				9251F2AC1EF5C0E300A6E1BD /* Address.swift in Sources */,
 				92C66F031EE1433400CA8292 /* HomeViewController.swift in Sources */,
 				9251F2B11EF5DD8800A6E1BD /* FinishShipViewController.swift in Sources */,
+				929C591C1EFA42DB00AAC363 /* MainSearchingViewController.swift in Sources */,
 				92C66F371EE2569F00CA8292 /* Order.swift in Sources */,
 				92699F741EEC9D0A008EDC56 /* WelcomeFormView.swift in Sources */,
 			);
@@ -1107,7 +1363,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Daniel Jones (R565XSQC74)";
-				CURRENT_PROJECT_VERSION = 16;
+				CURRENT_PROJECT_VERSION = 19;
 				DEVELOPMENT_TEAM = KNK3WJA66N;
 				INFOPLIST_FILE = HippiesEcosystem/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -1220,7 +1476,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Daniel Jones (R565XSQC74)";
-				CURRENT_PROJECT_VERSION = 16;
+				CURRENT_PROJECT_VERSION = 19;
 				DEVELOPMENT_TEAM = KNK3WJA66N;
 				INFOPLIST_FILE = HippiesEcosystem/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -1240,7 +1496,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Medici Holdings LLC (KNK3WJA66N)";
-				CURRENT_PROJECT_VERSION = 16;
+				CURRENT_PROJECT_VERSION = 19;
 				DEVELOPMENT_TEAM = KNK3WJA66N;
 				INFOPLIST_FILE = HippiesEcosystem/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;

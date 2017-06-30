@@ -28,18 +28,30 @@ class LineItem: NSObject {
     }
     var isPicked: Bool {
         get {
-            return lineItemParse.isPicked
+            return lineItemParse.pick != nil
         }
         set {
-            lineItemParse.isPicked = newValue
+            if newValue && lineItemParse.pick == nil {
+                let pickParse = PickParse()
+                if let currentUser = User.current() {
+                    pickParse.user = currentUser
+                }
+                lineItemParse.pick = pickParse
+            }
         }
     }
     var isShipped: Bool {
         get {
-            return lineItemParse.isShipped
+            return lineItemParse.ship != nil
         }
         set {
-            lineItemParse.isShipped = newValue
+            if newValue && lineItemParse.ship == nil {
+                let shipParse = ShipParse()
+                if let currentUser = User.current() {
+                    shipParse.user = currentUser
+                }
+                lineItemParse.ship = shipParse
+            }
         }
     }
     var shopifyID: String {

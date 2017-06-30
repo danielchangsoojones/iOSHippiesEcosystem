@@ -44,7 +44,7 @@ struct Helpers {
         return 0
     }
     
-    static func showActivityIndicatory(uiView: UIView) -> UIView {
+    static func showActivityIndicatory(on uiView: UIView) -> UIView {
         let container: UIView = UIView()
         container.frame = uiView.frame
         container.center = uiView.center

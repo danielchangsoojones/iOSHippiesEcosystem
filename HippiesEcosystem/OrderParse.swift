@@ -9,7 +9,7 @@
 import Foundation
 import Parse
 
-class OrderParse: PFObject, PFSubclassing {
+class OrderParse: CustomParseObject, PFSubclassing {
     class func parseClassName() -> String {
         return "Order"
     }

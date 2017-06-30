@@ -21,7 +21,23 @@ class PickItemDataStore {
         self.delegate = delegate
     }
     
-    func save(lineItems: [LineItem]) {
+    func pick(pickable: Pickable) {
+        save(lineItems: pickable.lineItems) { 
+            self.delete(pickable)
+        }
+    }
+    
+    private func delete(_ pickable: Pickable) {
+        pickable.pickableParse.deleteInBackground { (success, error) in
+            if success {
+                self.delegate?.successfulSave()
+            } else if let error = error {
+                SCLAlertView().showError("Error", subTitle: error.localizedDescription)
+            }
+        }
+    }
+    
+    private func save(lineItems: [LineItem], completion: @escaping () -> ()) {
         var lineItemsParse: [LineItemParse] = []
         
         for lineItem in lineItems {
@@ -31,7 +47,7 @@ class PickItemDataStore {
         
         LineItemParse.saveAll(inBackground: lineItemsParse) { (success, error) in
             if success {
-                self.delegate?.successfulSave()
+                completion()
             } else if let error = error {
                 SCLAlertView().showError("Error", subTitle: error.localizedDescription)
             }

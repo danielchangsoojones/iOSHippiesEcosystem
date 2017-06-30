@@ -22,24 +22,23 @@ class TrackingFormDataStore {
     }
     
     func save(id: Double) {
-        //override in subclasses
-        let query = LineItemParse.query() as! PFQuery<LineItemParse>
-        query.whereKey("shopifyLineItemID", equalTo: id)
-        query.getFirstObjectInBackground { (lineItemParse, error) in
-            if let lineItemParse = lineItemParse {
-                self.recieved(lineItemParse: lineItemParse)
+        let query = ItemParse.query() as! PFQuery<ItemParse>
+        query.whereKey("uniqueID", equalTo: id)
+        query.getFirstObjectInBackground { (itemParse, error) in
+            if let itemParse = itemParse {
+                self.recieved(itemParse: itemParse)
             } else if let error = error {
                 self.delegate?.recieved(error: error)
             }
         }
     }
     
-    func recieved(lineItemParse: LineItemParse) {
-        save(lineItemParse: lineItemParse)
+    func recieved(itemParse: ItemParse) {
+        save(itemParse: itemParse)
     }
     
-    fileprivate func save(lineItemParse: LineItemParse) {
-        lineItemParse.saveInBackground { (success, error) in
+    fileprivate func save(itemParse: ItemParse) {
+        itemParse.saveInBackground { (success, error) in
             if success {
                 self.delegate?.successfullySaved()
             } else if let error = error {

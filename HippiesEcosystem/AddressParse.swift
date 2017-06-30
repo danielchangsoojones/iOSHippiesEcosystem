@@ -9,7 +9,7 @@
 import Foundation
 import Parse
 
-class AddressParse: PFObject, PFSubclassing {
+class AddressParse: CustomParseObject, PFSubclassing {
     class func parseClassName() -> String {
         return "Address"
     }

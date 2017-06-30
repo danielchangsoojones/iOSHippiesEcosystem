@@ -9,7 +9,7 @@
 import Foundation
 import Parse
 
-class LineItemParse: PFObject, PFSubclassing {
+class LineItemParse: CustomParseObject, PFSubclassing {
     class func parseClassName() -> String {
         return "LineItem"
     }
@@ -17,14 +17,11 @@ class LineItemParse: PFObject, PFSubclassing {
     @NSManaged var shopifyLineItemID: Double
     @NSManaged var quantity: Int
     @NSManaged var state: String
-    @NSManaged var isInitiated: Bool
-    @NSManaged var isCut: Bool
-    @NSManaged var isSewn: Bool
-    @NSManaged var isPackaged: Bool
-    @NSManaged var isPicked: Bool
-    @NSManaged var isShipped: Bool
     @NSManaged var title: String
     @NSManaged var variant_title: String
     @NSManaged var productVariant: ProductVariantParse
     @NSManaged var order: OrderParse
+    @NSManaged var item: ItemParse
+    @NSManaged var pick: PickParse?
+    @NSManaged var ship: ShipParse?
 }
