@@ -57,26 +57,36 @@ extension ShipLineItemsViewController: ShipLineItemsDataDelegate {
     func recieved(order: Order?) {
         if let order = order {
             spinnerView?.removeFromSuperview()
+            checkQuantities(lineItems: order.lineItems)
             self.order = order
             self.lineItems = order.lineItems
         } else {
-            showErrorAlert(title: "Invalid Order ID", subTitle: "There was no order ID found. Please try re-typing the order number")
+            createPoppingAlert(title: "Invalid Order ID", subTitle: "There was no order ID found. Please try re-typing the order number")
         }
     }
     
-    func showErrorAlert(title: String, subTitle: String) {
+    private func checkQuantities(lineItems: [LineItem]) {
+        let hasMultipleQuantityLineItem = lineItems.contains(where: { (lineItem: LineItem) -> Bool in
+            return lineItem.quantity > 1
+        })
+        if hasMultipleQuantityLineItem {
+            createPoppingAlert(title: "Quantity Error", subTitle: "Please place this bag into Quality Control. There are multiple quantites per item that Daniel needs to check.")
+        }
+    }
+    
+    private func createPoppingAlert(title: String, subTitle: String) {
         let appearance = SCLAlertView.SCLAppearance(
             showCloseButton: false
         )
         let alertView = SCLAlertView(appearance: appearance)
-        alertView.addButton("Okay") { 
+        alertView.addButton("Okay") {
             self.popVC()
         }
         alertView.showError(title, subTitle: subTitle)
     }
     
     func recieved(error: Error) {
-        showErrorAlert(title: "Error", subTitle: error.localizedDescription)
+        createPoppingAlert(title: "Error", subTitle: error.localizedDescription)
     }
 }
 

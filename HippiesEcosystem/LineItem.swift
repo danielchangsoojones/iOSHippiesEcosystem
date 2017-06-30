@@ -76,6 +76,11 @@ class LineItem: NSObject {
             return order
         }
     }
+    var quantity: Int {
+        get {
+            return lineItemParse.quantity
+        }
+    }
     
     var lineItemParse: LineItemParse!
     
