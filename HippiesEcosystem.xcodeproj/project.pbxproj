@@ -106,6 +106,11 @@
 		92C66F511EE2EDFF00CA8292 /* CutListDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C66F501EE2EDFF00CA8292 /* CutListDataStore.swift */; };
 		92C66F531EE5322000CA8292 /* ProductVariantParse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C66F521EE5322000CA8292 /* ProductVariantParse.swift */; };
 		92C66F551EE5327C00CA8292 /* ProductVariant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C66F541EE5327C00CA8292 /* ProductVariant.swift */; };
+		92D907AC1F0732C300EE33A6 /* AnalyticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D907AB1F0732C300EE33A6 /* AnalyticsViewController.swift */; };
+		92D907AF1F07337600EE33A6 /* AnalyticTitles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D907AE1F07337600EE33A6 /* AnalyticTitles.swift */; };
+		92D907B21F07351300EE33A6 /* AnalyticTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D907B11F07351300EE33A6 /* AnalyticTableViewCell.swift */; };
+		92D907B51F073F7D00EE33A6 /* Analytic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D907B41F073F7D00EE33A6 /* Analytic.swift */; };
+		92D907B81F07407E00EE33A6 /* AnalyticsDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D907B71F07407E00EE33A6 /* AnalyticsDataStore.swift */; };
 		D6B19A08BF665B2FA5A4C32D /* Pods_HippiesEcosystem.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A84C2EA6A6B416856716234F /* Pods_HippiesEcosystem.framework */; };
 /* End PBXBuildFile section */
 
@@ -214,6 +219,11 @@
 		92C66F501EE2EDFF00CA8292 /* CutListDataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CutListDataStore.swift; sourceTree = "<group>"; };
 		92C66F521EE5322000CA8292 /* ProductVariantParse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductVariantParse.swift; sourceTree = "<group>"; };
 		92C66F541EE5327C00CA8292 /* ProductVariant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductVariant.swift; sourceTree = "<group>"; };
+		92D907AB1F0732C300EE33A6 /* AnalyticsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnalyticsViewController.swift; sourceTree = "<group>"; };
+		92D907AE1F07337600EE33A6 /* AnalyticTitles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnalyticTitles.swift; sourceTree = "<group>"; };
+		92D907B11F07351300EE33A6 /* AnalyticTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnalyticTableViewCell.swift; sourceTree = "<group>"; };
+		92D907B41F073F7D00EE33A6 /* Analytic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Analytic.swift; sourceTree = "<group>"; };
+		92D907B71F07407E00EE33A6 /* AnalyticsDataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnalyticsDataStore.swift; sourceTree = "<group>"; };
 		A84C2EA6A6B416856716234F /* Pods_HippiesEcosystem.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HippiesEcosystem.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C94F17F7AB18AA5749DB7653 /* Pods-HippiesEcosystem.debug (production).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HippiesEcosystem.debug (production).xcconfig"; path = "Pods/Target Support Files/Pods-HippiesEcosystem/Pods-HippiesEcosystem.debug (production).xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -266,6 +276,18 @@
 				924957C31F0121D2005BA1C8 /* Pickable.swift */,
 			);
 			name = "Pick List";
+			sourceTree = "<group>";
+		};
+		925167FC1F07264100BFD921 /* Analytics */ = {
+			isa = PBXGroup;
+			children = (
+				92D907B61F07406900EE33A6 /* Data Store */,
+				92D907B31F073E8200EE33A6 /* Model */,
+				92D907AD1F07335D00EE33A6 /* Categories */,
+				92D907B01F0734E800EE33A6 /* Cell */,
+				92D907AB1F0732C300EE33A6 /* AnalyticsViewController.swift */,
+			);
+			name = Analytics;
 			sourceTree = "<group>";
 		};
 		9251F26D1EF3899700A6E1BD /* Enter Order ID */ = {
@@ -731,6 +753,7 @@
 				92C66EE31EE137EA00CA8292 /* Inventory */,
 				929C59191EFA3E6800AAC363 /* Search */,
 				9251F2761EF3989900A6E1BD /* Checklist */,
+				925167FC1F07264100BFD921 /* Analytics */,
 				92C66ED11EE1370100CA8292 /* AppDelegate.swift */,
 				92C66ED81EE1370100CA8292 /* Assets.xcassets */,
 				92C66EDA1EE1370100CA8292 /* LaunchScreen.storyboard */,
@@ -1062,6 +1085,38 @@
 			name = Product;
 			sourceTree = "<group>";
 		};
+		92D907AD1F07335D00EE33A6 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				92D907AE1F07337600EE33A6 /* AnalyticTitles.swift */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
+		92D907B01F0734E800EE33A6 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				92D907B11F07351300EE33A6 /* AnalyticTableViewCell.swift */,
+			);
+			name = Cell;
+			sourceTree = "<group>";
+		};
+		92D907B31F073E8200EE33A6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				92D907B41F073F7D00EE33A6 /* Analytic.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		92D907B61F07406900EE33A6 /* Data Store */ = {
+			isa = PBXGroup;
+			children = (
+				92D907B71F07407E00EE33A6 /* AnalyticsDataStore.swift */,
+			);
+			name = "Data Store";
+			sourceTree = "<group>";
+		};
 		B5C3C8F1D36C3B002CA066F2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -1202,6 +1257,8 @@
 				92C66F171EE2123200CA8292 /* CuttingFormDataStore.swift in Sources */,
 				92C66F461EE2693B00CA8292 /* PickItemDataStore.swift in Sources */,
 				929C591F1EFA494B00AAC363 /* ProductSearchDataStore.swift in Sources */,
+				92D907AF1F07337600EE33A6 /* AnalyticTitles.swift in Sources */,
+				92D907AC1F0732C300EE33A6 /* AnalyticsViewController.swift in Sources */,
 				9251F2951EF4E37000A6E1BD /* InventoryManagementViewController.swift in Sources */,
 				92C66F281EE2342900CA8292 /* PackageFormViewController.swift in Sources */,
 				92C66F351EE2566100CA8292 /* OrderParse.swift in Sources */,
@@ -1268,6 +1325,7 @@
 				92C66F401EE25C3400CA8292 /* PickListItemViewController.swift in Sources */,
 				92C66F3A1EE2570D00CA8292 /* PickOrderTableViewCell.swift in Sources */,
 				9251F2721EF3945C00A6E1BD /* ShipLineItemsViewController.swift in Sources */,
+				92D907B51F073F7D00EE33A6 /* Analytic.swift in Sources */,
 				9251F26C1EF388C800A6E1BD /* ShipOrderViewController.swift in Sources */,
 				929C59151EFA214B00AAC363 /* Package.swift in Sources */,
 				92C66EF41EE13D3600CA8292 /* MainSearchingDataStore.swift in Sources */,
@@ -1278,6 +1336,7 @@
 				9251F2781EF398B400A6E1BD /* CheckTableViewCell.swift in Sources */,
 				9271EA321F02F1E700A61875 /* AggregateInventoryDataStore.swift in Sources */,
 				92C66EFE1EE1417F00CA8292 /* ProductTypeParse.swift in Sources */,
+				92D907B81F07407E00EE33A6 /* AnalyticsDataStore.swift in Sources */,
 				92699F7D1EEC9D7D008EDC56 /* LoginViewController.swift in Sources */,
 				9251F2B61EF5DF9500A6E1BD /* FinishShipDataStore.swift in Sources */,
 				929C59261EFA4E9B00AAC363 /* Fabric.swift in Sources */,
@@ -1289,6 +1348,7 @@
 				9251F2B11EF5DD8800A6E1BD /* FinishShipViewController.swift in Sources */,
 				929C591C1EFA42DB00AAC363 /* MainSearchingViewController.swift in Sources */,
 				92C66F371EE2569F00CA8292 /* Order.swift in Sources */,
+				92D907B21F07351300EE33A6 /* AnalyticTableViewCell.swift in Sources */,
 				92699F741EEC9D0A008EDC56 /* WelcomeFormView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
