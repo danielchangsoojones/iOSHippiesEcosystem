@@ -10,8 +10,8 @@ import Foundation
 
 enum AnalyticTitle: String {
     case openOrders = "Open Orders"
-    case newestOrders = "Orders in the past 24 hours"
-    case newestItems = "Items ordered in the past 24 hours"
+    case newestOrders = "Orders since midnight"
+    case newestItems = "Items ordered since midnight"
     case itemsToCut = "# of items to cut"
     case itemsToSew = "# of items to sew"
     case allocatedInventoryCount = "# of allocated inventory"
