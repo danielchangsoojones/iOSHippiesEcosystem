@@ -27,13 +27,14 @@ class AnalyticTableViewCell: UITableViewCell {
     }
     
     func set(title: AnalyticTitle, count: Int) {
-        titleLabel.text = title.rawValue
+        titleLabel.text = title.rawValue + ":"
         numberLabel.text = count.toString
     }
     
     fileprivate func titleLabelSetup() {
         titleLabel = UILabel()
         self.addSubview(titleLabel)
+        titleLabel.font = UIFont.systemFont(ofSize: 20, weight: UIFontWeightBold)
         titleLabel.snp.makeConstraints { (make) in
             make.top.leading.equalToSuperview().inset(10)
         }
@@ -42,6 +43,8 @@ class AnalyticTableViewCell: UITableViewCell {
     fileprivate func numberLabelSetup() {
         numberLabel = UILabel()
         self.addSubview(numberLabel)
+        numberLabel.font = UIFont.systemFont(ofSize: 20)
+        numberLabel.textColor = UIColor.green
         numberLabel.snp.makeConstraints { (make) in
             make.leading.equalTo(titleLabel)
             make.top.equalTo(titleLabel.snp.bottom).offset(10)

@@ -24,8 +24,8 @@ class AnalyticsDataStore {
     func loadAnalytics() {
         PFCloud.callFunction(inBackground: "getAnalyticCounts", withParameters: [:], block: {
             (results: Any?, error: Error?) -> Void in
-            if let analyticsDictionary = results as? [[String : Int]] {
-                let analytics = self.parse(analyticsDictionary)
+            if let results = results as? [[String: Int]] {
+                let analytics = self.parse(results)
                 let sortedAnalytics = self.sort(analytics)
                 self.delegate?.received(analytics: sortedAnalytics)
             } else if let error = error {
@@ -34,10 +34,11 @@ class AnalyticsDataStore {
         })
     }
     
-    private func parse(_ analyticsDictionary: [[String : Int]]) -> [Analytic] {
+    private func parse(_ resultsArray: [[String : Int]]) -> [Analytic] {
         var analytics: [Analytic] = []
-        for element in analyticsDictionary {
-            if let title = element.keys.first, let count = element[title], let analyticTitle = AnalyticTitle(rawValue: title) {
+        for element in resultsArray {
+            if let title = element.keys.first, let count = element[title] {
+                let analyticTitle = AnalyticTitle(apiString: title)
                 let analytic = Analytic(title: analyticTitle, count: count)
                 analytics.append(analytic)
             }

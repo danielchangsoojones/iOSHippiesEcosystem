@@ -19,15 +19,22 @@ class AnalyticsViewController: UIViewController {
             }
         }
     }
+    var dataStore: AnalyticsDataStore?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         tableViewSetup()
+        dataStoreSetup()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    private func dataStoreSetup() {
+        dataStore = AnalyticsDataStore(delegate: self)
+        dataStore?.loadAnalytics()
     }
 }
 
@@ -35,6 +42,8 @@ extension AnalyticsViewController: UITableViewDelegate, UITableViewDataSource {
     fileprivate func tableViewSetup() {
         tableView = UITableView(frame: self.view.bounds)
         tableView.register(AnalyticTableViewCell.self, forCellReuseIdentifier: AnalyticTableViewCell.identifier)
+        tableView.delegate = self
+        tableView.dataSource = self
         self.view.addSubview(tableView)
     }
     
@@ -47,6 +56,10 @@ extension AnalyticsViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return analytics.count
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 70
     }
 }
 
