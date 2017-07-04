@@ -9,16 +9,11 @@
 import Foundation
 
 class CutDistribution {
-    var color: String {
-        get {
-            return fabricParse.color
-        }
-    }
+    var color: String!
     var count: Int = 0
-    var fabricParse: FabricParse!
     
-    init(fabric: FabricParse, count: Int) {
-        self.fabricParse = fabric
+    init(color: String, count: Int) {
+        self.color = color
         self.count = count
     }
 }

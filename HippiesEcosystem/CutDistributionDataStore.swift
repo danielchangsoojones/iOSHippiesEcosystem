@@ -25,7 +25,7 @@ class CutDistributionDataStore {
     func loadDistributions() {
         PFCloud.callFunction(inBackground: "getCutDistributions", withParameters: [ : ], block: {
             (results: Any?, error: Error?) -> Void in
-            if let results = results as? [FabricParse : Int] {
+            if let results = results as? [String : Int] {
                 let distributions = self.parse(results)
                 self.delegate?.received(distributions: distributions)
             } else if let error = error {
@@ -34,10 +34,10 @@ class CutDistributionDataStore {
         })
     }
     
-    private func parse(_ results: [FabricParse : Int]) -> [CutDistribution] {
+    private func parse(_ results: [String : Int]) -> [CutDistribution] {
         var cutDistributions: [CutDistribution] = []
-        for (fabric, count) in results {
-            let cutDistribution = CutDistribution(fabric: fabric, count: count)
+        for (color, count) in results {
+            let cutDistribution = CutDistribution(color: color, count: count)
             cutDistributions.append(cutDistribution)
         }
         let sortedCutDistributions = sort(cutDistributions)
@@ -46,7 +46,7 @@ class CutDistributionDataStore {
     
     private func sort(_ cutDistributions: [CutDistribution]) -> [CutDistribution] {
         let sortedDistributions = cutDistributions.sorted { (current: CutDistribution, next: CutDistribution) -> Bool in
-            return next.count > current.count
+            return next.count < current.count
         }
         return sortedDistributions
     }

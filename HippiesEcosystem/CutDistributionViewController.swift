@@ -61,6 +61,10 @@ extension CutDistributionViewController: UITableViewDelegate, UITableViewDataSou
         return cell
     }
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 70
+    }
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let alertView = SCLAlertView()
         alertView.addButton("Yes", action: {
@@ -68,6 +72,7 @@ extension CutDistributionViewController: UITableViewDelegate, UITableViewDataSou
             self.dataStore?.createCutList(from: cutDistribution)
             alertView.dismissVC(completion: nil)
         })
+        alertView.showInfo("Cut List", subTitle: "Create a Google Sheet Cut List")
     }
 }
 
