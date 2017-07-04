@@ -16,14 +16,13 @@ class HomeViewController: UIViewController {
         case sewing = "Sewn"
         case packaging = "Packaging"
         case shipped = "Shipped"
-        case removeInventory = "Remove Inventory"
         case multipleCuts = "Input Mike Cuts"
         case oneColorCutList = "Get One Color Cut List"
         case aggregateInventory = "Total Inventory"
         case analytics = "Analytics"
         case logOut = "Log Out"
         
-        static let all : [Categories] = [.inputInventory, .cutting, .sewing, .packaging, .pickList, .shipped, .removeInventory, .multipleCuts, .oneColorCutList, .aggregateInventory, .analytics, .logOut]
+        static let all : [Categories] = [.inputInventory, .cutting, .sewing, .packaging, .pickList, .shipped, .multipleCuts, .oneColorCutList, .aggregateInventory, .analytics, .logOut]
     }
     
     var theTableView: UITableView!
@@ -77,8 +76,6 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
             targetVC = PickListOrderViewController()
         case .shipped:
             targetVC = ShipOrderViewController()
-        case .removeInventory:
-            targetVC = ProductSearchViewController(resultAction: .remove)
         case .multipleCuts:
             targetVC = ProductSearchViewController(resultAction: .multipleCut)
         case .oneColorCutList:
