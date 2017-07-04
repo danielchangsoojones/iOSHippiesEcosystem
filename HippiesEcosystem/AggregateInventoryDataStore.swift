@@ -16,7 +16,6 @@ protocol AggregateInventoryDataDelegate {
 }
 
 class AggregateInventoryDataStore {
-    var sizeGroups: [SizeGroup] = []
     var delegate: AggregateInventoryDataDelegate?
     
     init(delegate: AggregateInventoryDataDelegate) {
@@ -26,52 +25,57 @@ class AggregateInventoryDataStore {
 
 //MARK: Load inventory counts
 extension AggregateInventoryDataStore {
-    //TODO: this is probably much better to run in cloud code, since we run a double query
     func loadInventories(from productType: ProductType) {
-        let productVariantQuery = ProductVariantParse.query()! as! PFQuery<ProductVariantParse>
-        productVariantQuery.whereKey("product", equalTo: productType.productTypeParse)
-        productVariantQuery.findObjectsInBackground { (productVariantsParse, error) in
-            if let productVariantsParse = productVariantsParse {
-                let productVariants = productVariantsParse.map({ (p: ProductVariantParse) -> ProductVariant in
-                    return ProductVariant(productVariantParse: p)
-                })
-                self.sizeGroups = self.createSizeGroups(productVariants: productVariants)
-                self.loadItems(from: productType)
-            } else if let error = error {
-                self.delegate?.received(error: error)
-            }
+        if let productTypeObjectID = productType.productTypeParse.objectId {
+            PFCloud.callFunction(inBackground: "getInventoryCounts", withParameters: ["productTypeObjectID" : productTypeObjectID], block: {
+                (results: Any?, error: Error?) -> Void in
+                if let results = results as? [[Any]] {
+                    let tuple = self.parse(results)
+                    let sizeGroups = self.makeSizeGroups(productVariants: tuple.productVariants, items: tuple.items)
+                    self.delegate?.received(sizeGroups: sizeGroups)
+                } else if let error = error {
+                    self.delegate?.received(error: error)
+                }
+            })
         }
     }
     
-    func loadItems(from productType: ProductType) {
-        let query = ItemParse.query() as! PFQuery<ItemParse>
-        query.whereKeyDoesNotExist("pick")
-        
-        let packageQuery = PackageParse.query()!
-        packageQuery.whereKey("state", equalTo: Package.State.in_inventory.rawValue)
-        query.whereKey("package", matchesQuery: packageQuery)
-        
-        let variantQuery = ProductVariantParse.query()!
-        variantQuery.whereKey("product", equalTo: productType.productTypeParse)
-        query.whereKey("productVariant", matchesQuery: variantQuery)
-        
-        query.limit = 10000
-        query.includeKey("productVariant")
-        query.findObjectsInBackground { (itemsParse, error) in
-            if let itemsParse = itemsParse {
-                let items = itemsParse.map({ (itemParse: ItemParse) -> Item in
-                    let item = Item(itemParse: itemParse)
-                    return item
-                })
-                let sizeGroups = self.updateSizeGroups(with: items)
-                self.delegate?.received(sizeGroups: sizeGroups)
-            } else if let error = error {
-                self.delegate?.received(error: error)
-            }
-        }
+    private func makeSizeGroups(productVariants: [ProductVariant], items: [Item]) -> [SizeGroup] {
+        let sizeGroups = createSizeGroups(from: productVariants)
+        let updatedSizeGroups = self.update(sizeGroups, with: items)
+        let sortedSizegroups = sort(updatedSizeGroups)
+        return sortedSizegroups
     }
     
-    private func updateSizeGroups(with items: [Item]) -> [SizeGroup] {
+    private func parse(_ results: [[Any]]) -> (productVariants: [ProductVariant], items: [Item]) {
+        var productVariants: [ProductVariant] = []
+        var items: [Item] = []
+        for result in results where !result.isEmpty {
+            if let productVariantsParse = result as? [ProductVariantParse] {
+                productVariants = map(productVariantsParse)
+            } else if let itemsParse = result as? [ItemParse] {
+                items = map(itemsParse)
+            }
+        }
+        
+        return (productVariants, items)
+    }
+    
+    private func map(_ productVariantsParse: [ProductVariantParse]) -> [ProductVariant] {
+        let productVariants = productVariantsParse.map { (p: ProductVariantParse) -> ProductVariant in
+            return ProductVariant(productVariantParse: p)
+        }
+        return productVariants
+    }
+    
+    private func map(_ itemsParse: [ItemParse]) -> [Item] {
+        let items = itemsParse.map { (i: ItemParse) -> Item in
+            return Item(itemParse: i)
+        }
+        return items
+    }
+    
+    private func update(_ sizeGroups: [SizeGroup], with items: [Item]) -> [SizeGroup] {
         for item in items {
             let index = sizeGroups.index(where: { (sizeGroup: SizeGroup) -> Bool in
                 return sizeGroup.size == item.productVariant.size
@@ -84,7 +88,7 @@ extension AggregateInventoryDataStore {
         return sizeGroups
     }
     
-    private func createSizeGroups(productVariants: [ProductVariant]) -> [SizeGroup] {
+    private func createSizeGroups(from productVariants: [ProductVariant]) -> [SizeGroup] {
         var sizeGroups: [SizeGroup] = []
         for productVariant in productVariants {
             let sizeGroup = SizeGroup(productVariant: productVariant)
