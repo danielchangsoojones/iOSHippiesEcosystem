@@ -9,6 +9,9 @@
 import UIKit
 
 class AnalyticTableViewCell: UITableViewCell {
+    struct Constants {
+        static let countColor: UIColor = .green
+    }
     override var reuseIdentifier: String? {
         return AnalyticTableViewCell.identifier
     }
@@ -44,7 +47,7 @@ class AnalyticTableViewCell: UITableViewCell {
         numberLabel = UILabel()
         self.addSubview(numberLabel)
         numberLabel.font = UIFont.systemFont(ofSize: 20)
-        numberLabel.textColor = UIColor.green
+        numberLabel.textColor = Constants.countColor
         numberLabel.snp.makeConstraints { (make) in
             make.leading.equalTo(titleLabel)
             make.top.equalTo(titleLabel.snp.bottom).offset(10)
