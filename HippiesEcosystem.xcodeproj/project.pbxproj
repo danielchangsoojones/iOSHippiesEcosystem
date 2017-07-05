@@ -733,6 +733,7 @@
 				929C59191EFA3E6800AAC363 /* Search */,
 				9251F2761EF3989900A6E1BD /* Checklist */,
 				925167FC1F07264100BFD921 /* Analytics */,
+				92FE2C161F0CB12200668A7E /* Expedite */,
 				92C66ED11EE1370100CA8292 /* AppDelegate.swift */,
 				92C66ED81EE1370100CA8292 /* Assets.xcassets */,
 				92C66EDA1EE1370100CA8292 /* LaunchScreen.storyboard */,
@@ -1131,6 +1132,13 @@
 			name = Cell;
 			sourceTree = "<group>";
 		};
+		92FE2C161F0CB12200668A7E /* Expedite */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Expedite;
+			sourceTree = "<group>";
+		};
 		B5C3C8F1D36C3B002CA066F2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -1439,7 +1447,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Daniel Jones (R565XSQC74)";
-				CURRENT_PROJECT_VERSION = 22;
+				CURRENT_PROJECT_VERSION = 23;
 				DEVELOPMENT_TEAM = KNK3WJA66N;
 				INFOPLIST_FILE = HippiesEcosystem/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -1552,7 +1560,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Daniel Jones (R565XSQC74)";
-				CURRENT_PROJECT_VERSION = 22;
+				CURRENT_PROJECT_VERSION = 23;
 				DEVELOPMENT_TEAM = KNK3WJA66N;
 				INFOPLIST_FILE = HippiesEcosystem/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -1572,7 +1580,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Medici Holdings LLC (KNK3WJA66N)";
-				CURRENT_PROJECT_VERSION = 22;
+				CURRENT_PROJECT_VERSION = 23;
 				DEVELOPMENT_TEAM = KNK3WJA66N;
 				INFOPLIST_FILE = HippiesEcosystem/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
