@@ -10,7 +10,6 @@ import UIKit
 
 class ProductSearchViewController: MainSearchingViewController {
     enum ResulAction {
-        case remove
         case input
         case multipleCut
         case aggregateInventory
@@ -59,8 +58,6 @@ extension ProductSearchViewController {
         switch resultAction {
         case .input:
             targetVC = InputInventoryViewController(productType: product)
-        case .remove:
-            targetVC = RemoveInventoryViewController(productType: product)
         case .multipleCut:
             targetVC = MultipleCutsViewController(productType: product)
         case .aggregateInventory:

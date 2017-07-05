@@ -16,13 +16,14 @@ class HomeViewController: UIViewController {
         case sewing = "Sewn"
         case packaging = "Packaging"
         case shipped = "Shipped"
-        case removeInventory = "Remove Inventory"
         case multipleCuts = "Input Mike Cuts"
         case oneColorCutList = "Get One Color Cut List"
         case aggregateInventory = "Total Inventory"
+        case analytics = "Analytics"
+        case cutDistributions = "Cut Distributions"
         case logOut = "Log Out"
         
-        static let all : [Categories] = [.inputInventory, .cutting, .sewing, .packaging, .pickList, .shipped, .removeInventory, .multipleCuts, .oneColorCutList, .aggregateInventory, .logOut]
+        static let all : [Categories] = [.inputInventory, .cutting, .sewing, .packaging, .pickList, .shipped, .multipleCuts, .oneColorCutList, .aggregateInventory, .analytics, .cutDistributions, .logOut]
     }
     
     var theTableView: UITableView!
@@ -76,14 +77,16 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
             targetVC = PickListOrderViewController()
         case .shipped:
             targetVC = ShipOrderViewController()
-        case .removeInventory:
-            targetVC = ProductSearchViewController(resultAction: .remove)
         case .multipleCuts:
             targetVC = ProductSearchViewController(resultAction: .multipleCut)
         case .oneColorCutList:
             targetVC = SearchColorViewController()
         case .aggregateInventory:
             targetVC = ProductSearchViewController(resultAction: .aggregateInventory)
+        case .analytics:
+            targetVC = AnalyticsViewController()
+        case .cutDistributions:
+            targetVC = CutDistributionViewController()
         case .logOut:
             logOut()
             return
