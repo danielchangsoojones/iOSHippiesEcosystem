@@ -113,6 +113,7 @@
 		92D907BF1F0B5DE200EE33A6 /* CutDistribution.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D907BE1F0B5DE200EE33A6 /* CutDistribution.swift */; };
 		92D907C21F0B5E1D00EE33A6 /* CutDistributionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D907C11F0B5E1D00EE33A6 /* CutDistributionTableViewCell.swift */; };
 		92D907C41F0B5F5C00EE33A6 /* CutDistributionDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D907C31F0B5F5C00EE33A6 /* CutDistributionDataStore.swift */; };
+		92FE2C331F19892300668A7E /* AppDelegateDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92FE2C321F19892300668A7E /* AppDelegateDataStore.swift */; };
 		D6B19A08BF665B2FA5A4C32D /* Pods_HippiesEcosystem.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A84C2EA6A6B416856716234F /* Pods_HippiesEcosystem.framework */; };
 /* End PBXBuildFile section */
 
@@ -228,6 +229,7 @@
 		92D907BE1F0B5DE200EE33A6 /* CutDistribution.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CutDistribution.swift; sourceTree = "<group>"; };
 		92D907C11F0B5E1D00EE33A6 /* CutDistributionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CutDistributionTableViewCell.swift; sourceTree = "<group>"; };
 		92D907C31F0B5F5C00EE33A6 /* CutDistributionDataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CutDistributionDataStore.swift; sourceTree = "<group>"; };
+		92FE2C321F19892300668A7E /* AppDelegateDataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegateDataStore.swift; sourceTree = "<group>"; };
 		A84C2EA6A6B416856716234F /* Pods_HippiesEcosystem.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HippiesEcosystem.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C94F17F7AB18AA5749DB7653 /* Pods-HippiesEcosystem.debug (production).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HippiesEcosystem.debug (production).xcconfig"; path = "Pods/Target Support Files/Pods-HippiesEcosystem/Pods-HippiesEcosystem.debug (production).xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -734,7 +736,7 @@
 				9251F2761EF3989900A6E1BD /* Checklist */,
 				925167FC1F07264100BFD921 /* Analytics */,
 				92FE2C161F0CB12200668A7E /* Expedite */,
-				92C66ED11EE1370100CA8292 /* AppDelegate.swift */,
+				92FE2C301F1988FE00668A7E /* App Delegate */,
 				92C66ED81EE1370100CA8292 /* Assets.xcassets */,
 				92C66EDA1EE1370100CA8292 /* LaunchScreen.storyboard */,
 				92C66EDD1EE1370100CA8292 /* Info.plist */,
@@ -1139,6 +1141,23 @@
 			name = Expedite;
 			sourceTree = "<group>";
 		};
+		92FE2C301F1988FE00668A7E /* App Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				92FE2C311F19891600668A7E /* Data Store */,
+				92C66ED11EE1370100CA8292 /* AppDelegate.swift */,
+			);
+			name = "App Delegate";
+			sourceTree = "<group>";
+		};
+		92FE2C311F19891600668A7E /* Data Store */ = {
+			isa = PBXGroup;
+			children = (
+				92FE2C321F19892300668A7E /* AppDelegateDataStore.swift */,
+			);
+			name = "Data Store";
+			sourceTree = "<group>";
+		};
 		B5C3C8F1D36C3B002CA066F2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -1297,6 +1316,7 @@
 				929C59101EFA1BDA00AAC363 /* SewnParse.swift in Sources */,
 				92699F861EEC9DB9008EDC56 /* SignUpDataStore.swift in Sources */,
 				92699F771EEC9D33008EDC56 /* ForwardAccessoryView.swift in Sources */,
+				92FE2C331F19892300668A7E /* AppDelegateDataStore.swift in Sources */,
 				9251F2811EF3D49100A6E1BD /* PickItemTableView.swift in Sources */,
 				92C66EED1EE13AC900CA8292 /* CustomColors.swift in Sources */,
 				92C66F121EE20F7200CA8292 /* TrackingFormView.swift in Sources */,
