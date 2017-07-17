@@ -27,10 +27,9 @@ class PickItemTableViewCell: CheckTableViewCell {
     
     override func set(lineItem: LineItem) {
         super.set(lineItem: lineItem)
-        if let packageState = lineItem.item?.packageState {
-            setIDTextColor(for: packageState)
-            idLabel.text = packageState.displayName
-        }
+        let packageState = lineItem.packageState
+        setIDTextColor(for: packageState)
+        idLabel.text = packageState.displayName
     }
     
     private func setIDTextColor(for packageState: Package.State) {
