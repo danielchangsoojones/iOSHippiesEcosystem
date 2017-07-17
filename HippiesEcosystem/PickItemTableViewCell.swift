@@ -27,7 +27,23 @@ class PickItemTableViewCell: CheckTableViewCell {
     
     override func set(lineItem: LineItem) {
         super.set(lineItem: lineItem)
-        idLabel.text = "Item ID: " + lineItem.shopifyID
+        if let packageState = lineItem.item?.packageState {
+            setIDTextColor(for: packageState)
+            idLabel.text = packageState.displayName
+        }
+    }
+    
+    private func setIDTextColor(for packageState: Package.State) {
+        var textColor: UIColor = .black
+        switch packageState {
+        case .waiting_for_identified_pick:
+            textColor = .purple
+        case .in_inventory:
+            textColor = .blue
+        case .unknown:
+            textColor = .orange
+        }
+        idLabel.textColor = textColor
     }
     
     fileprivate func idLabelSetup() {

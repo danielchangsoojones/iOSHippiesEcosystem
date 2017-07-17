@@ -12,6 +12,7 @@ import SCLAlertView
 
 protocol PickItemDataStoreDelegate {
     func successfulSave()
+    func loaded(_ lineItemWithStates: [LineItem])
 }
 
 class PickItemDataStore {
@@ -61,13 +62,16 @@ extension PickItemDataStore {
             return lineItem.itemObjectID
         }
         let query = ItemParse.query() as! PFQuery<ItemParse>
-        query.whereKey("objectId", containedIn: [itemObjectIDs])
+        query.whereKey("objectId", containedIn: itemObjectIDs)
         query.includeKey("package")
-        query.selectKeys(["package"])
+//        query.selectKeys(["package"])
         query.limit = lineItems.count
         query.findObjectsInBackground { (itemParses, error) in
             if let itemParses = itemParses {
-                
+                let lineItemWithStates = self.matchStates(to: lineItems, from: itemParses)
+                if !lineItemWithStates.isEmpty {
+                   self.delegate?.loaded(lineItemWithStates)
+                }
             } else if let error = error {
                 print(error)
             }
@@ -78,16 +82,16 @@ extension PickItemDataStore {
         var lineItemsWithStates: [LineItem] = []
         for itemParse in itemParses {
             if let itemParseObjectID = itemParse.objectId {
-                lineItems.index
-                let index = lineItems.index(where: { (lineItem: LineItem) -> Bool in
+                let matchingLineItem = lineItems.first(where: { (lineItem: LineItem) -> Bool in
                     let itemObjectId = lineItem.lineItemParse.item.objectId ?? ""
                     return itemObjectId == itemParseObjectID
                 })
-                if let index = index {
-                    let matchingLineItem = lineItems[index]
-                    
+                if let matchingLineItem = matchingLineItem, let stateStr = itemParse.package?.state, let packageState = Package.State(rawValue: stateStr)  {
+                    matchingLineItem.packageState = packageState
+                    lineItemsWithStates.append(matchingLineItem)
                 }
             }
         }
+        return lineItemsWithStates
     }
 }
