@@ -33,6 +33,7 @@ class CheckListTableView: UITableView {
     }
     
     func setCompletes() {
+        completes = []
         for _ in lineItems {
             completes.append(false)
         }

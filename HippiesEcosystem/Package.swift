@@ -17,7 +17,7 @@ class Package {
         var displayName: String {
             switch self {
             case .waiting_for_identified_pick:
-                return "in packaged suits bin"
+                return "in packaged suits bin or bag"
             default:
                 return self.rawValue
             }
