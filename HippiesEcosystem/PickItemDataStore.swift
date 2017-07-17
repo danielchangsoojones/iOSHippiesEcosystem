@@ -54,3 +54,40 @@ class PickItemDataStore {
         }
     }
 }
+
+extension PickItemDataStore {
+    func loadItemStates(for lineItems: [LineItem]) {
+        let itemObjectIDs: [String] = lineItems.map { (lineItem: LineItem) -> String in
+            return lineItem.itemObjectID
+        }
+        let query = ItemParse.query() as! PFQuery<ItemParse>
+        query.whereKey("objectId", containedIn: [itemObjectIDs])
+        query.includeKey("package")
+        query.selectKeys(["package"])
+        query.limit = lineItems.count
+        query.findObjectsInBackground { (itemParses, error) in
+            if let itemParses = itemParses {
+                
+            } else if let error = error {
+                print(error)
+            }
+        }
+    }
+    
+    private func matchStates(to lineItems: [LineItem], from itemParses: [ItemParse]) -> [LineItem] {
+        var lineItemsWithStates: [LineItem] = []
+        for itemParse in itemParses {
+            if let itemParseObjectID = itemParse.objectId {
+                lineItems.index
+                let index = lineItems.index(where: { (lineItem: LineItem) -> Bool in
+                    let itemObjectId = lineItem.lineItemParse.item.objectId ?? ""
+                    return itemObjectId == itemParseObjectID
+                })
+                if let index = index {
+                    let matchingLineItem = lineItems[index]
+                    
+                }
+            }
+        }
+    }
+}

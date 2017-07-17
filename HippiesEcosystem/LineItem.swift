@@ -81,6 +81,11 @@ class LineItem: NSObject {
             return lineItemParse.quantity
         }
     }
+    var itemObjectID: String {
+        get {
+            return lineItemParse.item.objectId ?? ""
+        }
+    }
     
     var lineItemParse: LineItemParse!
     
