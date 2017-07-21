@@ -26,7 +26,7 @@ class QuantityManagementViewController: InventoryManagementViewController {
 extension QuantityManagementViewController {
     var quantities: [Int] {
         var nums: [Int] = []
-        for i in 1..<50 {
+        for i in 1..<101 {
             nums.append(i)
         }
         return nums

@@ -33,6 +33,7 @@ class CheckListTableView: UITableView {
     }
     
     func setCompletes() {
+        completes = []
         for _ in lineItems {
             completes.append(false)
         }
@@ -41,9 +42,7 @@ class CheckListTableView: UITableView {
     func registerCell() {
         register(CheckTableViewCell.self, forCellReuseIdentifier: CheckTableViewCell.identifier)
     }
-}
-
-extension CheckListTableView: UITableViewDataSource {
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = dequeueCell(indexPath: indexPath)
         cell.checkBox.tag = indexPath.row
@@ -52,7 +51,9 @@ extension CheckListTableView: UITableViewDataSource {
         cell.set(lineItem: lineItem)
         return cell
     }
-    
+}
+
+extension CheckListTableView: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return lineItems.count
     }

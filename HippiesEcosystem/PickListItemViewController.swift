@@ -51,6 +51,7 @@ class PickListItemViewController: CheckListViewController {
     
     fileprivate func dataStoreSetup() {
         dataStore = PickItemDataStore(delegate: self)
+        dataStore?.loadItemStates(for: lineItems)
     }
 }
 
@@ -71,5 +72,9 @@ extension PickListItemViewController: PickItemDataStoreDelegate {
             pickOrderVC.removeRow()
             popVC()
         }
+    }
+    
+    func loaded(_ lineItemWithStates: [LineItem]) {
+        self.lineItems = lineItemWithStates
     }
 }

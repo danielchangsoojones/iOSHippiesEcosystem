@@ -63,6 +63,26 @@ extension AnalyticsViewController: UITableViewDelegate, UITableViewDataSource {
     }
 }
 
+extension AnalyticsViewController {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let analytic = analytics[indexPath.row]
+        switch analytic.title {
+        case .itemsToSew:
+            showItemsToSewAction()
+        default:
+            break
+        }
+    }
+    
+    private func showItemsToSewAction() {
+        let alertView = SCLAlertView()
+        alertView.addButton("Yes", action: {
+            self.dataStore?.sendItemsToBeSewnToGoogleSheet()
+        })
+        alertView.showInfo("Create Google Sheet", subTitle: "create a google sheet for all items to be sewn", closeButtonTitle: "Cancel")
+    }
+}
+
 extension AnalyticsViewController: AnalyticsDataDelegate {
     func received(analytics: [Analytic]) {
         self.analytics = analytics
@@ -70,6 +90,10 @@ extension AnalyticsViewController: AnalyticsDataDelegate {
     
     func received(error: Error) {
         SCLAlertView().showError("Error", subTitle: error.localizedDescription)
+    }
+    
+    func successfullyReceivedResponse() {
+        SCLAlertView().showSuccess("Success", subTitle: "Successfully sent to Google Sheet")
     }
 }
 

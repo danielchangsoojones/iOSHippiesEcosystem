@@ -12,6 +12,7 @@ enum AnalyticTitle: String {
     case openOrders = "Open Orders"
     case newestOrders = "Orders since midnight"
     case newestItems = "Items ordered since midnight"
+    case newestItemsCost = "Cost to make above items($15)"
     case itemsToCut = "# of items to cut"
     case itemsToSew = "# of items to sew"
     case allocatedInventoryCount = "# of allocated inventory"
@@ -29,6 +30,8 @@ enum AnalyticTitle: String {
             currentCase = .newestOrders
         case "newestItems":
             currentCase = .newestItems
+        case "newestItemsCost":
+            currentCase = .newestItemsCost
         case "itemsToCut":
             currentCase = .itemsToCut
         case "itemsToSew":
@@ -50,5 +53,5 @@ enum AnalyticTitle: String {
         self = currentCase
     }
     
-    static let all: [AnalyticTitle] = [.openOrders, .newestOrders, .newestItems, .itemsToCut, .itemsToSew, .allocatedInventoryCount, .openPicks, .openShipping, .lastShippedOrders, .lastShippedItems]
+    static let all: [AnalyticTitle] = [.openOrders, .newestOrders, .newestItems, .newestItemsCost, .itemsToCut, .itemsToSew, .allocatedInventoryCount, .openPicks, .openShipping, .lastShippedOrders, .lastShippedItems]
 }

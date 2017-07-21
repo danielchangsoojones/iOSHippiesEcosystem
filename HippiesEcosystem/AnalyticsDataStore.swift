@@ -12,6 +12,7 @@ import Parse
 protocol AnalyticsDataDelegate {
     func received(analytics: [Analytic])
     func received(error: Error)
+    func successfullyReceivedResponse()
 }
 
 class AnalyticsDataStore {
@@ -52,6 +53,19 @@ class AnalyticsDataStore {
             let currentIndex: Int = AnalyticTitle.all.index(of: current.title) ?? 0
             let nextIndex: Int = AnalyticTitle.all.index(of: next.title) ?? 0
             return nextIndex > currentIndex
+        })
+    }
+}
+
+extension AnalyticsDataStore {
+    func sendItemsToBeSewnToGoogleSheet() {
+        PFCloud.callFunction(inBackground: "createSewingItemsGoogleSheet", withParameters: [:], block: {
+            (results: Any?, error: Error?) -> Void in
+            if let _ = results {
+                self.delegate?.successfullyReceivedResponse()
+            } else if let error = error {
+                self.delegate?.received(error: error)
+            }
         })
     }
 }

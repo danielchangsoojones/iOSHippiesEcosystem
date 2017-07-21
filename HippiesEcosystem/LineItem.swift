@@ -81,6 +81,21 @@ class LineItem: NSObject {
             return lineItemParse.quantity
         }
     }
+    var itemObjectID: String {
+        get {
+            return lineItemParse.item.objectId ?? ""
+        }
+    }
+    private var _packageState: Package.State = .unknown
+    var packageState: Package.State {
+        get {
+            return _packageState
+        }
+        set {
+            _packageState = newValue
+        }
+    }
+    
     
     var lineItemParse: LineItemParse!
     

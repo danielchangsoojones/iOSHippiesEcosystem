@@ -18,5 +18,5 @@ class ItemParse: CustomParseObject, PFSubclassing {
     @NSManaged var lineItem: LineItemParse
     @NSManaged var cut: CutParse
     @NSManaged var sewn: SewnParse
-    @NSManaged var package: PackageParse
+    @NSManaged var package: PackageParse?
 }
